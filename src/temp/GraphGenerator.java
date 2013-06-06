@@ -40,14 +40,23 @@ public class GraphGenerator {
             graph.addVertex(myVertex);
             holdsVertexPointers.add(myVertex);
         }
-
-        //triple loop adds edges to all vertices with similarities
+        
+        /* The following set of three FOR loops adds edges to all nodes that share similar similar mutants or
+         * test cases.  The outer most FOR loop (incrementing the variable i) is used to transverse each element
+         * in the MutationVector pointsToData.  The node in pointsToData at index "i" can be seen as the reference
+         * node for that iteration in the loop.  The middle FOR loop (incrementing the variable t) is used to get
+         * each node in pointsToData at indicies greater than the current value of i.  Since an edge is shared
+         * between 2 nodes, the nodes previous to index i have already been analyzed.  The most inner FOR loop
+         * (incrementing variable q) is used to iterate through each mutant or test case within the nodes at
+         * indicies 'i' and 't' to see if there are any similarities.
+         */
+        
+        //Iterate through each node in the graph.
         for(int i = 0;i < pointsToData.size();i++){
-
-
+        	//Iterate through each node after the one represented by 'i'.
             for(int t = i;t < pointsToData.size();t++){
                 int counter = 0;
-
+                //Iterate through the details of nodes at 'i' and 't' checking for similarities.
                 for(int q = 0;q < pointsToData.get(t).getSize();q++){
                     if(i == t){
                         break;

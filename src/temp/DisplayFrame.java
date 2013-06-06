@@ -147,6 +147,7 @@ public class DisplayFrame extends JFrame {
     private ButtonGroup buttonGroupMutantTest;
     private ButtonGroup colorGroup;
     private ButtonGroup labelGroup;
+    private ButtonGroup mouseGroup;
     private JButton jButtonZoomIn;
     private JButton jButtonZoomOut;
     private JMenu jMenuColor;
@@ -215,26 +216,25 @@ public class DisplayFrame extends JFrame {
          */
         private void initGUI() {
             try {
-                // GUI initialization code
+                //Initializes the basic elements of the GUI.
                 setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                 this.setTitle(PROGRAM_TITLE);
                 currentMainCanvas.setBackground(CANVAS_COLOR);
                 //TODO connectionCanvases.setBackground(CANVAS_COLOR);
                 this.setMinimumSize(new Dimension(300, 300));
 
-                //create menu
+                //Create the menu bar.
                 createMenu();
 
-                //create panel contain graph canvas and controls
+                //Create the panel that is used when displaying the graph and associated control components.
                 createGraphPanel();
 
-                // Create split pane to contain source code on the left and graphs on the right
+                // Create split pane to contain source code on the left and graphs on the right.
                 jTabbedPaneMutantCanvas = new JTabbedPane();
+
                 
-                //Set onMutantCard to true
+                //Set onMutantCard to true to prevent the program from switching to a card it is already on.
                 onMutantCard = true;
-
-
 
                 jTabbedPaneMutantCanvas.add(MUTANT_TAB_TITLE, currentMainCanvas);
                 //TODO refactor identifier, or remove completely if not needed
@@ -272,9 +272,7 @@ public class DisplayFrame extends JFrame {
 
                 //a workaround that allows the TextPane to have no wordwrap
                 jTextPaneMain = new JTextPane() {
-                    /**
-                     * 
-                     */
+
                     private static final long serialVersionUID = 1;
 
                     public boolean getScrollableTracksViewportWidth() {
@@ -381,33 +379,46 @@ public class DisplayFrame extends JFrame {
         }
 
         /**
-         * TODO: method description
+         * This method creates the panel that is used to display the Mutant or Test graphs and the
+         * various control components.  Creates the following components: jPanelCanvas, jRadioButtonMutant,
+         * jRadioButtonTest, jButtonZoomIn, jButtonZoomOut.
          */
         private void createGraphPanel() {
-            // buttons: zoom in, zoom out, mutant, test
-
+        	//Create the jPanelCanvas that will hold the graph and the control components.
             jPanelCanvas = new JPanel();
             FlowLayout jPanelCanvasLayout = new FlowLayout();
             jPanelCanvasLayout.setAlignment(FlowLayout.RIGHT);
             jPanelCanvas.setLayout(jPanelCanvasLayout);
+            
+            //Create and add the radio button for selecting the mutant graph.
             jRadioButtonMutant = new JRadioButton("mutant");
             jRadioButtonMutant.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
+                	//Call updateCanvas with 1 as the flag to show that the mutant radio button was clicked.
                     updateCanvas(1);
                 }
             });
             jPanelCanvas.add(jRadioButtonMutant);
+            
+            //Create and add the radio button for selecting the test graph.
             jRadioButtonTest = new JRadioButton("test");
             jRadioButtonTest.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
+                	//Call updateCanvas with 2 as the flag to show that the test radio button was clicked.
                     updateCanvas(2);
                 }
             });
             jPanelCanvas.add(jRadioButtonTest);
+            
+            //Add the mutant and test radio buttons to a button group.
             buttonGroupMutantTest = new ButtonGroup();
             buttonGroupMutantTest.add(jRadioButtonMutant);
             buttonGroupMutantTest.add(jRadioButtonTest);
+            
+            //Begin with the mutant radio button selected.
             jRadioButtonMutant.setSelected(true);
+            
+            //Create and add the Zoom Out button for changing the zoom on a graph.
             jButtonZoomOut = new JButton();
             jPanelCanvas.add(jButtonZoomOut);
             jButtonZoomOut.setText("Zoom Out");
@@ -416,6 +427,8 @@ public class DisplayFrame extends JFrame {
                     zoomOut(currentMainCanvas);
                 }
             });
+            
+            //Create and add the Zoom In button for changing the zoom on a graph. 
             jButtonZoomIn = new JButton();
             jPanelCanvas.add(jButtonZoomIn);
             jButtonZoomIn.setText("Zoom In");
@@ -424,42 +437,31 @@ public class DisplayFrame extends JFrame {
                     zoomIn(currentMainCanvas);
                 }
             });
-
-            JMenuItem temp = new JMenuItem("Customize");
-            temp.addActionListener(new ActionListener() {
-
-                @Override
-                public void actionPerformed(ActionEvent evt) {
-
-                    if(jRadioButtonCircleLayout.isSelected()) {
-                        new AdvancedLayoutDialog(DisplayFrame.this, true, AdvancedLayoutDialog.FLAG_CIRCLE_LAYOUT);
-                        updateCanvas(DisplayFrame.FLAG_ADVANCED_CIRCLE);
-                    }else if(jRadioButtonFRLayout.isSelected()) {
-                        new AdvancedLayoutDialog(DisplayFrame.this, true, AdvancedLayoutDialog.FLAG_FR_LAYOUT);
-                        updateCanvas(DisplayFrame.FLAG_ADVANCED_FR);
-                    }else if(jRadioButtonSpringLayout.isSelected()) {
-                        new AdvancedLayoutDialog(DisplayFrame.this, true, AdvancedLayoutDialog.FLAG_SPRING_LAYOUT);
-                        updateCanvas(DisplayFrame.FLAG_ADVANCED_SPRING);
-                    }
-                }
-
-            });
-            jMenuLayout.add(temp);
-
         }
 
 
 
         /**
-         * TODO: method description
+         * This method will create and associate action listeners for all of the components in the program's 
+         * menu bar.
          */
         private void createMenu() {
-            // menu bar, file menu: open, load, save
+        	//Create the menu bar.
             jMenuBarTop = new JMenuBar();
             this.setJMenuBar(jMenuBarTop);
+            
+            /* The File menu presents four options:
+             *	Open - Open a visualization from an XML file.
+             *	Save -
+             *	Load -
+             *	Quit - Quit the program. */
+            
+            //Create the File menu and add it to the menu bar.
             jMenuFile = new JMenu();
             jMenuBarTop.add(jMenuFile);
             jMenuFile.setText("File");
+            
+            //Add the open option to the File menu.
             jMenuItemOpen = new JMenuItem("Open");
             jMenuItemOpen.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,
                     ActionEvent.CTRL_MASK));
@@ -469,6 +471,8 @@ public class DisplayFrame extends JFrame {
                     openButtonListener(evt);
                 }
             });
+            
+            //Add the save option to the File menu.
             jMenuItemSave = new JMenuItem("Save");
             jMenuItemSave.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
                     ActionEvent.CTRL_MASK));
@@ -478,17 +482,19 @@ public class DisplayFrame extends JFrame {
                     saveButtonListener();
                 }
             });
+            
+            //Add the load option to the File menu.
             jMenuItemLoad = new JMenuItem("Load");
             jMenuItemLoad.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_L,
                     ActionEvent.CTRL_MASK));
+            jMenuFile.add(jMenuItemLoad);
             jMenuItemLoad.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent evt) {
                     loadButtonListener();
                 }
             });
 
-            jMenuFile.add(jMenuItemLoad);
-
+            //Add the quit option to the File menu.
             jMenuItemQuit = new JMenuItem("Quit");
             jMenuItemQuit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q,
                     ActionEvent.CTRL_MASK));
@@ -500,17 +506,29 @@ public class DisplayFrame extends JFrame {
                 }
             });
 
-            // options menu, mouse/labels
+            /* The Options menu presents five options:
+             * 	Mouse - Set the mouse to translate the entire graph or move select nodes.
+             * 	Node Colour - Change the colour scheme for the nodes.
+             * 	Label Options - Change what information is displayed on the edges.
+             * 	Layout - Change the layout algorithm for generating the graph.
+             * 	Custom Node Size - Customize the radius of the nodes. 
+             */
+            
+            //Create the Options menu and add it to the menu bar.
             jMenuOptions = new JMenu("Options");
             jMenuBarTop.add(jMenuOptions);
             jMenuMouse = new JMenu();
+            
+            //Add the mouse option to the Options menu.
             jMenuOptions.add(jMenuMouse);
             jMenuMouse.setText("Mouse");
-            // TODO button group
+            mouseGroup = new ButtonGroup();
             jRadioButtonMenuItemTranslate = new JRadioButtonMenuItem();
             jMenuMouse.add(jRadioButtonMenuItemTranslate);
             jRadioButtonMenuItemTranslate.setText("Translate");
             jRadioButtonMenuItemTranslate.setSelected(true);
+            mouseGroup.add(jRadioButtonMenuItemTranslate);
+            //When translate is selected, remove the pick plugin from the mouse and add the translate plugin.
             jRadioButtonMenuItemTranslate.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent evt) {
                     if (!jRadioButtonMenuItemTranslate.isSelected()) {
@@ -527,6 +545,8 @@ public class DisplayFrame extends JFrame {
             jMenuMouse.add(jRadioButtonMenuItemPick);
             jRadioButtonMenuItemPick.setText("Pick");
             jRadioButtonMenuItemPick.setSelected(false);
+            mouseGroup.add(jRadioButtonMenuItemPick);
+            //When pick is selected, remove the translate plugin from the mouse and add the pick plugin.
             jRadioButtonMenuItemPick.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent evt) {
                     if (!jRadioButtonMenuItemPick.isSelected()) {
@@ -539,7 +559,8 @@ public class DisplayFrame extends JFrame {
 
                 }
             });
-            // Color menu
+            
+            //Add the node colour option to the Options menu.
             jMenuColor = new JMenu("Node Color");
             jMenuOptions.add(jMenuColor);
             colorGroup = new ButtonGroup();
@@ -569,100 +590,60 @@ public class DisplayFrame extends JFrame {
             colorGroup.add(customColorButton);
             redButton.setSelected(true);
 
-            // Help menu
-            jMenuHelp = new JMenu("Help");
-            jMenuBarTop.add(jMenuHelp);
-            jMenuItemAbout = new JMenuItem("About");
-            jMenuHelp.add(jMenuItemAbout);
-            jMenuItemAbout.addActionListener(new ActionListener(){
-
-                public void actionPerformed(ActionEvent arg0) {
-                    helpActionListener();
-                }
-
-            });
-
-
-
-            stringLabel = new JRadioButton("Edge name");
+            //Add the label options option to the Options menu.
+            labelMenu = new JMenu("Label Options");
+            jMenuOptions.add(labelMenu);
+            stringLabel = new JRadioButton("Edge Name");
+            labelMenu.add(stringLabel);
             stringLabel.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     updateTransformers();
                 }
             });
-
-            noLabel = new JRadioButton("No label");
+            noLabel = new JRadioButton("No Label");
+            labelMenu.add(noLabel);
             noLabel.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     updateTransformers();
                 }
             });
-
-            percentLabel = new JRadioButton("Edge statistics");
+            percentLabel = new JRadioButton("Edge Statistics");
+            labelMenu.add(percentLabel);
             percentLabel.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     updateTransformers();
                 }
             });
-
-            labelMenu = new JMenu("Label Options");
-            labelMenu.add(stringLabel);
-            labelMenu.add(percentLabel);
-            labelMenu.add(noLabel);
-
-
-
-
-            jMenuOptions.add(labelMenu);
-
             labelGroup = new ButtonGroup();
             labelGroup.add(stringLabel);
             labelGroup.add(percentLabel);
             labelGroup.add(noLabel);
-
             percentLabel.setSelected(true);
-
-
-
-
+            
+            //Add the layout option to the Options Menu
             jRadioButtonCircleLayout = new JRadioButton("Circle");
             jRadioButtonFRLayout = new JRadioButton("Fruchterman-Reingold Force Directed Algorithm");
             jRadioButtonSpringLayout = new JRadioButton("Spring Layout");
             jRadioButtonSpringLayout.setEnabled(false);
             jRadioButtonCircleLayout.addActionListener(new ActionListener() {
-
-                @Override
                 public void actionPerformed(ActionEvent arg0) {
-                    // TODO Auto-generated method stub
                     updateCanvas();
-
                 }
 
             });
             jRadioButtonSpringLayout.addActionListener(new ActionListener() {
-
-                @Override
                 public void actionPerformed(ActionEvent arg0) {
-                    // TODO Auto-generated method stub
                     updateCanvas();
-
                 }
 
             });
             jRadioButtonFRLayout.addActionListener(new ActionListener() {
-
-                @Override
                 public void actionPerformed(ActionEvent arg0) {
-                    // TODO Auto-generated method stub
                     updateCanvas();
-
                 }
 
             });
             ButtonGroup layoutGroup = new ButtonGroup();
-            //jMenuOptions.add(jRadioButtonCircleLayout);
-            //jMenuOptions.add(jRadioButtonFRLayout);
-            //jMenuOptions.add(jRadioButtonSpringLayout);
             layoutGroup.add(jRadioButtonCircleLayout);
             layoutGroup.add(jRadioButtonFRLayout);
             layoutGroup.add(jRadioButtonSpringLayout);
@@ -683,14 +664,46 @@ public class DisplayFrame extends JFrame {
                             updateTransformers();
                         }    
                     });
+            
+            JMenuItem temp = new JMenuItem("Customize");
+            temp.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent evt) {
 
+                    if(jRadioButtonCircleLayout.isSelected()) {
+                        new AdvancedLayoutDialog(DisplayFrame.this, true, AdvancedLayoutDialog.FLAG_CIRCLE_LAYOUT);
+                        updateCanvas(DisplayFrame.FLAG_ADVANCED_CIRCLE);
+                    }else if(jRadioButtonFRLayout.isSelected()) {
+                        new AdvancedLayoutDialog(DisplayFrame.this, true, AdvancedLayoutDialog.FLAG_FR_LAYOUT);
+                        updateCanvas(DisplayFrame.FLAG_ADVANCED_FR);
+                    }else if(jRadioButtonSpringLayout.isSelected()) {
+                        new AdvancedLayoutDialog(DisplayFrame.this, true, AdvancedLayoutDialog.FLAG_SPRING_LAYOUT);
+                        updateCanvas(DisplayFrame.FLAG_ADVANCED_SPRING);
+                    }
+                }
+            });
+            jMenuLayout.add(temp);
+          
+            /* The Help menu presents one option:
+             * 	About - Display the information about the program and its contributors.
+             */
+            
+            //Create the Help menu and add it to the menu bar.
+            jMenuHelp = new JMenu("Help");
+            jMenuBarTop.add(jMenuHelp);
+            //Add the about option to the Help menu.
+            jMenuItemAbout = new JMenuItem("About");
+            jMenuHelp.add(jMenuItemAbout);
+            jMenuItemAbout.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent arg0) {
+                    helpActionListener();
+                }
+            });
         }
 
         /**
-         * This method causes the JFrame to become visible. 
+         * This method creates an instance of the DisplayFrame and causes it to become visible.
          * 
-         * @param args
-         *            command-line arguments (if any)
+         * @param args Not used.
          */
         public static void main(String[] args) {
             DisplayFrame inst = new DisplayFrame();
@@ -700,24 +713,27 @@ public class DisplayFrame extends JFrame {
 
         /**
          * This is the constructor for the frame. Constructs the frame by calling
-         * the initGUI method
+         * the initGUI method.
          * 
-         * Also adds the graph mouse plugins to the mouse
-         * 
+         * Also adds the graph mouse plugins to the mouse.
          * 
          */
         public DisplayFrame() {
             super();
-            //TODO: explain below two lines
+            /* Adding translate to the PluggableGraphMouse mouse allows for left-clicking and dragging
+             * a node to move (translate) its location.
+             * Adding pop to the PluggableGraphMouse mouse allows for the generation of a popup menu
+             * providing further information and options for the node. 
+             */
             mouse.add(translate);
             mouse.add(pop);
-            //initialize the GUI
+            //Initialize the GUI.
             initGUI();
         }
 
         /**
          * This method converts a MutationVector containing Mutants as nodes into a
-         * MutationVector containing Tests as nodes
+         * MutationVector containing Tests as nodes.
          * 
          * @param a
          *            a MutationVector containing Mutants as nodes
@@ -757,9 +773,9 @@ public class DisplayFrame extends JFrame {
         }
 
         /**
-         * uses JFileChooser to open a data (xml) file. Calls updateCanvas() to do
-         * all the graphing related stuff, and displaySource() to display the source
-         * code in the textpane
+         * Uses JFileChooser to open a data (xml) file. Calls updateCanvas() to call
+         * all of the graphing methods, and displaySource() to display the source
+         * code in the textpane.
          * 
          * This button also visualizes the data, and controls everything related to
          * visualizing the data.
@@ -769,25 +785,25 @@ public class DisplayFrame extends JFrame {
          */
         private void openButtonListener(ActionEvent evt) {
 
-            //TODO: What is this line for? Provide a comment
-            //UPDATE:  line not used right now.
-            //beenClicked = true;
-
-            // reinitialize pData and parses the selected file to extract and store mutation data
+            // Reinitialize mutantData and parses the selected file to extract and store mutation data.
             mutantData = new MutationVector<MutationData>(true);
             XMLParser pars = new XMLParser(mutantData);
             pars.parseDocument();
 
-            //Create and store test data
+            //Initialize a new testData object and use it as the destination of a mutantData conversion.
             testData = new MutationVector<MutationData>(false);
             convertProgramToTest(mutantData, testData);
 
-            //Update the graph canvas
+            //Update the graph canvas.
             updateCanvas();
-            //Display the source code
+            //Display the source code.
             displaySource();
         }
 
+        /**
+         * This method allow for updateCanvas to be called without a flag and will call updateCanvas
+         * with a -1 flag.
+         */
         public void updateCanvas() {
             updateCanvas(-1);
         }
@@ -809,7 +825,7 @@ public class DisplayFrame extends JFrame {
                 TAB_TITLE = TEST_TAB_TITLE;
             }
 
-            // decides which MutationVector to use based on the radio buttons
+            // Decides which MutationVector to use based on the selection of the mutant or test radio buttons.
             if (jRadioButtonMutant.isSelected()) {
                 currentData = mutantData;
                 jTabbedPaneCurrentCanvas = jTabbedPaneMutantCanvas;
@@ -823,14 +839,22 @@ public class DisplayFrame extends JFrame {
 
             }
 
-            if(flag == 1 ) {
+            
+            /* Prevents the program from attempting to flip to the next card when the radio button of 
+             * the current card is selected.
+             */
+            
+    
+            if(flag == 1 ) //Mutant radio button was clicked.
+            {
             	if (!onMutantCard)
             	{
             		flipToNextCard();
             	}
             }
-            
-            if(flag == 2 ) {
+            //
+            else if(flag == 2 ) //Test radio button was clicked. 
+            {
             	if (onMutantCard)
             	{
             		flipToNextCard();
@@ -1681,14 +1705,17 @@ public class DisplayFrame extends JFrame {
         }
 
         /**
-         * Creates an about dialog
+         * Creates a dialog with information about the program's authors.
          */
         public void helpActionListener(){
-            String text = new String(PROGRAM_TITLE + NEW_LINE + "Authors: " + NEW_LINE + "Jeff Falkenham" + NEW_LINE + "Dr. Jeremy Bradbury");
+            String text = new String(PROGRAM_TITLE + NEW_LINE + "Authors: " + NEW_LINE + "Jeff Falkenham" + NEW_LINE + "Dr. Jeremy Bradbury" + NEW_LINE + "David Petras");
             String title = new String("about");
             new DisplayDialog(this, text, title);
         }
         
+        /**
+         * Changes the card being displayed from the mutant graph to the test graph and vice-versa.
+         */
         public void flipToNextCard() {
         	onMutantCard = !onMutantCard;
         	((CardLayout)(cardPanel.getLayout())).next(cardPanel);

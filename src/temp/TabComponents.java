@@ -1,5 +1,6 @@
 package temp;
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -47,22 +48,20 @@ public class TabComponents extends JPanel{
         };
         this.add(label);
         
-        JButton closeButton = new JButton("x");
+        JButton closeButton = new JButton();
+        closeButton.setBackground(Color.red);
         closeButton.setPreferredSize(new Dimension(12, 12));
         closeButton.addActionListener(new ActionListener(){
-
-            @Override
+        	@Override
             public void actionPerformed(ActionEvent evt) {
-                // TODO Auto-generated method stub
-                buttonListener();
-                
+                buttonListener();   
             }
             
         });
         this.add(closeButton);
         
         Dimension size = new Dimension(0, 0);
-        size.height = Math.max(label.getPreferredSize().height, closeButton.getPreferredSize().height);
+        size.height = Math.max(label.getPreferredSize().height + 5, closeButton.getPreferredSize().height);
         size.width = label.getPreferredSize().width + closeButton.getPreferredSize().width + 15;
         
         
