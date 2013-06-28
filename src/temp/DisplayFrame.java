@@ -1118,65 +1118,32 @@ public class DisplayFrame extends JFrame {
          * @param tempGraph
          *            The graph that will be drawn on the canvas
          */
-        public void updateCanvasConnectionsSameType(MyVertex v) {
+        public void updateCanvasConnections(MyVertex v, String flag) {
+        	Graph<MyVertex, MyEdge> oGraph;
+        	if (flag.equals("connections"))
+        	{
+        		oGraph = GraphGenerator.returnConnectionGraph(v, this.getCurrentCanvasGraph());
+        	}
+        	else
+        	{
+        		oGraph = GraphGenerator.returnSameTypeGraph(v, this.getCurrentCanvasGraph());
+        	}
 
-            Graph<MyVertex, MyEdge> oGraph = GraphGenerator.returnSameTypeGraph(v, this.getCurrentCanvasGraph());
             final VisualizationViewer<MyVertex, MyEdge> newCanvas = new VisualizationViewer<MyVertex, MyEdge>(
                     new CustomCircleLayout<MyVertex, MyEdge>(oGraph));
             connectionCanvases.add(newCanvas);
             newCanvas.setBackground(CANVAS_COLOR);
             jTabbedPaneCurrentCanvas.add(newCanvas);
             jTabbedPaneCurrentCanvas.setTitleAt(connectionCanvases.size(), v.name + "      ");
-            JPanel panelThing = new TabComponents(v.type, jTabbedPaneCurrentCanvas, connectionCanvases);
-            //panelThing.setPreferredSize(new Dimension(30, 30));
-
-            jTabbedPaneCurrentCanvas.setTabComponentAt(connectionCanvases.size(), panelThing);
-
-
-
-
-
-            // update the transformers for the canvas
-            updateTransformers(newCanvas);
-
-            // set a graph mouse for the canvas
-            newCanvas.setGraphMouse(mouse);
-
-            // add the zoom in and zoom out buttons
-            newCanvas.setLayout(new BorderLayout());
-            JPanel jPanelCanvas2 = new JPanel();
-            JScrollPane jScrollPaneCanvas2 = new JScrollPane();
-            JButton jButtonCanvas2ZoomIn = new JButton("Zoom in");
-            JButton jButtonCanvas2ZoomOut = new JButton("Zoom out");
-            jPanelCanvas2.setLayout(new FlowLayout());
-            jPanelCanvas2.add(jButtonCanvas2ZoomIn);
-            jPanelCanvas2.add(jButtonCanvas2ZoomOut);
-            jScrollPaneCanvas2.setViewportView(jPanelCanvas2);
-            newCanvas.add(jScrollPaneCanvas2, BorderLayout.SOUTH);
-            jButtonCanvas2ZoomIn.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent evt) {
-                    zoomIn(newCanvas);
-                }
-            });
-            jButtonCanvas2ZoomOut.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent evt) {
-                    zoomOut(newCanvas);
-                }
-            });
-
-        }
-        
-        
-        public void updateCanvasConnections(MyVertex v) {
-
-            Graph<MyVertex, MyEdge> oGraph = GraphGenerator.returnConnectionGraph(v, this.getCurrentCanvasGraph());
-            final VisualizationViewer<MyVertex, MyEdge> newCanvas = new VisualizationViewer<MyVertex, MyEdge>(
-                    new CustomCircleLayout<MyVertex, MyEdge>(oGraph));
-            connectionCanvases.add(newCanvas);
-            newCanvas.setBackground(CANVAS_COLOR);
-            jTabbedPaneCurrentCanvas.add(newCanvas);
-            jTabbedPaneCurrentCanvas.setTitleAt(connectionCanvases.size(), v.name + "      ");
-            JPanel panelThing = new TabComponents(v.name, jTabbedPaneCurrentCanvas, connectionCanvases);
+            JPanel panelThing;
+            if (flag.equals("connections"))
+            {
+            	panelThing = new TabComponents(v.name, jTabbedPaneCurrentCanvas, connectionCanvases);
+            }
+            else
+            {
+            	panelThing = new TabComponents(v.type, jTabbedPaneCurrentCanvas, connectionCanvases);
+            }
             //panelThing.setPreferredSize(new Dimension(30, 30));
 
             jTabbedPaneCurrentCanvas.setTabComponentAt(connectionCanvases.size(), panelThing);

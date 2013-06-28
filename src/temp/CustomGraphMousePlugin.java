@@ -438,7 +438,7 @@ implements MouseListener {
         similaritiesMenuItem.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 if(vertex instanceof MyVertex) {
-                    displayFrame.updateCanvasConnections((MyVertex)vertex);
+                    displayFrame.updateCanvasConnections((MyVertex)vertex,"connections");
                 }
             }	
         });
@@ -460,7 +460,7 @@ implements MouseListener {
     		{
         		if (vertex instanceof MyVertex)
         		{
-        			displayFrame.updateCanvasConnectionsSameType((MyVertex)vertex);
+        			displayFrame.updateCanvasConnections((MyVertex)vertex,"type");
         		}
         	}
     	});
