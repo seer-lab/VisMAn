@@ -232,6 +232,7 @@ implements MouseListener {
 
         if(pDataM.isMutant()){
             popup.add(createDisplayModifiedSourceMenuItem(indexf));
+            popup.add(createSameTypeMenuItem(indexf,ver));
         }
 
         popup.add(createSimilaritiesMenuItem(indexf, ver));
@@ -444,6 +445,27 @@ implements MouseListener {
 
         return similaritiesMenuItem;
 
+    }
+    
+    /**
+     * Creates the JMenuItem in the popup that can be clicked to show only mutants of similar type in a second tab.
+     */
+    
+    public JMenuItem createSameTypeMenuItem(final int indexf, final MyVertex vertex)
+    {
+    	JMenuItem sameTypeMenuItem = new JMenuItem("Show Same Type");
+    	
+    	sameTypeMenuItem.addActionListener(new ActionListener(){
+    		public void actionPerformed(ActionEvent e)
+    		{
+        		if (vertex instanceof MyVertex)
+        		{
+        			displayFrame.updateCanvasConnectionsSameType((MyVertex)vertex);
+        		}
+        	}
+    	});
+    	
+    	return sameTypeMenuItem;
     }
 
     /**

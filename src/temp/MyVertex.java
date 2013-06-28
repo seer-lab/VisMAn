@@ -2,14 +2,19 @@ package temp;
 
 import java.awt.Paint;
 import java.awt.Shape;
+import java.util.Vector;
 
 public class MyVertex {
     protected String name;
+    protected String type;
+    protected Vector<String> data;
     protected Shape sizeAndShape;
     protected Paint color;
 
-    MyVertex(String name) {
-        this.name = name;
+    MyVertex(String _name, String _type, Vector<String> _vec) {
+        this.name = _name;
+        this.type = _type;
+        this.data = _vec;
     }
     
     
@@ -20,6 +25,8 @@ public class MyVertex {
     public String toString() {
         return name;
     }
+    
+
     
     
 }

@@ -1118,6 +1118,55 @@ public class DisplayFrame extends JFrame {
          * @param tempGraph
          *            The graph that will be drawn on the canvas
          */
+        public void updateCanvasConnectionsSameType(MyVertex v) {
+
+            Graph<MyVertex, MyEdge> oGraph = GraphGenerator.returnSameTypeGraph(v, this.getCurrentCanvasGraph());
+            final VisualizationViewer<MyVertex, MyEdge> newCanvas = new VisualizationViewer<MyVertex, MyEdge>(
+                    new CustomCircleLayout<MyVertex, MyEdge>(oGraph));
+            connectionCanvases.add(newCanvas);
+            newCanvas.setBackground(CANVAS_COLOR);
+            jTabbedPaneCurrentCanvas.add(newCanvas);
+            jTabbedPaneCurrentCanvas.setTitleAt(connectionCanvases.size(), v.name + "      ");
+            JPanel panelThing = new TabComponents(v.type, jTabbedPaneCurrentCanvas, connectionCanvases);
+            //panelThing.setPreferredSize(new Dimension(30, 30));
+
+            jTabbedPaneCurrentCanvas.setTabComponentAt(connectionCanvases.size(), panelThing);
+
+
+
+
+
+            // update the transformers for the canvas
+            updateTransformers(newCanvas);
+
+            // set a graph mouse for the canvas
+            newCanvas.setGraphMouse(mouse);
+
+            // add the zoom in and zoom out buttons
+            newCanvas.setLayout(new BorderLayout());
+            JPanel jPanelCanvas2 = new JPanel();
+            JScrollPane jScrollPaneCanvas2 = new JScrollPane();
+            JButton jButtonCanvas2ZoomIn = new JButton("Zoom in");
+            JButton jButtonCanvas2ZoomOut = new JButton("Zoom out");
+            jPanelCanvas2.setLayout(new FlowLayout());
+            jPanelCanvas2.add(jButtonCanvas2ZoomIn);
+            jPanelCanvas2.add(jButtonCanvas2ZoomOut);
+            jScrollPaneCanvas2.setViewportView(jPanelCanvas2);
+            newCanvas.add(jScrollPaneCanvas2, BorderLayout.SOUTH);
+            jButtonCanvas2ZoomIn.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent evt) {
+                    zoomIn(newCanvas);
+                }
+            });
+            jButtonCanvas2ZoomOut.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent evt) {
+                    zoomOut(newCanvas);
+                }
+            });
+
+        }
+        
+        
         public void updateCanvasConnections(MyVertex v) {
 
             Graph<MyVertex, MyEdge> oGraph = GraphGenerator.returnConnectionGraph(v, this.getCurrentCanvasGraph());
@@ -1290,14 +1339,14 @@ public class DisplayFrame extends JFrame {
         /**
          * Transformer method that calculates the paint color of the node
          * 
-         * @param vvvvvvvvvvvvv
+         * @param vertexName
          *            The name of the vertex (String)
          * @return The color of the vertex (Color, which implements Paint)
          */
-        public Paint vertexPaintTransformer(MyVertex vvvvvvvvvvvvv) {
+        public Paint vertexPaintTransformer(MyVertex vertexName) {
 
             for (int i = 0; i <= currentData.size(); i++) {
-                if (currentData.get(i).getName().equals(vvvvvvvvvvvvv.name)) {
+                if (currentData.get(i).getName().equals(vertexName.name)) {
                     float temp = currentData.get(i).getPercent();
                     return getPaintColor(temp);
 
@@ -1727,7 +1776,7 @@ public class DisplayFrame extends JFrame {
                 double lineCoord = e.getY();
                 double textHeight = e.getComponent().getHeight();
 
-                int counter = 0;
+                int counter = 1;
                 String text = jTextPaneMain.getText();
                 String lineBreak = "\n";
 

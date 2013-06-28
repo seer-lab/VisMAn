@@ -240,4 +240,13 @@ class MutationData{
 	public String getModifiedSource(){
 		return modifiedSource;
 	}
+	
+	/**
+	 * Gets the data vector.
+	 * @return
+	 */
+	public Vector<String> getDataVector()
+	{
+		return found;
+	}
 }

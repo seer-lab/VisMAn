@@ -1,6 +1,7 @@
 package temp;
 
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Vector;
 
@@ -36,7 +37,7 @@ public class GraphGenerator {
 
         //add all the vertices to the graph from the data
         for(int i = 0;i < pointsToData.size();i++){
-            MyVertex myVertex = new MyVertex(pointsToData.get(i).getName());
+            MyVertex myVertex = new MyVertex(pointsToData.get(i).getName(), pointsToData.get(i).getType(), pointsToData.get(i).getDataVector());
             graph.addVertex(myVertex);
             holdsVertexPointers.add(myVertex);
         }
@@ -152,6 +153,69 @@ public class GraphGenerator {
 
 
     }
+    
+    /**
+     * Generates a graph for the Same Type canvas.
+     * @param v
+     * @param g
+     * @return
+     */
+    public static Graph<MyVertex, MyEdge> returnSameTypeGraph(MyVertex v, Graph<MyVertex, MyEdge> g) {
+    	
+    	Graph<MyVertex, MyEdge> localGraph = new MainGraphClass<MyVertex, MyEdge>();
+    	Collection<MyVertex> vertexHolder = g.getVertices();
+    	
+    	for (MyVertex vert : vertexHolder)
+    	{
+    		if (vert.type.equals(v.type))
+    		{
+    			localGraph.addVertex(vert);
+    		}
+    	}
+    	
+    	Collection<MyVertex> localVerticies = localGraph.getVertices();
+    	Object[] objectArray = localVerticies.toArray();
+    	ArrayList<MyVertex> localArray = new ArrayList<MyVertex>();
+    	for(Object vertex: objectArray)
+    	{
+    		localArray.add((MyVertex) vertex);
+    	}
+
+    	
+    	for (int i = 0; i < localVerticies.size(); i++)
+    	{
+    		for (int t = i; t < localVerticies.size();t++)
+    		{
+    			int counter = 0;
+    			for (int q = 0; q < localArray.get(i).data.size();q++)
+    			{
+    				if (i == t)
+    				{
+    					break;
+    				}
+    				if (localArray.get(i).data.get(q).equals("yes") && localArray.get(t).data.get(q).equals("yes"))
+    				{
+    					counter++;
+    				}
+    						
+    			}
+    			if (counter != 0 && i!=t)
+    			{
+    				String one = localArray.get(i).name;
+    				String two = localArray.get(t).name;
+    				String name = one + " " + two;
+    				MyEdge tempEdge = new MyEdge(name);
+    				localGraph.addEdge(tempEdge,localArray.get(i),localArray.get(t));
+    			}
+    		}
+    	}
+    	
+    	
+    	
+    	
+    	return localGraph;
+    }
+    
 
     /**
      * get method to return the graph
