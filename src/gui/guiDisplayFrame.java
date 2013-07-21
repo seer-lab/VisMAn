@@ -292,7 +292,6 @@ public class guiDisplayFrame extends JFrame
 					packageNode selectedNode = (packageNode) sourceTree.getLastSelectedPathComponent();
 					sourceArea.setText("");
 					drawAggregateGraph(selectedNode);
-					
 				}
 			}
 		});
@@ -308,10 +307,11 @@ public class guiDisplayFrame extends JFrame
 	private void parseXML(File root)
 	{
 		parser = new dataXMLParser(manager);
-		File xmlFile = new File(root.getAbsolutePath()+"\\xml_output.txt");
+		File xmlFile = new File(root.getAbsolutePath()+"/xml_output.txt");
 		parser.parseDocument(xmlFile);
 		
 		manager.linkMutantsToNodes();
+		manager.produceAggregateData();
 	}
 	
 	/**
@@ -392,7 +392,18 @@ public class guiDisplayFrame extends JFrame
 	 */
 	private void drawAggregateGraph(packageNode node)
 	{
+		Graph<DefaultMutableTreeNode,String> packageGraph = new SparseMultigraph<DefaultMutableTreeNode,String>();
+		for (int i = 0; i < node.getChildCount(); i++)
+		{
+			packageGraph.addVertex((DefaultMutableTreeNode) node.getChildAt(i));
+		}
+		
+		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(packageGraph);
+		layout.setSize(new Dimension(300,300));
+		BasicVisualizationServer<DefaultMutableTreeNode,String> viewer = new BasicVisualizationServer<DefaultMutableTreeNode, String>(layout);
+		viewer.setPreferredSize(new Dimension(400,400));
 		graphPane.removeAll();
+		graphPane.add(viewer);
 		graphPane.revalidate();
 		graphPane.repaint();
 	}

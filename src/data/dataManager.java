@@ -95,6 +95,55 @@ public class dataManager {
 	
 	/**
 	 * 
+	 */
+	public void produceAggregateData()
+	{
+		for (int i = 0; i < rootNode.getChildCount(); i++)
+		{
+			if (rootNode.getChildAt(i) instanceof packageNode)
+			{
+				produceAggregateData((DefaultMutableTreeNode)rootNode.getChildAt(i));
+			}
+		}
+	}
+	
+	/**
+	 * 
+	 * @param currentNode
+	 */
+	private void produceAggregateData(DefaultMutableTreeNode currentNode)
+	{
+		int numberOfMutants = 0;
+		double totalPercentKilled = 0;
+		for (int i = 0; i < currentNode.getChildCount(); i++)
+		{
+			if (currentNode.getChildAt(i) instanceof packageNode)
+			{
+				produceAggregateData((DefaultMutableTreeNode) currentNode.getChildAt(i));
+			}
+			
+			if (currentNode.getChildAt(i) instanceof packageNode)
+			{
+				packageNode node = (packageNode) currentNode.getChildAt(i);
+				numberOfMutants += node.getNumberOfMutants();
+				totalPercentKilled += node.getAveragePercentKilled();
+			}
+			else if (currentNode.getChildAt(i) instanceof classNode)
+			{
+				classNode node = (classNode) currentNode.getChildAt(i);
+				numberOfMutants += node.getNumberOfMutants();
+				totalPercentKilled += node.getAggregateData();
+			}
+		}
+		packageNode activeNode = (packageNode) currentNode;
+		double averagePercentKilled = totalPercentKilled/currentNode.getChildCount();
+		activeNode.setNumberOfMutants(numberOfMutants);
+		activeNode.setAveragePercentKilled(averagePercentKilled);
+		
+	}
+
+	/**
+	 * 
 	 * @return
 	 */
 	public JTree getFileTree()

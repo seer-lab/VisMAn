@@ -96,4 +96,28 @@ public class classNode extends DefaultMutableTreeNode {
 	{
 		return this.mutantList;
 	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public double getAggregateData()
+	{
+		double mutantPercentSum = 0;
+		for (dataMutant mutant: mutantList)
+		{
+			mutantPercentSum += mutant.getPercentKilled();
+		}
+		
+		return mutantPercentSum/mutantList.size();
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int getNumberOfMutants()
+	{
+		return this.mutantList.size();
+	}
 }
