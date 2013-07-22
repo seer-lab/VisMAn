@@ -32,7 +32,10 @@ import edu.uci.ics.jung.algorithms.layout.Layout;
 import edu.uci.ics.jung.graph.Graph;
 import edu.uci.ics.jung.graph.SparseMultigraph;
 import edu.uci.ics.jung.visualization.BasicVisualizationServer;
+import edu.uci.ics.jung.visualization.VisualizationViewer;
 import edu.uci.ics.jung.visualization.control.CrossoverScalingControl;
+import edu.uci.ics.jung.visualization.control.DefaultModalGraphMouse;
+import edu.uci.ics.jung.visualization.control.ModalGraphMouse;
 import edu.uci.ics.jung.visualization.control.ScalingControl;
 import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
 
@@ -94,8 +97,9 @@ public class guiDisplayFrame extends JFrame
 	
 	private JTextArea sourceArea;
 	
-	private BasicVisualizationServer<DefaultMutableTreeNode,String> viewer;
+	private VisualizationViewer<DefaultMutableTreeNode,String> viewer;
 	
+	private DefaultModalGraphMouse graphMouse;
 	
 	
 	//Other entities.
@@ -143,7 +147,6 @@ public class guiDisplayFrame extends JFrame
 		
 		//Form the layout for each of the components.
 		initializeContentArea();
-	
 	}
 	
 	/**
@@ -256,6 +259,19 @@ public class guiDisplayFrame extends JFrame
 		translateButton = new JRadioButton("Translate");
 		selectionOptions.add(pickButton);
 		selectionOptions.add(translateButton);
+		pickButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event)
+			{
+				graphMouse.setMode(ModalGraphMouse.Mode.PICKING);
+			}
+		});
+		translateButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event)
+			{
+				graphMouse.setMode(ModalGraphMouse.Mode.TRANSFORMING);
+			}
+		});
+		translateButton.setSelected(true);
 		
 		zoomIn = new JButton("Zoom In");
 		zoomIn.addActionListener(new ActionListener() {
@@ -290,6 +306,8 @@ public class guiDisplayFrame extends JFrame
 		horizontalSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,verticalSplit,rightPane);
 		horizontalSplit.setDividerLocation(400);
 		this.getContentPane().add(horizontalSplit);
+		
+		graphMouse = new DefaultModalGraphMouse();
 	}
 	
 	/**
@@ -418,11 +436,14 @@ public class guiDisplayFrame extends JFrame
 		
 		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(classGraph);
 		layout.setSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
-		viewer = new BasicVisualizationServer<DefaultMutableTreeNode, String>(layout);
+		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
 		viewer.getRenderContext().setVertexFillPaintTransformer(vertexColour);
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
+		
+        viewer.setGraphMouse(graphMouse);
+		
 		graphPane.removeAll();
 		graphPane.add(viewer);
 		graphPane.revalidate();
@@ -504,11 +525,14 @@ public class guiDisplayFrame extends JFrame
 		
 		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(packageGraph);
 		layout.setSize(new Dimension(300,300));
-		viewer = new BasicVisualizationServer<DefaultMutableTreeNode, String>(layout);
+		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
 		viewer.getRenderContext().setVertexFillPaintTransformer(vertexColour);
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
+		
+        viewer.setGraphMouse(graphMouse);
+		
 		graphPane.removeAll();
 		graphPane.add(viewer);
 		graphPane.revalidate();
