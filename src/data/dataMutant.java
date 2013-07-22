@@ -2,12 +2,14 @@ package data;
 
 import java.util.ArrayList;
 
+import javax.swing.tree.DefaultMutableTreeNode;
+
 /**
  * 
  * @author 100425830
  *
  */
-public class dataMutant 
+public class dataMutant extends DefaultMutableTreeNode
 {
 	private String name; //Name of the mutant. (ie. ROR_1)
 	private String type; //Operation applied to create the mutant. (ROR)
@@ -141,6 +143,15 @@ public class dataMutant
 		}
 		this.percentKilled = killedCounter/tests.size();
 		return this.percentKilled;
+	}
+	
+	/**
+	 * 
+	 */
+	@Override
+	public String toString()
+	{
+		return this.name;
 	}
 
 }

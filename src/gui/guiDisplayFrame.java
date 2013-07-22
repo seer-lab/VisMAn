@@ -11,8 +11,8 @@ import java.awt.Paint;
 import java.awt.Shape;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.net.URI;
 
@@ -32,6 +32,9 @@ import edu.uci.ics.jung.algorithms.layout.Layout;
 import edu.uci.ics.jung.graph.Graph;
 import edu.uci.ics.jung.graph.SparseMultigraph;
 import edu.uci.ics.jung.visualization.BasicVisualizationServer;
+import edu.uci.ics.jung.visualization.control.CrossoverScalingControl;
+import edu.uci.ics.jung.visualization.control.ScalingControl;
+import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
 
 
 /**
@@ -51,6 +54,8 @@ public class guiDisplayFrame extends JFrame
 	private static final int FRAME_HEIGHT = 800;
 	private static final int FRAME_MIN_WIDTH = 300;
 	private static final int FRAME_MIN_HEIGHT = 300;
+	
+	private static final int MAX_NODE_SIZE = 80;
 	
 	
 	//GUI Components
@@ -88,6 +93,8 @@ public class guiDisplayFrame extends JFrame
 	private JRadioButton translateButton;
 	
 	private JTextArea sourceArea;
+	
+	private BasicVisualizationServer<DefaultMutableTreeNode,String> viewer;
 	
 	
 	
@@ -251,7 +258,21 @@ public class guiDisplayFrame extends JFrame
 		selectionOptions.add(translateButton);
 		
 		zoomIn = new JButton("Zoom In");
+		zoomIn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event)
+			{
+				ScalingControl scaler = new CrossoverScalingControl();
+				scaler.scale(viewer, 1.1f, viewer.getCenter());
+			}
+		});	
 		zoomOut = new JButton("Zoom Out");
+		zoomOut.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event)
+			{
+				ScalingControl scaler = new CrossoverScalingControl();
+				scaler.scale(viewer, (1 / 1.1f), viewer.getCenter());
+			}
+		});	
 		controlPane.add(pickButton);
 		controlPane.add(translateButton);
 		controlPane.add(zoomIn);
@@ -360,26 +381,48 @@ public class guiDisplayFrame extends JFrame
 	 */
 	private void drawClassGraph(classNode node)
 	{
-		Graph<dataMutant, String> classGraph = new SparseMultigraph<dataMutant, String>();
+		Graph<DefaultMutableTreeNode, String> classGraph = new SparseMultigraph<DefaultMutableTreeNode, String>();
 		for (dataMutant mutant:node.getMutantList())
 		{
 			classGraph.addVertex(mutant);
 		}
 		
-		Transformer<dataMutant,Shape> vertexSize = new Transformer<dataMutant,Shape>()
+		Transformer<DefaultMutableTreeNode,Shape> vertexSize = new Transformer<DefaultMutableTreeNode,Shape>()
 		{
-			Ellipse2D circle = new Ellipse2D.Double(10,10,20,20);
-			public Shape transform(dataMutant mutant)
+			public Shape transform(DefaultMutableTreeNode _mutant)
 			{
-				return AffineTransform.getScaleInstance(mutant.getPercentKilled(), mutant.getPercentKilled()).createTransformedShape(circle);
+				dataMutant mutant = (dataMutant) _mutant;
+				return new Ellipse2D.Double(0, 0, (1.2-mutant.getPercentKilled())*MAX_NODE_SIZE, (1.2-mutant.getPercentKilled())*MAX_NODE_SIZE);
 			}
 		};
 		
-		Layout<dataMutant, String> layout = new CircleLayout(classGraph);
-		layout.setSize(new Dimension(300,300));
-		BasicVisualizationServer<dataMutant,String> viewer = new BasicVisualizationServer<dataMutant, String>(layout);
-		viewer.setPreferredSize(new Dimension(400,400));
+		Transformer<DefaultMutableTreeNode,Paint> vertexColour = new Transformer<DefaultMutableTreeNode,Paint>()
+		{
+			public Paint transform(DefaultMutableTreeNode mutant)
+			{
+				dataMutant workingMutant = (dataMutant) mutant;
+				if (workingMutant.getPercentKilled() < 0.33)
+				{
+					return Color.red;
+				}
+				else if (workingMutant.getPercentKilled() < 0.66)
+				{
+					return Color.yellow;
+				}
+				else
+				{
+					return Color.green;
+				}
+			}
+		};
+		
+		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(classGraph);
+		layout.setSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
+		viewer = new BasicVisualizationServer<DefaultMutableTreeNode, String>(layout);
+		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
+		viewer.getRenderContext().setVertexFillPaintTransformer(vertexColour);
+		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		graphPane.removeAll();
 		graphPane.add(viewer);
 		graphPane.revalidate();
@@ -398,10 +441,74 @@ public class guiDisplayFrame extends JFrame
 			packageGraph.addVertex((DefaultMutableTreeNode) node.getChildAt(i));
 		}
 		
+		Transformer<DefaultMutableTreeNode,Shape> vertexSize = new Transformer<DefaultMutableTreeNode,Shape>()
+				{
+					public Shape transform(DefaultMutableTreeNode node)
+					{
+						if (node instanceof classNode)
+						{
+							classNode workingNode = (classNode) node;
+							return new Ellipse2D.Double(0, 0, (1.2-workingNode.getAggregateData())*MAX_NODE_SIZE, (1.2-workingNode.getAggregateData())*MAX_NODE_SIZE);
+						}
+						else if(node instanceof packageNode)
+						{
+							packageNode workingNode = (packageNode) node;
+							return new Rectangle2D.Double(0,0,(1.2-workingNode.getAveragePercentKilled())*MAX_NODE_SIZE, (1.2-workingNode.getAveragePercentKilled())*MAX_NODE_SIZE);
+						}
+						return null;
+					}
+				};
+				
+		Transformer<DefaultMutableTreeNode,Paint> vertexColour = new Transformer<DefaultMutableTreeNode,Paint>()
+						{
+							public Paint transform(DefaultMutableTreeNode node)
+							{
+								if (node instanceof classNode)
+								{
+									classNode workingNode = (classNode) node;
+									if (workingNode.getAggregateData() < 0.33)
+									{
+										return Color.red;
+									}
+									else if (workingNode.getAggregateData() < 0.66)
+									{
+										return Color.yellow;
+									}
+									else
+									{
+										return Color.green;
+									}
+								}
+								else if (node instanceof packageNode)
+								{
+									packageNode workingNode = (packageNode) node;
+									
+									if (workingNode.getAveragePercentKilled() < 0.33)
+									{
+										return Color.red;
+									}
+									else if (workingNode.getAveragePercentKilled() < 0.66)
+									{
+										return Color.yellow;
+									}
+									else
+									{
+										return Color.green;
+									}
+									
+								}
+
+								return null;
+							}
+						};
+		
 		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(packageGraph);
 		layout.setSize(new Dimension(300,300));
-		BasicVisualizationServer<DefaultMutableTreeNode,String> viewer = new BasicVisualizationServer<DefaultMutableTreeNode, String>(layout);
-		viewer.setPreferredSize(new Dimension(400,400));
+		viewer = new BasicVisualizationServer<DefaultMutableTreeNode, String>(layout);
+		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
+		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
+		viewer.getRenderContext().setVertexFillPaintTransformer(vertexColour);
+		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		graphPane.removeAll();
 		graphPane.add(viewer);
 		graphPane.revalidate();
