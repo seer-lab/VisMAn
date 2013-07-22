@@ -15,6 +15,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.net.URI;
+import java.util.ArrayList;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -26,8 +27,11 @@ import org.apache.commons.collections15.Transformer;
 
 import data.dataManager;
 import data.dataMutant;
+import data.dataTest;
 import data.dataXMLParser;
 import edu.uci.ics.jung.algorithms.layout.CircleLayout;
+import edu.uci.ics.jung.algorithms.layout.FRLayout;
+import edu.uci.ics.jung.algorithms.layout.KKLayout;
 import edu.uci.ics.jung.algorithms.layout.Layout;
 import edu.uci.ics.jung.graph.Graph;
 import edu.uci.ics.jung.graph.SparseMultigraph;
@@ -353,47 +357,7 @@ public class guiDisplayFrame extends JFrame
 		manager.produceAggregateData();
 	}
 	
-	/**
-	 * 
-	 */
-	private void drawSampleGraph()
-	{
-		Graph<Integer, String> g = new SparseMultigraph<Integer, String>();
-		g.addVertex((Integer)1);
-		g.addVertex((Integer)2);
-		g.addVertex((Integer)3);
-		
-		Layout<Integer, String> layout = new CircleLayout(g);
-		layout.setSize(new Dimension(300,300));
-		BasicVisualizationServer<Integer,String> viewer = new BasicVisualizationServer<Integer, String>(layout);
-		viewer.setPreferredSize(new Dimension(400,400));
-		
-		Transformer<Integer,Paint> vertexPaint = new Transformer<Integer,Paint>()
-		{
-			public Paint transform(Integer i) 
-			{
-				if (i == 1)
-				{
-					return Color.blue;
-				}
-				else if (i == 2)
-				{
-					return Color.red;
-				}
-				else
-				{
-					return Color.green;
-				}
-				
-			}
-		};
-		
-		viewer.getRenderContext().setVertexFillPaintTransformer(vertexPaint);
-		
-		graphPane.add(viewer);
-		
-	}
-	
+
 	/**
 	 * 
 	 */
@@ -405,12 +369,40 @@ public class guiDisplayFrame extends JFrame
 			classGraph.addVertex(mutant);
 		}
 		
+		//Add the edges to the graph.
+		ArrayList<dataMutant> mutantList = node.getMutantList();
+		for (int i = 0; i < mutantList.size(); i++)
+		{
+			dataMutant referenceMutant = mutantList.get(i);
+			for (int j = i+1; j < mutantList.size();j++)
+			{
+				int similarities = 0;
+				dataMutant checkMutant = mutantList.get(j);
+				ArrayList<dataTest> referenceTests = referenceMutant.getTestArray();
+				ArrayList<dataTest> checkTests = referenceMutant.getTestArray();
+				
+				for (int q = 0; q < referenceTests.size();q++)
+				{
+					if (referenceTests.get(q).getResult().equals("yes") && checkTests.get(q).getResult().equals("yes"))
+					{
+						similarities++;
+					}
+				}
+				
+				if (similarities > 0)
+				{
+					classGraph.addEdge(referenceMutant.getName()+" to "+checkMutant.getName(),referenceMutant,checkMutant);
+				}
+			}
+		}
+		
 		Transformer<DefaultMutableTreeNode,Shape> vertexSize = new Transformer<DefaultMutableTreeNode,Shape>()
 		{
 			public Shape transform(DefaultMutableTreeNode _mutant)
 			{
 				dataMutant mutant = (dataMutant) _mutant;
-				return new Ellipse2D.Double(0, 0, (1.2-mutant.getPercentKilled())*MAX_NODE_SIZE, (1.2-mutant.getPercentKilled())*MAX_NODE_SIZE);
+				double nodeSize = (1.2-mutant.getPercentKilled())*MAX_NODE_SIZE;
+				return new Ellipse2D.Double(-nodeSize/2, -nodeSize/2, nodeSize, nodeSize);
 			}
 		};
 		
@@ -469,12 +461,14 @@ public class guiDisplayFrame extends JFrame
 						if (node instanceof classNode)
 						{
 							classNode workingNode = (classNode) node;
-							return new Ellipse2D.Double(0, 0, (1.2-workingNode.getAggregateData())*MAX_NODE_SIZE, (1.2-workingNode.getAggregateData())*MAX_NODE_SIZE);
+							double nodeSize = (1.2-workingNode.getAggregateData())*MAX_NODE_SIZE;
+							return new Ellipse2D.Double(-nodeSize/2, -nodeSize/2, nodeSize, nodeSize);
 						}
 						else if(node instanceof packageNode)
 						{
 							packageNode workingNode = (packageNode) node;
-							return new Rectangle2D.Double(0,0,(1.2-workingNode.getAveragePercentKilled())*MAX_NODE_SIZE, (1.2-workingNode.getAveragePercentKilled())*MAX_NODE_SIZE);
+							double nodeSize = (1.2-workingNode.getAveragePercentKilled())*MAX_NODE_SIZE;
+							return new Rectangle2D.Double(-nodeSize/2,-nodeSize/2,nodeSize, nodeSize);
 						}
 						return null;
 					}

@@ -145,6 +145,11 @@ public class dataMutant extends DefaultMutableTreeNode
 		return this.percentKilled;
 	}
 	
+	public ArrayList<dataTest> getTestArray()
+	{
+		return this.tests;
+	}
+	
 	/**
 	 * 
 	 */
