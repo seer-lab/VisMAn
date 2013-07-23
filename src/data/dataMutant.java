@@ -5,8 +5,11 @@ import java.util.ArrayList;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
- * 
- * @author 100425830
+ * This class represents a mutated class file for a program.  Instances of this class
+ * contain information pertaining to the details of the mutation such as the name of
+ * the mutant, the operator that created it, where the mutation occurred, and wheter or
+ * not a test case was able to detect it.
+ * @author David Petras
  *
  */
 public class dataMutant extends DefaultMutableTreeNode
@@ -17,10 +20,11 @@ public class dataMutant extends DefaultMutableTreeNode
 	private String modifiedSourceName; //The name of the modified source code.
 	private int line; //The line number where the modification occurred.
 	private ArrayList<dataTest> tests; //All of the results from the tests run on the mutant.
-	private double percentKilled;
+	private double percentKilled; //The percentage of test cases that were able to kill the mutant.
 	
 	/**
-	 * 
+	 * This method is the constructor and will create a new ArrayList for
+	 * holding the tests.
 	 */
 	public dataMutant()
 	{
@@ -28,8 +32,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @param _name
+	 * Mutator (setter) method to set the name of the mutant.
+	 * @param _name the name of the mutant
 	 */
 	public void setName(String _name)
 	{
@@ -37,8 +41,9 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @param _type
+	 * Mutator (setter) method to set the type of mutation (mutation operator used
+	 * to create the mutant).
+	 * @param _type the type of mutation applied to the code
 	 */
 	public void setType(String _type)
 	{
@@ -46,8 +51,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @param _modifiedName
+	 * Mutator (setter) method to set the modified source code file name.
+	 * @param _modifiedName the file name of the modified source code
 	 */
 	public void setModifiedSourceName(String _modifiedName)
 	{
@@ -55,8 +60,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @param _modifiedSource
+	 * Mutator (setter) method to set the modified source code.
+	 * @param _modifiedSource the modified version of the source code
 	 */
 	public void setModifiedSource(String _modifiedSource)
 	{
@@ -64,8 +69,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @param _line
+	 * Mutator (setter) method to set which line of the source code was modified.
+	 * @param _line the line of code modified to create the mutant
 	 */
 	public void setLine(int _line)
 	{
@@ -73,8 +78,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Accessor method to get the name of the mutant.
+	 * @return the name of the mutant.
 	 */
 	public String getName()
 	{
@@ -82,8 +87,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Accessor method to get the type of the mutant.
+	 * @return the mutation operator that was applied to create the mutant
 	 */
 	public String getType()
 	{
@@ -91,8 +96,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Accessor method to get the modified source code.
+	 * @return the modified source code
 	 */
 	public String getModifiedSource()
 	{
@@ -100,8 +105,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Accessor method to get the name of the modified source file.
+	 * @return the name of the modified source file
 	 */
 	public String getModifiedSourceName()
 	{
@@ -109,8 +114,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Accessor method to get the line number where the mutation occurred.
+	 * @return the line number where the code was mutated
 	 */
 	public int getLine()
 	{
@@ -118,8 +123,8 @@ public class dataMutant extends DefaultMutableTreeNode
 	}
 	
 	/**
-	 * 
-	 * @param _test
+	 * This method adds a test to the mutant.
+	 * @param _test the test to associate with the mutant.
 	 */
 	public void addTest(dataTest _test)
 	{
@@ -145,15 +150,20 @@ public class dataMutant extends DefaultMutableTreeNode
 		return this.percentKilled;
 	}
 	
+	/**
+	 * Accessor method to retrieve a list of the tests. 
+	 * @return a list containing all of the added tests
+	 */
 	public ArrayList<dataTest> getTestArray()
 	{
 		return this.tests;
 	}
 	
-	/**
-	 * 
-	 */
 	@Override
+	/**
+	 * This method will return the name of the mutant.
+	 * @return the name of the mutant
+	 */
 	public String toString()
 	{
 		return this.name;
