@@ -71,8 +71,8 @@ public class classNode extends DefaultMutableTreeNode {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Accessor method to get the name of the class.
+	 * @return the name of the class
 	 */
 	public String getName()
 	{
@@ -80,8 +80,8 @@ public class classNode extends DefaultMutableTreeNode {
 	}
 	
 	/**
-	 * 
-	 * @param _mutant
+	 * This method will add a mutant to the classNode.
+	 * @param _mutant a mutated version of the class
 	 */
 	public void addMutant(dataMutant _mutant)
 	{
@@ -89,8 +89,8 @@ public class classNode extends DefaultMutableTreeNode {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Accessor method to get the mutants associated with the class.
+	 * @return a list of mutants
 	 */
 	public ArrayList<dataMutant> getMutantList()
 	{
@@ -98,8 +98,9 @@ public class classNode extends DefaultMutableTreeNode {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * This method will calculate the average percentage of test cases that are able
+	 * to detect a mutant for all the mutants of the class.
+	 * @return the average percent of test cases that kill a mutant of the class
 	 */
 	public double getAggregateData()
 	{
@@ -113,8 +114,8 @@ public class classNode extends DefaultMutableTreeNode {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Accessor method to get the number of mutants in the class.
+	 * @return the number of mutant versions of the class
 	 */
 	public int getNumberOfMutants()
 	{
