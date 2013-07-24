@@ -1,5 +1,6 @@
 package data;
 
+import java.awt.Color;
 import java.util.ArrayList;
 
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -21,6 +22,7 @@ public class dataMutant extends DefaultMutableTreeNode
 	private int line; //The line number where the modification occurred.
 	private ArrayList<dataTest> tests; //All of the results from the tests run on the mutant.
 	private double percentKilled; //The percentage of test cases that were able to kill the mutant.
+	private Color nodeColor; //The color of the node on the graph.
 	
 	/**
 	 * This method is the constructor and will create a new ArrayList for
@@ -167,6 +169,24 @@ public class dataMutant extends DefaultMutableTreeNode
 	public String toString()
 	{
 		return this.name;
+	}
+	
+	/**
+	 * Mutator (setter) method of setting the color of the node.
+	 * @param _color the color of the node
+	 */
+	public void setColor(Color _color)
+	{
+		this.nodeColor = _color;
+	}
+	
+	/**
+	 * Accessor method for getting the color of the ndoe.
+	 * @return the color of the node.
+	 */
+	public Color getColor()
+	{
+		return this.nodeColor;
 	}
 
 }

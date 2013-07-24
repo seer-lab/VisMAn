@@ -16,12 +16,19 @@ import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.Collection;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.DefaultHighlighter;
+import javax.swing.text.Highlighter;
+import javax.swing.text.Highlighter.HighlightPainter;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.TreeNode;
+import javax.swing.tree.TreePath;
 
 import org.apache.commons.collections15.Transformer;
 
@@ -95,6 +102,7 @@ public class guiDisplayFrame extends JFrame
 	private JPanel controlPane;
 	private JButton zoomIn;
 	private JButton zoomOut;
+	private JButton enterPicked;
 	private ButtonGroup selectionOptions;
 	private JRadioButton pickButton;
 	private JRadioButton translateButton;
@@ -275,7 +283,7 @@ public class guiDisplayFrame extends JFrame
 				graphMouse.setMode(ModalGraphMouse.Mode.TRANSFORMING);
 			}
 		});
-		translateButton.setSelected(true);
+		pickButton.setSelected(true);
 		
 		zoomIn = new JButton("Zoom In");
 		zoomIn.addActionListener(new ActionListener() {
@@ -293,6 +301,38 @@ public class guiDisplayFrame extends JFrame
 				scaler.scale(viewer, (1 / 1.1f), viewer.getCenter());
 			}
 		});	
+		enterPicked = new JButton("Enter Picked");
+		enterPicked.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event)
+			{
+				Collection<DefaultMutableTreeNode> pickedNodes = viewer.getPickedVertexState().getPicked();
+				if (pickedNodes.size() == 1)
+				{
+					if(pickedNodes.toArray()[0] instanceof classNode)
+					{
+						classNode selectedNode = (classNode) pickedNodes.toArray()[0];
+						TreePath path = new TreePath(selectedNode.getPath());
+						sourceTree.setExpandsSelectedPaths(true);
+						sourceTree.setSelectionPath(path);
+						sourceArea.setText(selectedNode.getSource());
+						highlightSource(selectedNode);
+						drawClassGraph(selectedNode);
+					}
+					else if (pickedNodes.toArray()[0] instanceof packageNode)
+					{
+						packageNode selectedNode = (packageNode) pickedNodes.toArray()[0];
+						TreePath path = new TreePath(selectedNode.getPath());
+						sourceTree.setExpandsSelectedPaths(true);
+						sourceTree.setSelectionPath(path);
+						sourceArea.setText("");
+						drawAggregateGraph(selectedNode);
+					}
+				}
+				//OTHERWISE DO NOTHING
+			}
+		});
+		
+		controlPane.add(enterPicked);
 		controlPane.add(pickButton);
 		controlPane.add(translateButton);
 		controlPane.add(zoomIn);
@@ -306,16 +346,18 @@ public class guiDisplayFrame extends JFrame
 		sourceArea.setEditable(false);
 		sourcePane.setViewportView(sourceArea);
 		verticalSplit = new JSplitPane(JSplitPane.VERTICAL_SPLIT,treePane,sourcePane);
-		verticalSplit.setDividerLocation(400);
+		verticalSplit.setDividerLocation(250);
 		horizontalSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,verticalSplit,rightPane);
 		horizontalSplit.setDividerLocation(400);
 		this.getContentPane().add(horizontalSplit);
 		
 		graphMouse = new DefaultModalGraphMouse();
+		graphMouse.setMode(ModalGraphMouse.Mode.PICKING);
 	}
 	
 	/**
-	 * 
+	 * This method will get the source tree that was created by the dataManager, create the action
+	 * listeners, and add it to the treePane.
 	 */
 	private void createSourceTree(File root)
 	{
@@ -328,6 +370,7 @@ public class guiDisplayFrame extends JFrame
 				{
 					classNode selectedNode = (classNode) sourceTree.getLastSelectedPathComponent();
 					sourceArea.setText(selectedNode.getSource());
+					highlightSource(selectedNode);
 					drawClassGraph(selectedNode);
 				}
 				else if (sourceTree.getLastSelectedPathComponent() instanceof packageNode)
@@ -344,32 +387,45 @@ public class guiDisplayFrame extends JFrame
 	}
 	
 	/**
-	 * 
-	 * @param root
+	 * This method is used to instantiate an XML parser to parse the XML file created
+	 * by the test harness and add its information to the dataManager.
+	 * @param root the root directory of the test harness output
 	 */
 	private void parseXML(File root)
 	{
+		//Create a new parser with the data manager that will then hold the extracted information.
 		parser = new dataXMLParser(manager);
 		File xmlFile = new File(root.getAbsolutePath()+"/xml_output.txt");
 		parser.parseDocument(xmlFile);
 		
+		/* Have the data manager perform the linking and aggregation methods to relate the parsed data
+		 * to the nodes of the souceTree.
+		 */
 		manager.linkMutantsToNodes();
 		manager.produceAggregateData();
 	}
 	
 
 	/**
-	 * 
+	 * This method will create the graph of a class level file from the package hierarchy.
+	 * @param node the class file to visualize
 	 */
 	private void drawClassGraph(classNode node)
 	{
+		//Create a new graph.
 		Graph<DefaultMutableTreeNode, String> classGraph = new SparseMultigraph<DefaultMutableTreeNode, String>();
+		//Add all of the mutants of the class to the graph as vertices (nodes).
 		for (dataMutant mutant:node.getMutantList())
 		{
 			classGraph.addVertex(mutant);
 		}
 		
-		//Add the edges to the graph.
+		/* Add the edges to the graph.  This nested for loop structure works by choosing each mutant as 
+		 * the reference mutant, then checks its test results agaist each subsequent mutant.  This 
+		 * prevents duplicate edges from being created since each pair of nodes is only checked in a
+		 * single direction from the reference.  The inner-most for loop compares the results of each test
+		 * case to see if both mutants were kill by the same test cases.
+		 */
 		ArrayList<dataMutant> mutantList = node.getMutantList();
 		for (int i = 0; i < mutantList.size(); i++)
 		{
@@ -396,6 +452,10 @@ public class guiDisplayFrame extends JFrame
 			}
 		}
 		
+		/* This transformer will change the size of the mutant node based upon the percentage of test cases that are able
+		 * to kill it.  It is an inverse relationship meaning that the fewer test cases that kill a mutant, the larger the
+		 * node is rendered.
+		 */
 		Transformer<DefaultMutableTreeNode,Shape> vertexSize = new Transformer<DefaultMutableTreeNode,Shape>()
 		{
 			public Shape transform(DefaultMutableTreeNode _mutant)
@@ -406,22 +466,29 @@ public class guiDisplayFrame extends JFrame
 			}
 		};
 		
-		Transformer<DefaultMutableTreeNode,Paint> vertexColour = new Transformer<DefaultMutableTreeNode,Paint>()
+		/* This transformer will change the colour of the mutant node based upon the percentage of test cases that are
+		 * able to kill it.  Green means that more than 66% of the test cases were able to kill it, yellow means 33%-66%
+		 * and red means less than 33%.
+		 */
+		Transformer<DefaultMutableTreeNode,Paint> threeColour = new Transformer<DefaultMutableTreeNode,Paint>()
 		{
 			public Paint transform(DefaultMutableTreeNode mutant)
 			{
 				dataMutant workingMutant = (dataMutant) mutant;
 				if (workingMutant.getPercentKilled() < 0.33)
 				{
-					return Color.red;
+					workingMutant.setColor(Color.red);
+					return workingMutant.getColor();
 				}
 				else if (workingMutant.getPercentKilled() < 0.66)
 				{
-					return Color.yellow;
+					workingMutant.setColor(Color.yellow);
+					return workingMutant.getColor();
 				}
 				else
 				{
-					return Color.green;
+					workingMutant.setColor(Color.green);
+					return workingMutant.getColor();
 				}
 			}
 		};
@@ -431,7 +498,7 @@ public class guiDisplayFrame extends JFrame
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
-		viewer.getRenderContext().setVertexFillPaintTransformer(vertexColour);
+		viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		
         viewer.setGraphMouse(graphMouse);
@@ -443,8 +510,9 @@ public class guiDisplayFrame extends JFrame
 	}
 	
 	/**
-	 * 
-	 * @param node
+	 * This method will create and add an aggregatedGraph (a graph for a package that may contain classes and additional
+	 * packages) to the graphPane.
+	 * @param node the node to visualize
 	 */
 	private void drawAggregateGraph(packageNode node)
 	{
@@ -454,75 +522,83 @@ public class guiDisplayFrame extends JFrame
 			packageGraph.addVertex((DefaultMutableTreeNode) node.getChildAt(i));
 		}
 		
+		/* This transformer will change the size of the aggregate node based upon the percentage of test cases that are able
+		 * to kill the mutants within.  It is an inverse relationship meaning that the fewer test cases that kill a mutant, the larger the
+		 * node is rendered.
+		 */
 		Transformer<DefaultMutableTreeNode,Shape> vertexSize = new Transformer<DefaultMutableTreeNode,Shape>()
+		{
+			public Shape transform(DefaultMutableTreeNode node)
+			{
+				if (node instanceof classNode)
 				{
-					public Shape transform(DefaultMutableTreeNode node)
+					classNode workingNode = (classNode) node;
+					double nodeSize = (1.2-workingNode.getAggregateData())*MAX_NODE_SIZE;
+					return new Ellipse2D.Double(-nodeSize/2, -nodeSize/2, nodeSize, nodeSize);
+				}
+				else if(node instanceof packageNode)
+				{
+					packageNode workingNode = (packageNode) node;
+					double nodeSize = (1.2-workingNode.getAveragePercentKilled())*MAX_NODE_SIZE;
+					return new Rectangle2D.Double(-nodeSize/2,-nodeSize/2,nodeSize, nodeSize);
+				}
+				return null;
+			}
+		};
+		
+		/* This transformer will change the colour of the aggregaet node based upon the percentage of test cases that are
+		 * able to kill the mutants within it.  Green means that more than 66% of the test cases were able to kill it, yellow means 33%-66%
+		 * and red means less than 33%.
+		 */
+		Transformer<DefaultMutableTreeNode,Paint> threeColour = new Transformer<DefaultMutableTreeNode,Paint>()
+		{
+			public Paint transform(DefaultMutableTreeNode node)
+			{
+				if (node instanceof classNode)
+				{
+					classNode workingNode = (classNode) node;
+					if (workingNode.getAggregateData() < 0.33)
 					{
-						if (node instanceof classNode)
-						{
-							classNode workingNode = (classNode) node;
-							double nodeSize = (1.2-workingNode.getAggregateData())*MAX_NODE_SIZE;
-							return new Ellipse2D.Double(-nodeSize/2, -nodeSize/2, nodeSize, nodeSize);
-						}
-						else if(node instanceof packageNode)
-						{
-							packageNode workingNode = (packageNode) node;
-							double nodeSize = (1.2-workingNode.getAveragePercentKilled())*MAX_NODE_SIZE;
-							return new Rectangle2D.Double(-nodeSize/2,-nodeSize/2,nodeSize, nodeSize);
-						}
-						return null;
+						return Color.red;
 					}
-				};
-				
-		Transformer<DefaultMutableTreeNode,Paint> vertexColour = new Transformer<DefaultMutableTreeNode,Paint>()
-						{
-							public Paint transform(DefaultMutableTreeNode node)
-							{
-								if (node instanceof classNode)
-								{
-									classNode workingNode = (classNode) node;
-									if (workingNode.getAggregateData() < 0.33)
-									{
-										return Color.red;
-									}
-									else if (workingNode.getAggregateData() < 0.66)
-									{
-										return Color.yellow;
-									}
-									else
-									{
-										return Color.green;
-									}
-								}
-								else if (node instanceof packageNode)
-								{
-									packageNode workingNode = (packageNode) node;
-									
-									if (workingNode.getAveragePercentKilled() < 0.33)
-									{
-										return Color.red;
-									}
-									else if (workingNode.getAveragePercentKilled() < 0.66)
-									{
-										return Color.yellow;
-									}
-									else
-									{
-										return Color.green;
-									}
-									
-								}
+					else if (workingNode.getAggregateData() < 0.66)
+					{
+						return Color.yellow;
+					}
+					else
+					{
+						return Color.green;
+					}
+				}
+				else if (node instanceof packageNode)
+				{
+					packageNode workingNode = (packageNode) node;
+					
+					if (workingNode.getAveragePercentKilled() < 0.33)
+					{
+						return Color.red;
+					}
+					else if (workingNode.getAveragePercentKilled() < 0.66)
+					{
+						return Color.yellow;
+					}
+					else
+					{
+						return Color.green;
+					}
+								
+				}
 
-								return null;
-							}
-						};
+				return null;
+			}
+		};
 		
 		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(packageGraph);
 		layout.setSize(new Dimension(300,300));
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
-		viewer.getRenderContext().setVertexFillPaintTransformer(vertexColour);
+		viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		
         viewer.setGraphMouse(graphMouse);
@@ -531,5 +607,30 @@ public class guiDisplayFrame extends JFrame
 		graphPane.add(viewer);
 		graphPane.revalidate();
 		graphPane.repaint();
+	}
+	
+	/**
+	 * This method will highlight the lines of the source code associated with
+	 * each mutant.  If multiple mutants modify the same line, the color will be
+	 * set with the following order: 1) Red 2) Yellow 3) Green
+	 * @param selectedNode the classNode currently being displayed
+	 */
+	public void highlightSource(classNode selectedNode)
+	{
+		for (dataMutant mutant: selectedNode.getMutantList())
+		{
+			try 
+			{
+				int startChar = sourceArea.getLineStartOffset(mutant.getLine());
+				int endChar = sourceArea.getLineEndOffset(mutant.getLine());
+				Highlighter.HighlightPainter highlighter = new DefaultHighlighter.DefaultHighlightPainter(mutant.getColor());
+				sourceArea.getHighlighter().addHighlight(startChar, endChar, highlighter);
+				sourceArea.repaint();
+			} catch (BadLocationException e) 
+			{
+				e.printStackTrace();
+			}
+			
+		}
 	}
 }
