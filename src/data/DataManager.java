@@ -1,7 +1,7 @@
 package data;
 
-import graph.classNode;
-import graph.packageNode;
+import graph.ClassNode;
+import graph.PackageNode;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -10,21 +10,21 @@ import javax.swing.JScrollPane;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 
-public class dataManager {
+public class DataManager {
 	
 	private JTree fileHierarchy;
 	private DefaultMutableTreeNode rootNode;
 	
-	private ArrayList<classNode> leafNodeList;
+	private ArrayList<ClassNode> leafNodeList;
 	
 	private File initialDirectory;
 	
-	private ArrayList<dataMutant> mutantList;
+	private ArrayList<DataMutant> mutantList;
 	
-	public dataManager(File directory)
+	public DataManager(File directory)
 	{
-		mutantList = new ArrayList<dataMutant>();
-		leafNodeList = new ArrayList<classNode>();
+		mutantList = new ArrayList<DataMutant>();
+		leafNodeList = new ArrayList<ClassNode>();
 		initialDirectory = directory;
 		createFileHierarchy(initialDirectory);
 	
@@ -41,7 +41,7 @@ public class dataManager {
 	{
 		if (currentFile.isDirectory())
 		{
-			packageNode newChild = new packageNode(currentFile);
+			PackageNode newChild = new PackageNode(currentFile);
 			
 			node.add(newChild);
 			File fileList[] = currentFile.listFiles();
@@ -54,7 +54,7 @@ public class dataManager {
 		{
 			if(currentFile.getName().endsWith(".java"))
 			{
-				classNode newChild = new classNode(currentFile);
+				ClassNode newChild = new ClassNode(currentFile);
 				node.add(newChild);
 				leafNodeList.add(newChild);
 			}
@@ -81,9 +81,9 @@ public class dataManager {
 	 */
 	public void linkMutantsToNodes()
 	{
-		for(classNode currentNode: leafNodeList)
+		for(ClassNode currentNode: leafNodeList)
 		{
-			for (dataMutant mutant: mutantList)
+			for (DataMutant mutant: mutantList)
 			{
 				if (currentNode.getName().equals(mutant.getModifiedSourceName()))
 				{
@@ -100,7 +100,7 @@ public class dataManager {
 	{
 		for (int i = 0; i < rootNode.getChildCount(); i++)
 		{
-			if (rootNode.getChildAt(i) instanceof packageNode)
+			if (rootNode.getChildAt(i) instanceof PackageNode)
 			{
 				produceAggregateData((DefaultMutableTreeNode)rootNode.getChildAt(i));
 			}
@@ -117,25 +117,25 @@ public class dataManager {
 		double totalPercentKilled = 0;
 		for (int i = 0; i < currentNode.getChildCount(); i++)
 		{
-			if (currentNode.getChildAt(i) instanceof packageNode)
+			if (currentNode.getChildAt(i) instanceof PackageNode)
 			{
 				produceAggregateData((DefaultMutableTreeNode) currentNode.getChildAt(i));
 			}
 			
-			if (currentNode.getChildAt(i) instanceof packageNode)
+			if (currentNode.getChildAt(i) instanceof PackageNode)
 			{
-				packageNode node = (packageNode) currentNode.getChildAt(i);
+				PackageNode node = (PackageNode) currentNode.getChildAt(i);
 				numberOfMutants += node.getNumberOfMutants();
 				totalPercentKilled += node.getAveragePercentKilled();
 			}
-			else if (currentNode.getChildAt(i) instanceof classNode)
+			else if (currentNode.getChildAt(i) instanceof ClassNode)
 			{
-				classNode node = (classNode) currentNode.getChildAt(i);
+				ClassNode node = (ClassNode) currentNode.getChildAt(i);
 				numberOfMutants += node.getNumberOfMutants();
 				totalPercentKilled += node.getAggregateData();
 			}
 		}
-		packageNode activeNode = (packageNode) currentNode;
+		PackageNode activeNode = (PackageNode) currentNode;
 		double averagePercentKilled = totalPercentKilled/currentNode.getChildCount();
 		activeNode.setNumberOfMutants(numberOfMutants);
 		activeNode.setAveragePercentKilled(averagePercentKilled);
@@ -155,7 +155,7 @@ public class dataManager {
 	 * 
 	 * @return
 	 */
-	public ArrayList<dataMutant> getMutantList()
+	public ArrayList<DataMutant> getMutantList()
 	{
 		return this.mutantList;
 	}
@@ -164,7 +164,7 @@ public class dataManager {
 	 * 
 	 * @param mutant
 	 */
-	public void addMutant(dataMutant mutant)
+	public void addMutant(DataMutant mutant)
 	{
 		this.mutantList.add(mutant);
 	}
@@ -173,7 +173,7 @@ public class dataManager {
 	 * 
 	 * @return
 	 */
-	public ArrayList<classNode> getLeafNodes()
+	public ArrayList<ClassNode> getLeafNodes()
 	{
 		return this.leafNodeList;
 	}

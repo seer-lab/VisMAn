@@ -13,14 +13,14 @@ import javax.swing.tree.DefaultMutableTreeNode;
  * @author David Petras
  *
  */
-public class dataMutant extends DefaultMutableTreeNode
+public class DataMutant extends DefaultMutableTreeNode
 {
 	private String name; //Name of the mutant. (ie. ROR_1)
 	private String type; //Operation applied to create the mutant. (ROR)
 	private String modifiedSource; //The modified source code.
 	private String modifiedSourceName; //The name of the modified source code.
 	private int line; //The line number where the modification occurred.
-	private ArrayList<dataTest> tests; //All of the results from the tests run on the mutant.
+	private ArrayList<DataTest> tests; //All of the results from the tests run on the mutant.
 	private double percentKilled; //The percentage of test cases that were able to kill the mutant.
 	private Color nodeColor; //The color of the node on the graph.
 	
@@ -28,9 +28,9 @@ public class dataMutant extends DefaultMutableTreeNode
 	 * This method is the constructor and will create a new ArrayList for
 	 * holding the tests.
 	 */
-	public dataMutant()
+	public DataMutant()
 	{
-		tests = new ArrayList<dataTest>();
+		tests = new ArrayList<DataTest>();
 	}
 	
 	/**
@@ -128,7 +128,7 @@ public class dataMutant extends DefaultMutableTreeNode
 	 * This method adds a test to the mutant.
 	 * @param _test the test to associate with the mutant.
 	 */
-	public void addTest(dataTest _test)
+	public void addTest(DataTest _test)
 	{
 		this.tests.add(_test);
 	}
@@ -141,7 +141,7 @@ public class dataMutant extends DefaultMutableTreeNode
 	public double getPercentKilled()
 	{
 		double killedCounter = 0;
-		for (dataTest test: tests)
+		for (DataTest test: tests)
 		{
 			if (test.getResult().equals("yes"))
 			{
@@ -156,7 +156,7 @@ public class dataMutant extends DefaultMutableTreeNode
 	 * Accessor method to retrieve a list of the tests. 
 	 * @return a list containing all of the added tests
 	 */
-	public ArrayList<dataTest> getTestArray()
+	public ArrayList<DataTest> getTestArray()
 	{
 		return this.tests;
 	}

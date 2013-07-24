@@ -10,7 +10,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
  * @author David Petras
  *
  */
-public class packageNode extends DefaultMutableTreeNode 
+public class PackageNode extends DefaultMutableTreeNode 
 {
 	private File directoryPath;
 	private int numberOfMutants;
@@ -21,7 +21,7 @@ public class packageNode extends DefaultMutableTreeNode
 	 * to the newly instantiated packageNode.
 	 * @param directory
 	 */
-	public packageNode(File directory)
+	public PackageNode(File directory)
 	{
 		super(directory);
 		directoryPath = directory;

@@ -1,7 +1,7 @@
 package gui;
 
-import graph.classNode;
-import graph.packageNode;
+import graph.ClassNode;
+import graph.PackageNode;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -32,10 +32,10 @@ import javax.swing.tree.TreePath;
 
 import org.apache.commons.collections15.Transformer;
 
-import data.dataManager;
-import data.dataMutant;
-import data.dataTest;
-import data.dataXMLParser;
+import data.DataManager;
+import data.DataMutant;
+import data.DataTest;
+import data.DataXMLParser;
 import edu.uci.ics.jung.algorithms.layout.CircleLayout;
 import edu.uci.ics.jung.algorithms.layout.FRLayout;
 import edu.uci.ics.jung.algorithms.layout.KKLayout;
@@ -59,7 +59,7 @@ import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
  * @author David Petras
  *
  */
-public class guiDisplayFrame extends JFrame
+public class GuiDisplayFrame extends JFrame
 	{
 	
 	//Constants
@@ -88,7 +88,7 @@ public class guiDisplayFrame extends JFrame
 	private JMenuItem helpAbout;
 	
 	//About VisMAN Dialog
-	private guiAboutDialog aboutDialog;
+	private GuiAboutDialog aboutDialog;
 	
 	private JTree sourceTree;
 	
@@ -115,8 +115,8 @@ public class guiDisplayFrame extends JFrame
 	
 	
 	//Other entities.
-	private dataManager manager;
-	private dataXMLParser parser;
+	private DataManager manager;
+	private DataXMLParser parser;
 	
 	/**
 	 * This is the main method for displaying the GUI.  It will create an instance
@@ -126,7 +126,7 @@ public class guiDisplayFrame extends JFrame
 	 */
 	public static void main(String[] args)
 	{
-		guiDisplayFrame displayFrame = new guiDisplayFrame();
+		GuiDisplayFrame displayFrame = new GuiDisplayFrame();
 		displayFrame.setVisible(true);
 	}
 	
@@ -136,7 +136,7 @@ public class guiDisplayFrame extends JFrame
 	 * within this class.  Upon construction of a new instance, the initializeGUI
 	 * method is run to add all of the components to the guiDisplayFrame. 
 	 */
-	private guiDisplayFrame()
+	private GuiDisplayFrame()
 	{
 		super();
 		initializeGUI();
@@ -191,7 +191,7 @@ public class guiDisplayFrame extends JFrame
 				JFileChooser fileChooser = new JFileChooser();
 				fileChooser.setDialogTitle("Select project directory...");
 				fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-				int returnValue = fileChooser.showOpenDialog(guiDisplayFrame.this);
+				int returnValue = fileChooser.showOpenDialog(GuiDisplayFrame.this);
 				if (returnValue == JFileChooser.APPROVE_OPTION)
 				{
 					createSourceTree(fileChooser.getSelectedFile());
@@ -248,7 +248,7 @@ public class guiDisplayFrame extends JFrame
 		helpAbout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event)
 			{
-				aboutDialog = new guiAboutDialog(guiDisplayFrame.this);
+				aboutDialog = new GuiAboutDialog(GuiDisplayFrame.this);
 				aboutDialog.setVisible(true);
 			}
 		});	
@@ -308,9 +308,9 @@ public class guiDisplayFrame extends JFrame
 				Collection<DefaultMutableTreeNode> pickedNodes = viewer.getPickedVertexState().getPicked();
 				if (pickedNodes.size() == 1)
 				{
-					if(pickedNodes.toArray()[0] instanceof classNode)
+					if(pickedNodes.toArray()[0] instanceof ClassNode)
 					{
-						classNode selectedNode = (classNode) pickedNodes.toArray()[0];
+						ClassNode selectedNode = (ClassNode) pickedNodes.toArray()[0];
 						TreePath path = new TreePath(selectedNode.getPath());
 						sourceTree.setExpandsSelectedPaths(true);
 						sourceTree.setSelectionPath(path);
@@ -318,9 +318,9 @@ public class guiDisplayFrame extends JFrame
 						highlightSource(selectedNode);
 						drawClassGraph(selectedNode);
 					}
-					else if (pickedNodes.toArray()[0] instanceof packageNode)
+					else if (pickedNodes.toArray()[0] instanceof PackageNode)
 					{
-						packageNode selectedNode = (packageNode) pickedNodes.toArray()[0];
+						PackageNode selectedNode = (PackageNode) pickedNodes.toArray()[0];
 						TreePath path = new TreePath(selectedNode.getPath());
 						sourceTree.setExpandsSelectedPaths(true);
 						sourceTree.setSelectionPath(path);
@@ -361,21 +361,21 @@ public class guiDisplayFrame extends JFrame
 	 */
 	private void createSourceTree(File root)
 	{
-		manager = new dataManager(root);
+		manager = new DataManager(root);
 		sourceTree = manager.getFileTree();
 		//Add the action listener to detect when the user clicks on an element in the hierarchy.
 		sourceTree.addTreeSelectionListener(new TreeSelectionListener(){
 			public void valueChanged(TreeSelectionEvent event) {
-				if(sourceTree.getLastSelectedPathComponent() instanceof classNode)
+				if(sourceTree.getLastSelectedPathComponent() instanceof ClassNode)
 				{
-					classNode selectedNode = (classNode) sourceTree.getLastSelectedPathComponent();
+					ClassNode selectedNode = (ClassNode) sourceTree.getLastSelectedPathComponent();
 					sourceArea.setText(selectedNode.getSource());
 					highlightSource(selectedNode);
 					drawClassGraph(selectedNode);
 				}
-				else if (sourceTree.getLastSelectedPathComponent() instanceof packageNode)
+				else if (sourceTree.getLastSelectedPathComponent() instanceof PackageNode)
 				{
-					packageNode selectedNode = (packageNode) sourceTree.getLastSelectedPathComponent();
+					PackageNode selectedNode = (PackageNode) sourceTree.getLastSelectedPathComponent();
 					sourceArea.setText("");
 					drawAggregateGraph(selectedNode);
 				}
@@ -394,7 +394,7 @@ public class guiDisplayFrame extends JFrame
 	private void parseXML(File root)
 	{
 		//Create a new parser with the data manager that will then hold the extracted information.
-		parser = new dataXMLParser(manager);
+		parser = new DataXMLParser(manager);
 		File xmlFile = new File(root.getAbsolutePath()+"/xml_output.txt");
 		parser.parseDocument(xmlFile);
 		
@@ -410,12 +410,12 @@ public class guiDisplayFrame extends JFrame
 	 * This method will create the graph of a class level file from the package hierarchy.
 	 * @param node the class file to visualize
 	 */
-	private void drawClassGraph(classNode node)
+	private void drawClassGraph(ClassNode node)
 	{
 		//Create a new graph.
 		Graph<DefaultMutableTreeNode, String> classGraph = new SparseMultigraph<DefaultMutableTreeNode, String>();
 		//Add all of the mutants of the class to the graph as vertices (nodes).
-		for (dataMutant mutant:node.getMutantList())
+		for (DataMutant mutant:node.getMutantList())
 		{
 			classGraph.addVertex(mutant);
 		}
@@ -426,16 +426,16 @@ public class guiDisplayFrame extends JFrame
 		 * single direction from the reference.  The inner-most for loop compares the results of each test
 		 * case to see if both mutants were kill by the same test cases.
 		 */
-		ArrayList<dataMutant> mutantList = node.getMutantList();
+		ArrayList<DataMutant> mutantList = node.getMutantList();
 		for (int i = 0; i < mutantList.size(); i++)
 		{
-			dataMutant referenceMutant = mutantList.get(i);
+			DataMutant referenceMutant = mutantList.get(i);
 			for (int j = i+1; j < mutantList.size();j++)
 			{
 				int similarities = 0;
-				dataMutant checkMutant = mutantList.get(j);
-				ArrayList<dataTest> referenceTests = referenceMutant.getTestArray();
-				ArrayList<dataTest> checkTests = referenceMutant.getTestArray();
+				DataMutant checkMutant = mutantList.get(j);
+				ArrayList<DataTest> referenceTests = referenceMutant.getTestArray();
+				ArrayList<DataTest> checkTests = referenceMutant.getTestArray();
 				
 				for (int q = 0; q < referenceTests.size();q++)
 				{
@@ -460,7 +460,7 @@ public class guiDisplayFrame extends JFrame
 		{
 			public Shape transform(DefaultMutableTreeNode _mutant)
 			{
-				dataMutant mutant = (dataMutant) _mutant;
+				DataMutant mutant = (DataMutant) _mutant;
 				double nodeSize = (1.2-mutant.getPercentKilled())*MAX_NODE_SIZE;
 				return new Ellipse2D.Double(-nodeSize/2, -nodeSize/2, nodeSize, nodeSize);
 			}
@@ -474,7 +474,7 @@ public class guiDisplayFrame extends JFrame
 		{
 			public Paint transform(DefaultMutableTreeNode mutant)
 			{
-				dataMutant workingMutant = (dataMutant) mutant;
+				DataMutant workingMutant = (DataMutant) mutant;
 				if (workingMutant.getPercentKilled() < 0.33)
 				{
 					workingMutant.setColor(Color.red);
@@ -514,7 +514,7 @@ public class guiDisplayFrame extends JFrame
 	 * packages) to the graphPane.
 	 * @param node the node to visualize
 	 */
-	private void drawAggregateGraph(packageNode node)
+	private void drawAggregateGraph(PackageNode node)
 	{
 		Graph<DefaultMutableTreeNode,String> packageGraph = new SparseMultigraph<DefaultMutableTreeNode,String>();
 		for (int i = 0; i < node.getChildCount(); i++)
@@ -530,15 +530,15 @@ public class guiDisplayFrame extends JFrame
 		{
 			public Shape transform(DefaultMutableTreeNode node)
 			{
-				if (node instanceof classNode)
+				if (node instanceof ClassNode)
 				{
-					classNode workingNode = (classNode) node;
+					ClassNode workingNode = (ClassNode) node;
 					double nodeSize = (1.2-workingNode.getAggregateData())*MAX_NODE_SIZE;
 					return new Ellipse2D.Double(-nodeSize/2, -nodeSize/2, nodeSize, nodeSize);
 				}
-				else if(node instanceof packageNode)
+				else if(node instanceof PackageNode)
 				{
-					packageNode workingNode = (packageNode) node;
+					PackageNode workingNode = (PackageNode) node;
 					double nodeSize = (1.2-workingNode.getAveragePercentKilled())*MAX_NODE_SIZE;
 					return new Rectangle2D.Double(-nodeSize/2,-nodeSize/2,nodeSize, nodeSize);
 				}
@@ -554,9 +554,9 @@ public class guiDisplayFrame extends JFrame
 		{
 			public Paint transform(DefaultMutableTreeNode node)
 			{
-				if (node instanceof classNode)
+				if (node instanceof ClassNode)
 				{
-					classNode workingNode = (classNode) node;
+					ClassNode workingNode = (ClassNode) node;
 					if (workingNode.getAggregateData() < 0.33)
 					{
 						return Color.red;
@@ -570,9 +570,9 @@ public class guiDisplayFrame extends JFrame
 						return Color.green;
 					}
 				}
-				else if (node instanceof packageNode)
+				else if (node instanceof PackageNode)
 				{
-					packageNode workingNode = (packageNode) node;
+					PackageNode workingNode = (PackageNode) node;
 					
 					if (workingNode.getAveragePercentKilled() < 0.33)
 					{
@@ -615,9 +615,9 @@ public class guiDisplayFrame extends JFrame
 	 * set with the following order: 1) Red 2) Yellow 3) Green
 	 * @param selectedNode the classNode currently being displayed
 	 */
-	public void highlightSource(classNode selectedNode)
+	public void highlightSource(ClassNode selectedNode)
 	{
-		for (dataMutant mutant: selectedNode.getMutantList())
+		for (DataMutant mutant: selectedNode.getMutantList())
 		{
 			try 
 			{

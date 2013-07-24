@@ -25,7 +25,7 @@ import javax.swing.*;
  * @author David Petras
  *
  */
-public class guiAboutDialog extends JDialog {
+public class GuiAboutDialog extends JDialog {
 	
 	//Constants
 	private static final int DIALOG_WIDTH = 400;
@@ -46,7 +46,7 @@ public class guiAboutDialog extends JDialog {
 	
 
 	
-	public guiAboutDialog(JFrame owner)
+	public GuiAboutDialog(JFrame owner)
 	{
 		super(owner,"About VisMAN");
 		initializeDialog();
@@ -88,7 +88,7 @@ public class guiAboutDialog extends JDialog {
 		
 		infoPanel.add(infoArea);
 
-		URL imageURL = guiAboutDialog.class.getResource("logo.png");
+		URL imageURL = GuiAboutDialog.class.getResource("logo.png");
 		JLabel logoLabel = new JLabel(new ImageIcon(imageURL));
 		logoLabel.setMaximumSize(new Dimension(356,110));
 		

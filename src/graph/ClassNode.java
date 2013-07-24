@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-import data.dataMutant;
+import data.DataMutant;
 
 
 /**
@@ -16,20 +16,20 @@ import data.dataMutant;
  * @author David Petras
  *
  */
-public class classNode extends DefaultMutableTreeNode {
+public class ClassNode extends DefaultMutableTreeNode {
 	
 	private File sourceFile; //The actual .java source code file.
 	private String sourceCode; //A string containing the source code for the class.
-	private ArrayList<dataMutant> mutantList;
+	private ArrayList<DataMutant> mutantList;
 	
 	/**
 	 * This method is used to construct a new instance of a class node.
 	 * @param _sourceFile
 	 */
-	public classNode(File _sourceFile)
+	public ClassNode(File _sourceFile)
 	{
 		super(_sourceFile);
-		mutantList = new ArrayList<dataMutant>();
+		mutantList = new ArrayList<DataMutant>();
 		sourceFile = _sourceFile;
 		loadSourceCode();
 	}
@@ -83,7 +83,7 @@ public class classNode extends DefaultMutableTreeNode {
 	 * This method will add a mutant to the classNode.
 	 * @param _mutant a mutated version of the class
 	 */
-	public void addMutant(dataMutant _mutant)
+	public void addMutant(DataMutant _mutant)
 	{
 		this.mutantList.add(_mutant);
 	}
@@ -92,7 +92,7 @@ public class classNode extends DefaultMutableTreeNode {
 	 * Accessor method to get the mutants associated with the class.
 	 * @return a list of mutants
 	 */
-	public ArrayList<dataMutant> getMutantList()
+	public ArrayList<DataMutant> getMutantList()
 	{
 		return this.mutantList;
 	}
@@ -105,7 +105,7 @@ public class classNode extends DefaultMutableTreeNode {
 	public double getAggregateData()
 	{
 		double mutantPercentSum = 0;
-		for (dataMutant mutant: mutantList)
+		for (DataMutant mutant: mutantList)
 		{
 			mutantPercentSum += mutant.getPercentKilled();
 		}

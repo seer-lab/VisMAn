@@ -15,14 +15,14 @@ import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
-public class dataXMLParser {
+public class DataXMLParser {
 	
-	private dataManager manager;
-	private dataMutant mutant;
-	private dataTest test;
+	private DataManager manager;
+	private DataMutant mutant;
+	private DataTest test;
 	
 	
-	public dataXMLParser(dataManager _manager)
+	public DataXMLParser(DataManager _manager)
 	{
 		manager = _manager;
 	}
@@ -45,7 +45,7 @@ public class dataXMLParser {
 					
 					if (startElement.getName().getLocalPart() == "mutant_program")
 					{
-						mutant = new dataMutant();
+						mutant = new DataMutant();
 						Iterator<Attribute> attributes = startElement.getAttributes();
 						while (attributes.hasNext())
 						{
@@ -85,7 +85,7 @@ public class dataXMLParser {
 					
 					if (startElement.getName().getLocalPart() == "test")
 					{
-						test = new dataTest();
+						test = new DataTest();
 						Iterator<Attribute> attributes = startElement.getAttributes();
 						while (attributes.hasNext())
 						{

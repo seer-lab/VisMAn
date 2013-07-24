@@ -5,7 +5,7 @@ package data;
  * @author David Petras
  *
  */
-public class dataTest {
+public class DataTest {
 
 	private String testName; //The name of the test method from the JUnit test suite
 	private String testResult; //The result from the test.
