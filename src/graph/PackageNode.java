@@ -15,6 +15,9 @@ public class PackageNode extends DefaultMutableTreeNode
 	private File directoryPath;
 	private int numberOfMutants;
 	private double averagePercentKilled;
+	private int numberOfLowDetected;
+	private int numberOfMedDetected;
+	private int numberOfHighDetected;
 	
 	/**
 	 * This is the constructor which will assign the File passed to it
@@ -76,7 +79,46 @@ public class PackageNode extends DefaultMutableTreeNode
 		this.averagePercentKilled = percentKilled;
 	}
 	
+	/**
+	 * 
+	 * @param value
+	 */
+	public void incrementLowDetected(int value)
+	{
+		numberOfLowDetected += value;
+	}
 	
+	/**
+	 * 
+	 * @param value
+	 */
+	public void incrementMedDetected(int value)
+	{
+		numberOfMedDetected += value;
+	}
 	
+	/**
+	 * 
+	 * @param value
+	 */
+	public void incrementHighDetected(int value)
+	{
+		numberOfHighDetected += value;
+	}
 	
+	public int getLowDetected()
+	{
+		return this.numberOfLowDetected;
+	}
+	
+	public int getMedDetected()
+	{
+		return this.numberOfMedDetected;
+	}
+	
+	public int getHighDetected()
+	{
+		return this.numberOfHighDetected;
+	}
+
 }

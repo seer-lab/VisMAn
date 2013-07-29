@@ -115,6 +115,11 @@ public class DataManager {
 	{
 		int numberOfMutants = 0;
 		double totalPercentKilled = 0;
+		
+		int numberOfLow = 0;
+		int numberOfMed = 0;
+		int numberOfHigh = 0;
+		
 		for (int i = 0; i < currentNode.getChildCount(); i++)
 		{
 			if (currentNode.getChildAt(i) instanceof PackageNode)
@@ -125,12 +130,22 @@ public class DataManager {
 			if (currentNode.getChildAt(i) instanceof PackageNode)
 			{
 				PackageNode node = (PackageNode) currentNode.getChildAt(i);
+				
+				numberOfLow += node.getLowDetected();
+				numberOfMed += node.getMedDetected();
+				numberOfHigh += node.getHighDetected();
+				
 				numberOfMutants += node.getNumberOfMutants();
 				totalPercentKilled += node.getAveragePercentKilled();
 			}
 			else if (currentNode.getChildAt(i) instanceof ClassNode)
 			{
 				ClassNode node = (ClassNode) currentNode.getChildAt(i);
+				
+				numberOfLow += node.getLowDetected();
+				numberOfMed += node.getMedDetected();
+				numberOfHigh += node.getHighDetected();
+				
 				numberOfMutants += node.getNumberOfMutants();
 				totalPercentKilled += node.getAggregateData();
 			}
@@ -139,6 +154,9 @@ public class DataManager {
 		double averagePercentKilled = totalPercentKilled/currentNode.getChildCount();
 		activeNode.setNumberOfMutants(numberOfMutants);
 		activeNode.setAveragePercentKilled(averagePercentKilled);
+		activeNode.incrementLowDetected(numberOfLow);
+		activeNode.incrementMedDetected(numberOfMed);
+		activeNode.incrementHighDetected(numberOfHigh);
 		
 	}
 

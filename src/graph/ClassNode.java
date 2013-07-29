@@ -121,4 +121,55 @@ public class ClassNode extends DefaultMutableTreeNode {
 	{
 		return this.mutantList.size();
 	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int getLowDetected()
+	{
+		int numberOfLow = 0;
+		for (DataMutant mutant: mutantList)
+		{
+			if (mutant.getPercentKilled() <= 0.33)
+			{
+				numberOfLow++;
+			}
+		}
+		return numberOfLow;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int getMedDetected()
+	{
+		int numberOfMed = 0;
+		for (DataMutant mutant: mutantList)
+		{
+			if (mutant.getPercentKilled() > 0.33 && mutant.getPercentKilled() <= 0.66)
+			{
+				numberOfMed++;
+			}
+		}
+		return numberOfMed;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int getHighDetected()
+	{
+		int numberOfHigh = 0;
+		for (DataMutant mutant: mutantList)
+		{
+			if (mutant.getPercentKilled() > 0.66)
+			{
+				numberOfHigh++;
+			}
+		}
+		return numberOfHigh;
+	}
 }

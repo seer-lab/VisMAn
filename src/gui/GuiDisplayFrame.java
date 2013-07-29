@@ -53,6 +53,7 @@ import edu.uci.ics.jung.visualization.control.DefaultModalGraphMouse;
 import edu.uci.ics.jung.visualization.control.ModalGraphMouse;
 import edu.uci.ics.jung.visualization.control.ScalingControl;
 import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
+import edu.uci.ics.jung.visualization.renderers.Renderer.VertexLabel.Position;
 
 
 /**
@@ -357,13 +358,14 @@ public class GuiDisplayFrame extends JFrame
 		
 		javaScanner = new JavaScanner();
 		highlighter = new SyntaxHighlighter(10,200,javaScanner);
+		highlighter.setEditable(false);
 		
 		//sourcePane.setViewportView(sourceArea);
 		sourcePane.setViewportView(highlighter);
 		verticalSplit = new JSplitPane(JSplitPane.VERTICAL_SPLIT,treePane,sourcePane);
 		verticalSplit.setDividerLocation(250);
 		horizontalSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,verticalSplit,rightPane);
-		horizontalSplit.setDividerLocation(400);
+		horizontalSplit.setDividerLocation(450);
 		this.getContentPane().add(horizontalSplit);
 		
 		graphMouse = new DefaultModalGraphMouse();
@@ -518,7 +520,9 @@ public class GuiDisplayFrame extends JFrame
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
 		viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
+		
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
+		viewer.getRenderer().getVertexLabelRenderer().setPosition(Position.CNTR);
 		
         viewer.setGraphMouse(graphMouse);
 		
@@ -618,7 +622,22 @@ public class GuiDisplayFrame extends JFrame
 			@Override
 			public Icon transform(DefaultMutableTreeNode node)
 			{
-				return new PieChartIcon(0.25,0.25,0.5);
+				if (node instanceof ClassNode)
+				{
+					ClassNode workingNode = (ClassNode) node;
+					double totalMutants = workingNode.getLowDetected() + workingNode.getMedDetected() + workingNode.getHighDetected();
+					return new PieChartIcon(workingNode.getLowDetected()/totalMutants, workingNode.getMedDetected()/totalMutants, workingNode.getHighDetected()/totalMutants);
+					
+				}
+				else if (node instanceof PackageNode)
+				{
+					PackageNode workingNode = (PackageNode) node;
+					double totalMutants = workingNode.getLowDetected() + workingNode.getMedDetected() + workingNode.getHighDetected();
+					return new PieChartIcon(workingNode.getLowDetected()/totalMutants, workingNode.getMedDetected()/totalMutants, workingNode.getHighDetected()/totalMutants);
+					
+				}
+				
+				return null;
 			}
 			
 		};
@@ -630,7 +649,9 @@ public class GuiDisplayFrame extends JFrame
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
 		viewer.getRenderContext().setVertexIconTransformer(barIcon);
 		//viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
+		
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
+		viewer.getRenderer().getVertexLabelRenderer().setPosition(Position.S);
 		
         viewer.setGraphMouse(graphMouse);
 		
