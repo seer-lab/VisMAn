@@ -1,18 +1,21 @@
 package gui;
 
 import graph.ClassNode;
+import graph.GraphEdge;
 import graph.PackageNode;
 import graph.PieChartIcon;
 import highlight.JavaScanner;
 import highlight.Scanner;
 import highlight.SyntaxHighlighter;
 
+import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GradientPaint;
 import java.awt.Paint;
 import java.awt.Shape;
+import java.awt.Stroke;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Ellipse2D;
@@ -121,6 +124,8 @@ public class GuiDisplayFrame extends JFrame
 	private SyntaxHighlighter highlighter;
 	
 	private Scanner javaScanner;
+	
+	private ArrayList<GraphEdge> edgeList;
 	
 	
 	//Other entities.
@@ -433,6 +438,8 @@ public class GuiDisplayFrame extends JFrame
 	{
 		//Create a new graph.
 		Graph<DefaultMutableTreeNode, String> classGraph = new SparseMultigraph<DefaultMutableTreeNode, String>();
+		//Create a new edge list.
+		edgeList = new ArrayList<GraphEdge>();
 		//Add all of the mutants of the class to the graph as vertices (nodes).
 		for (DataMutant mutant:node.getMutantList())
 		{
@@ -468,6 +475,8 @@ public class GuiDisplayFrame extends JFrame
 				
 				if (similarities > 0)
 				{
+					GraphEdge edge = new GraphEdge(referenceMutant, checkMutant, similarities);
+					edgeList.add(edge);
 					classGraph.addEdge(referenceMutant.getName()+" to "+checkMutant.getName(),referenceMutant,checkMutant);
 				}
 			}
@@ -514,13 +523,30 @@ public class GuiDisplayFrame extends JFrame
 			}
 		};
 		
+		Transformer<String,Stroke> edgeThickness = new Transformer<String,Stroke>()
+		{
+
+			@Override
+			public Stroke transform(String edgeName) {
+				for (GraphEdge edge: edgeList)
+				{
+					if (edge.toString().equals(edgeName))
+					{
+						return new BasicStroke(edge.getSimilarity());
+					}
+				}
+				return null;
+			}
+			
+		};
+		
 		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(classGraph);
 		layout.setSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
 		viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
-		
+		viewer.getRenderContext().setEdgeStrokeTransformer(edgeThickness);
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		viewer.getRenderer().getVertexLabelRenderer().setPosition(Position.CNTR);
 		
@@ -659,34 +685,5 @@ public class GuiDisplayFrame extends JFrame
 		graphPane.add(viewer);
 		graphPane.revalidate();
 		graphPane.repaint();
-	}
-	
-	/**
-	 * This method will highlight the lines of the source code associated with
-	 * each mutant.  If multiple mutants modify the same line, the color will be
-	 * set with the following order: 1) Red 2) Yellow 3) Green
-	 * @param selectedNode the classNode currently being displayed
-	 */
-	public void highlightSource(ClassNode selectedNode)
-	{
-		/* Due to the fact that MuJava modifies the source code by adding additional
-		 * comments, there is not a 1-1 correlation between the line-numbers provided
-		 * by the mutant programs the original source code.  For each mutant, the 
-		 */
-		for (DataMutant mutant: selectedNode.getMutantList())
-		{
-			try 
-			{
-				int startChar = sourceArea.getLineStartOffset(mutant.getLine());
-				int endChar = sourceArea.getLineEndOffset(mutant.getLine());
-				Highlighter.HighlightPainter highlighter = new DefaultHighlighter.DefaultHighlightPainter(mutant.getColor());
-				sourceArea.getHighlighter().addHighlight(startChar, endChar, highlighter);
-				sourceArea.repaint();
-			} catch (BadLocationException e) 
-			{
-				e.printStackTrace();
-			}
-			
-		}
 	}
 }

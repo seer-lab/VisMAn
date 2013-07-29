@@ -40,6 +40,7 @@ public class PieChartIcon implements Icon {
 		g2d.fill(new Rectangle2D.Double(x,y,sideLength,sideLength*percentGreen));
 		
 		g2d.setColor(Color.black);
+		g2d.setStroke(new BasicStroke(2));
 		g2d.draw(new Rectangle2D.Double(x,y,sideLength,sideLength));
 		
 	}
