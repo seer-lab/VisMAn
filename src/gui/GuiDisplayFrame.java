@@ -2,6 +2,10 @@ package gui;
 
 import graph.ClassNode;
 import graph.PackageNode;
+import graph.PieChartIcon;
+import highlight.JavaScanner;
+import highlight.Scanner;
+import highlight.SyntaxHighlighter;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -112,6 +116,10 @@ public class GuiDisplayFrame extends JFrame
 	private VisualizationViewer<DefaultMutableTreeNode,String> viewer;
 	
 	private DefaultModalGraphMouse graphMouse;
+	
+	private SyntaxHighlighter highlighter;
+	
+	private Scanner javaScanner;
 	
 	
 	//Other entities.
@@ -314,8 +322,9 @@ public class GuiDisplayFrame extends JFrame
 						TreePath path = new TreePath(selectedNode.getPath());
 						sourceTree.setExpandsSelectedPaths(true);
 						sourceTree.setSelectionPath(path);
-						sourceArea.setText(selectedNode.getSource());
-						highlightSource(selectedNode);
+						//sourceArea.setText(selectedNode.getSource());
+						highlighter.setText(selectedNode.getSource());
+						//highlightSource(selectedNode);
 						drawClassGraph(selectedNode);
 					}
 					else if (pickedNodes.toArray()[0] instanceof PackageNode)
@@ -324,7 +333,8 @@ public class GuiDisplayFrame extends JFrame
 						TreePath path = new TreePath(selectedNode.getPath());
 						sourceTree.setExpandsSelectedPaths(true);
 						sourceTree.setSelectionPath(path);
-						sourceArea.setText("");
+						//sourceArea.setText("");
+						highlighter.setText("");
 						drawAggregateGraph(selectedNode);
 					}
 				}
@@ -342,9 +352,14 @@ public class GuiDisplayFrame extends JFrame
 		rightPane.setLayout(new BorderLayout());
 		rightPane.add(graphPane,BorderLayout.CENTER);
 		rightPane.add(controlPane,BorderLayout.SOUTH);
-		sourceArea = new JTextArea();
-		sourceArea.setEditable(false);
-		sourcePane.setViewportView(sourceArea);
+		//sourceArea = new JTextArea();
+		//sourceArea.setEditable(false);
+		
+		javaScanner = new JavaScanner();
+		highlighter = new SyntaxHighlighter(10,200,javaScanner);
+		
+		//sourcePane.setViewportView(sourceArea);
+		sourcePane.setViewportView(highlighter);
 		verticalSplit = new JSplitPane(JSplitPane.VERTICAL_SPLIT,treePane,sourcePane);
 		verticalSplit.setDividerLocation(250);
 		horizontalSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,verticalSplit,rightPane);
@@ -369,14 +384,16 @@ public class GuiDisplayFrame extends JFrame
 				if(sourceTree.getLastSelectedPathComponent() instanceof ClassNode)
 				{
 					ClassNode selectedNode = (ClassNode) sourceTree.getLastSelectedPathComponent();
-					sourceArea.setText(selectedNode.getSource());
-					highlightSource(selectedNode);
+					//sourceArea.setText(selectedNode.getSource());
+					highlighter.setText(selectedNode.getSource());
+					//highlightSource(selectedNode);
 					drawClassGraph(selectedNode);
 				}
 				else if (sourceTree.getLastSelectedPathComponent() instanceof PackageNode)
 				{
 					PackageNode selectedNode = (PackageNode) sourceTree.getLastSelectedPathComponent();
-					sourceArea.setText("");
+					//sourceArea.setText("");
+					highlighter.setText("");
 					drawAggregateGraph(selectedNode);
 				}
 			}
@@ -417,6 +434,8 @@ public class GuiDisplayFrame extends JFrame
 		//Add all of the mutants of the class to the graph as vertices (nodes).
 		for (DataMutant mutant:node.getMutantList())
 		{
+			System.out.println(mutant.getName());
+			System.out.println(mutant.getModifiedSource());
 			classGraph.addVertex(mutant);
 		}
 		
@@ -593,12 +612,24 @@ public class GuiDisplayFrame extends JFrame
 			}
 		};
 		
+		Transformer<DefaultMutableTreeNode,Icon> barIcon = new Transformer<DefaultMutableTreeNode,Icon>()
+		{
+
+			@Override
+			public Icon transform(DefaultMutableTreeNode node)
+			{
+				return new PieChartIcon(0.25,0.25,0.5);
+			}
+			
+		};
+		
 		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(packageGraph);
 		layout.setSize(new Dimension(300,300));
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
-		viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
+		viewer.getRenderContext().setVertexIconTransformer(barIcon);
+		//viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		
         viewer.setGraphMouse(graphMouse);
@@ -617,6 +648,10 @@ public class GuiDisplayFrame extends JFrame
 	 */
 	public void highlightSource(ClassNode selectedNode)
 	{
+		/* Due to the fact that MuJava modifies the source code by adding additional
+		 * comments, there is not a 1-1 correlation between the line-numbers provided
+		 * by the mutant programs the original source code.  For each mutant, the 
+		 */
 		for (DataMutant mutant: selectedNode.getMutantList())
 		{
 			try 

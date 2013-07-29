@@ -81,6 +81,9 @@ public class DataXMLParser {
 							}
 						}
 						
+						event = eventReader.nextEvent();
+						mutant.setModifiedSource(event.asCharacters().getData());
+						
 					}
 					
 					if (startElement.getName().getLocalPart() == "test")
