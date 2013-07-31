@@ -25,6 +25,7 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.net.URI;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -48,6 +49,7 @@ import data.DataTest;
 import data.DataXMLParser;
 import edu.uci.ics.jung.algorithms.layout.CircleLayout;
 import edu.uci.ics.jung.algorithms.layout.FRLayout;
+import edu.uci.ics.jung.algorithms.layout.ISOMLayout;
 import edu.uci.ics.jung.algorithms.layout.KKLayout;
 import edu.uci.ics.jung.algorithms.layout.Layout;
 import edu.uci.ics.jung.graph.Graph;
@@ -238,8 +240,8 @@ public class GuiDisplayFrame extends JFrame
 		 */
 		
 		//Create the Options menu and add it to the menu bar.
-		optionsMenu = new JMenu("Options");
-		menuBarTop.add(optionsMenu);
+		//optionsMenu = new JMenu("Options");
+		//menuBarTop.add(optionsMenu);
 		
 		/*
 		 * The Help menu presents the following options:
@@ -336,6 +338,7 @@ public class GuiDisplayFrame extends JFrame
 						sourceTree.setExpandsSelectedPaths(true);
 						sourceTree.setSelectionPath(path);
 						highlighter.setText(selectedNode.getSource());
+						highlighter.setCaretPosition(0);
 						drawClassGraph(selectedNode);
 					}
 					else if (pickedNodes.toArray()[0] instanceof PackageNode)
@@ -390,7 +393,8 @@ public class GuiDisplayFrame extends JFrame
 	 */
 	private void createSourceTree(File root)
 	{
-		manager = new DataManager(root);
+		File rootSource = new File(root.getAbsolutePath()+"/original");
+		manager = new DataManager(rootSource);
 		sourceTree = manager.getFileTree();
 		//Add the action listener to detect when the user clicks on an element in the hierarchy.
 		sourceTree.addTreeSelectionListener(new TreeSelectionListener(){
@@ -400,6 +404,7 @@ public class GuiDisplayFrame extends JFrame
 					ClassNode selectedNode = (ClassNode) sourceTree.getLastSelectedPathComponent();
 					//sourceArea.setText(selectedNode.getSource());
 					highlighter.setText(selectedNode.getSource());
+					highlighter.setCaretPosition(0);
 					//highlightSource(selectedNode);
 					drawClassGraph(selectedNode);
 				}
@@ -602,7 +607,7 @@ public class GuiDisplayFrame extends JFrame
 			
 		};
 		
-		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout<DefaultMutableTreeNode, String>(packageGraph);
+		Layout<DefaultMutableTreeNode, String> layout = new ISOMLayout<DefaultMutableTreeNode, String>(packageGraph);
 		layout.setSize(new Dimension(300,300));
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
@@ -626,6 +631,7 @@ public class GuiDisplayFrame extends JFrame
 	public void displayAggregateInfo(DefaultMutableTreeNode selectedNode)
 	{
 		String informationText = "";
+		DecimalFormat formatter = new DecimalFormat("0.000");
 		for (int i = 0; i < selectedNode.getChildCount(); i++)
 		{
 			DefaultMutableTreeNode workingNode = (DefaultMutableTreeNode) selectedNode.getChildAt(i);
@@ -633,34 +639,36 @@ public class GuiDisplayFrame extends JFrame
 			{
 				ClassNode classNode = (ClassNode) workingNode;
 				informationText += "Class: " + classNode.toString() + "\n";
-				informationText += "Total Mutants: " + classNode.getNumberOfMutants() + "\n";
-				informationText += "Low Detection Mutants:\t" + classNode.getLowDetected() + "\n";
-				informationText += "Medium Detection Mutants:\t" + classNode.getMedDetected() + "\n";
-				informationText += "High Detection Mutants:\t" + classNode.getHighDetected() + "\n";
-				informationText += "Average Detection Percentage:\t" + classNode.getAggregateData() + "\n";
+				informationText += "Total Mutants:\t\t\t" + classNode.getNumberOfMutants() + "\n";
+				informationText += "Low Detection Mutants:\t\t" + classNode.getLowDetected() + "\n";
+				informationText += "Medium Detection Mutants:\t\t" + classNode.getMedDetected() + "\n";
+				informationText += "High Detection Mutants:\t\t" + classNode.getHighDetected() + "\n";
+				informationText += "Average Detection Percentage:\t" + formatter.format(classNode.getAggregateData()) + "\n";
 				informationText += "---------------------------------\n";
 			}
 			else if (workingNode instanceof PackageNode)
 			{
 				PackageNode packageNode = (PackageNode) workingNode;
 				informationText += "Package: " + packageNode.toString() + "\n";
-				informationText += "Total Mutants: " + packageNode.getNumberOfMutants() + "\n";
-				informationText += "Low Detection Mutants:\t" + packageNode.getLowDetected() + "\n";
-				informationText += "Medium Detection Mutants:\t" + packageNode.getMedDetected() + "\n";
-				informationText += "High Detection Mutants:\t" + packageNode.getHighDetected() + "\n";
-				informationText += "Average Detection Percentage:\t" + packageNode.getAveragePercentKilled() + "\n";
+				informationText += "Total Mutants:\t\t\t" + packageNode.getNumberOfMutants() + "\n";
+				informationText += "Low Detection Mutants:\t\t" + packageNode.getLowDetected() + "\n";
+				informationText += "Medium Detection Mutants:\t\t" + packageNode.getMedDetected() + "\n";
+				informationText += "High Detection Mutants:\t\t" + packageNode.getHighDetected() + "\n";
+				informationText += "Average Detection Percentage:\t" + formatter.format(packageNode.getAveragePercentKilled()) + "\n";
 				informationText += "---------------------------------\n";
 			}
 		}
 		highlighter.setText(informationText);
+		highlighter.setCaretPosition(0);
 	}
 	
 	/**
-	 * 
+	 * This method will display the 
 	 * @param node
 	 */
 	public void displayMutantSource(DataMutant node)
 	{
-		highlighter.setText(node.getModifiedSource());
+		highlighter.setText("//"+node.getName()+"\n"+node.getModifiedSource());
+		highlighter.setCaretPosition(0);
 	}
 }

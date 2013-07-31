@@ -69,9 +69,9 @@ public class DataManager {
 	{
 		String selectedPath = selectedDirectory.getAbsolutePath();
 		
-		File originalDirectory = new File(selectedPath+"/original");
+		File originalDirectory = new File(selectedPath);
 		
-		rootNode = new DefaultMutableTreeNode("root");
+		rootNode = new DefaultMutableTreeNode("Program");
 		fileHierarchy = new JTree(rootNode);
 		getFiles(rootNode,originalDirectory);
 	}
