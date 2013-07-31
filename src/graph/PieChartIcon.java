@@ -17,13 +17,16 @@ public class PieChartIcon implements Icon {
 	private double percentYellow;
 	private double percentGreen;
 	
-	private static final int sideLength = 60;
+	private static final int maxSize = 60;
 	
-	public PieChartIcon(double _percentRed, double _percentYellow, double _percentGreen)
+	private int sideLength;
+	
+	public PieChartIcon(double _percentRed, double _percentYellow, double _percentGreen, double averageKilled)
 	{
 		this.percentRed = _percentRed;
 		this.percentYellow = _percentYellow;
 		this.percentGreen = _percentGreen;
+		this.sideLength = (int) ((1.2 - averageKilled) * maxSize);
 	}
 	
 	@Override

@@ -12,12 +12,15 @@ import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GradientPaint;
 import java.awt.Paint;
 import java.awt.Shape;
 import java.awt.Stroke;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 import java.io.File;
@@ -56,6 +59,8 @@ import edu.uci.ics.jung.visualization.control.DefaultModalGraphMouse;
 import edu.uci.ics.jung.visualization.control.ModalGraphMouse;
 import edu.uci.ics.jung.visualization.control.ScalingControl;
 import edu.uci.ics.jung.visualization.decorators.ToStringLabeller;
+import edu.uci.ics.jung.visualization.picking.LayoutLensShapePickSupport;
+import edu.uci.ics.jung.visualization.picking.PickedState;
 import edu.uci.ics.jung.visualization.renderers.Renderer.VertexLabel.Position;
 
 
@@ -126,6 +131,8 @@ public class GuiDisplayFrame extends JFrame
 	private Scanner javaScanner;
 	
 	private ArrayList<GraphEdge> edgeList;
+	
+	private JPopupMenu popup;
 	
 	
 	//Other entities.
@@ -234,8 +241,6 @@ public class GuiDisplayFrame extends JFrame
 		optionsMenu = new JMenu("Options");
 		menuBarTop.add(optionsMenu);
 		
-		//TODO complete the options menu
-		
 		/*
 		 * The Help menu presents the following options:
 		 * 	VisMAN Help - load an operations manual for the program
@@ -314,7 +319,9 @@ public class GuiDisplayFrame extends JFrame
 				ScalingControl scaler = new CrossoverScalingControl();
 				scaler.scale(viewer, (1 / 1.1f), viewer.getCenter());
 			}
-		});	
+		});
+		
+		
 		enterPicked = new JButton("Enter Picked");
 		enterPicked.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event)
@@ -328,9 +335,7 @@ public class GuiDisplayFrame extends JFrame
 						TreePath path = new TreePath(selectedNode.getPath());
 						sourceTree.setExpandsSelectedPaths(true);
 						sourceTree.setSelectionPath(path);
-						//sourceArea.setText(selectedNode.getSource());
 						highlighter.setText(selectedNode.getSource());
-						//highlightSource(selectedNode);
 						drawClassGraph(selectedNode);
 					}
 					else if (pickedNodes.toArray()[0] instanceof PackageNode)
@@ -339,15 +344,19 @@ public class GuiDisplayFrame extends JFrame
 						TreePath path = new TreePath(selectedNode.getPath());
 						sourceTree.setExpandsSelectedPaths(true);
 						sourceTree.setSelectionPath(path);
-						//sourceArea.setText("");
-						highlighter.setText("");
+						//TODO Decide what needs to be displayed when an aggregated graph is displayed.
+						displayAggregateInfo(selectedNode);
 						drawAggregateGraph(selectedNode);
+					}
+					else if (pickedNodes.toArray()[0] instanceof DataMutant)
+					{
+						DataMutant selectedNode = (DataMutant) pickedNodes.toArray()[0];
+						displayMutantSource(selectedNode);
 					}
 				}
 				//OTHERWISE DO NOTHING
 			}
 		});
-		
 		controlPane.add(enterPicked);
 		controlPane.add(pickButton);
 		controlPane.add(translateButton);
@@ -358,14 +367,12 @@ public class GuiDisplayFrame extends JFrame
 		rightPane.setLayout(new BorderLayout());
 		rightPane.add(graphPane,BorderLayout.CENTER);
 		rightPane.add(controlPane,BorderLayout.SOUTH);
-		//sourceArea = new JTextArea();
-		//sourceArea.setEditable(false);
 		
 		javaScanner = new JavaScanner();
 		highlighter = new SyntaxHighlighter(10,200,javaScanner);
 		highlighter.setEditable(false);
 		
-		//sourcePane.setViewportView(sourceArea);
+		sourcePane.setViewportView(new JLabel("Original Source Code"));
 		sourcePane.setViewportView(highlighter);
 		verticalSplit = new JSplitPane(JSplitPane.VERTICAL_SPLIT,treePane,sourcePane);
 		verticalSplit.setDividerLocation(250);
@@ -400,7 +407,7 @@ public class GuiDisplayFrame extends JFrame
 				{
 					PackageNode selectedNode = (PackageNode) sourceTree.getLastSelectedPathComponent();
 					//sourceArea.setText("");
-					highlighter.setText("");
+					displayAggregateInfo(selectedNode);
 					drawAggregateGraph(selectedNode);
 				}
 			}
@@ -443,8 +450,6 @@ public class GuiDisplayFrame extends JFrame
 		//Add all of the mutants of the class to the graph as vertices (nodes).
 		for (DataMutant mutant:node.getMutantList())
 		{
-			System.out.println(mutant.getName());
-			System.out.println(mutant.getModifiedSource());
 			classGraph.addVertex(mutant);
 		}
 		
@@ -540,7 +545,7 @@ public class GuiDisplayFrame extends JFrame
 			
 		};
 		
-		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(classGraph);
+		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout<DefaultMutableTreeNode, String>(classGraph);
 		layout.setSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
@@ -570,78 +575,7 @@ public class GuiDisplayFrame extends JFrame
 		{
 			packageGraph.addVertex((DefaultMutableTreeNode) node.getChildAt(i));
 		}
-		
-		/* This transformer will change the size of the aggregate node based upon the percentage of test cases that are able
-		 * to kill the mutants within.  It is an inverse relationship meaning that the fewer test cases that kill a mutant, the larger the
-		 * node is rendered.
-		 */
-		Transformer<DefaultMutableTreeNode,Shape> vertexSize = new Transformer<DefaultMutableTreeNode,Shape>()
-		{
-			public Shape transform(DefaultMutableTreeNode node)
-			{
-				if (node instanceof ClassNode)
-				{
-					ClassNode workingNode = (ClassNode) node;
-					double nodeSize = (1.2-workingNode.getAggregateData())*MAX_NODE_SIZE;
-					return new Ellipse2D.Double(-nodeSize/2, -nodeSize/2, nodeSize, nodeSize);
-				}
-				else if(node instanceof PackageNode)
-				{
-					PackageNode workingNode = (PackageNode) node;
-					double nodeSize = (1.2-workingNode.getAveragePercentKilled())*MAX_NODE_SIZE;
-					return new Rectangle2D.Double(-nodeSize/2,-nodeSize/2,nodeSize, nodeSize);
-				}
-				return null;
-			}
-		};
-		
-		/* This transformer will change the colour of the aggregaet node based upon the percentage of test cases that are
-		 * able to kill the mutants within it.  Green means that more than 66% of the test cases were able to kill it, yellow means 33%-66%
-		 * and red means less than 33%.
-		 */
-		Transformer<DefaultMutableTreeNode,Paint> threeColour = new Transformer<DefaultMutableTreeNode,Paint>()
-		{
-			public Paint transform(DefaultMutableTreeNode node)
-			{
-				if (node instanceof ClassNode)
-				{
-					ClassNode workingNode = (ClassNode) node;
-					if (workingNode.getAggregateData() < 0.33)
-					{
-						return Color.red;
-					}
-					else if (workingNode.getAggregateData() < 0.66)
-					{
-						return Color.yellow;
-					}
-					else
-					{
-						return Color.green;
-					}
-				}
-				else if (node instanceof PackageNode)
-				{
-					PackageNode workingNode = (PackageNode) node;
-					
-					if (workingNode.getAveragePercentKilled() < 0.33)
-					{
-						return Color.red;
-					}
-					else if (workingNode.getAveragePercentKilled() < 0.66)
-					{
-						return Color.yellow;
-					}
-					else
-					{
-						return Color.green;
-					}
-								
-				}
 
-				return null;
-			}
-		};
-		
 		Transformer<DefaultMutableTreeNode,Icon> barIcon = new Transformer<DefaultMutableTreeNode,Icon>()
 		{
 
@@ -652,14 +586,14 @@ public class GuiDisplayFrame extends JFrame
 				{
 					ClassNode workingNode = (ClassNode) node;
 					double totalMutants = workingNode.getLowDetected() + workingNode.getMedDetected() + workingNode.getHighDetected();
-					return new PieChartIcon(workingNode.getLowDetected()/totalMutants, workingNode.getMedDetected()/totalMutants, workingNode.getHighDetected()/totalMutants);
+					return new PieChartIcon(workingNode.getLowDetected()/totalMutants, workingNode.getMedDetected()/totalMutants, workingNode.getHighDetected()/totalMutants, workingNode.getAggregateData());
 					
 				}
 				else if (node instanceof PackageNode)
 				{
 					PackageNode workingNode = (PackageNode) node;
 					double totalMutants = workingNode.getLowDetected() + workingNode.getMedDetected() + workingNode.getHighDetected();
-					return new PieChartIcon(workingNode.getLowDetected()/totalMutants, workingNode.getMedDetected()/totalMutants, workingNode.getHighDetected()/totalMutants);
+					return new PieChartIcon(workingNode.getLowDetected()/totalMutants, workingNode.getMedDetected()/totalMutants, workingNode.getHighDetected()/totalMutants, workingNode.getAveragePercentKilled());
 					
 				}
 				
@@ -668,14 +602,11 @@ public class GuiDisplayFrame extends JFrame
 			
 		};
 		
-		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout(packageGraph);
+		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout<DefaultMutableTreeNode, String>(packageGraph);
 		layout.setSize(new Dimension(300,300));
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
-		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
-		viewer.getRenderContext().setVertexIconTransformer(barIcon);
-		//viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
-		
+		viewer.getRenderContext().setVertexIconTransformer(barIcon);	
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		viewer.getRenderer().getVertexLabelRenderer().setPosition(Position.S);
 		
@@ -685,5 +616,51 @@ public class GuiDisplayFrame extends JFrame
 		graphPane.add(viewer);
 		graphPane.revalidate();
 		graphPane.repaint();
+	}
+	
+	/**
+	 * This method will display the general information from each aggregated class/package in the text area
+	 * below the file hierarchy.
+	 * @param selectedNode the current node that is being viewed
+	 */
+	public void displayAggregateInfo(DefaultMutableTreeNode selectedNode)
+	{
+		String informationText = "";
+		for (int i = 0; i < selectedNode.getChildCount(); i++)
+		{
+			DefaultMutableTreeNode workingNode = (DefaultMutableTreeNode) selectedNode.getChildAt(i);
+			if (workingNode instanceof ClassNode)
+			{
+				ClassNode classNode = (ClassNode) workingNode;
+				informationText += "Class: " + classNode.toString() + "\n";
+				informationText += "Total Mutants: " + classNode.getNumberOfMutants() + "\n";
+				informationText += "Low Detection Mutants:\t" + classNode.getLowDetected() + "\n";
+				informationText += "Medium Detection Mutants:\t" + classNode.getMedDetected() + "\n";
+				informationText += "High Detection Mutants:\t" + classNode.getHighDetected() + "\n";
+				informationText += "Average Detection Percentage:\t" + classNode.getAggregateData() + "\n";
+				informationText += "---------------------------------\n";
+			}
+			else if (workingNode instanceof PackageNode)
+			{
+				PackageNode packageNode = (PackageNode) workingNode;
+				informationText += "Package: " + packageNode.toString() + "\n";
+				informationText += "Total Mutants: " + packageNode.getNumberOfMutants() + "\n";
+				informationText += "Low Detection Mutants:\t" + packageNode.getLowDetected() + "\n";
+				informationText += "Medium Detection Mutants:\t" + packageNode.getMedDetected() + "\n";
+				informationText += "High Detection Mutants:\t" + packageNode.getHighDetected() + "\n";
+				informationText += "Average Detection Percentage:\t" + packageNode.getAveragePercentKilled() + "\n";
+				informationText += "---------------------------------\n";
+			}
+		}
+		highlighter.setText(informationText);
+	}
+	
+	/**
+	 * 
+	 * @param node
+	 */
+	public void displayMutantSource(DataMutant node)
+	{
+		highlighter.setText(node.getModifiedSource());
 	}
 }
