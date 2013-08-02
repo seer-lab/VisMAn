@@ -698,6 +698,7 @@ public class GuiDisplayFrame extends JFrame
 		sourceHighlighter.setCaretPosition(0);
 		mutantHighlighter.setText("");
 		tabbedPane.setTitleAt(0, "Aggregate Data");
+		tabbedPane.setEnabledAt(1,false);
 	}
 	
 	/**
@@ -706,6 +707,7 @@ public class GuiDisplayFrame extends JFrame
 	 */
 	public void displayMutantSource(DataMutant node)
 	{
+		tabbedPane.setEnabledAt(1,true);
 		mutantHighlighter.setText("//"+node.getName()+"\n"+node.getModifiedSource());
 		mutantHighlighter.setCaretPosition(0);
 		mutantHighlighter.repaint();
