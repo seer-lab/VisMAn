@@ -26,7 +26,7 @@ public class PieChartIcon implements Icon {
 		this.percentRed = _percentRed;
 		this.percentYellow = _percentYellow;
 		this.percentGreen = _percentGreen;
-		this.sideLength = (int) ((1.2 - averageKilled) * maxSize);
+		this.sideLength = maxSize;
 	}
 	
 	@Override

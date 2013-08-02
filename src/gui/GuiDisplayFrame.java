@@ -111,6 +111,7 @@ public class GuiDisplayFrame extends JFrame
 	private JSplitPane horizontalSplit;
 	private JScrollPane treePane;
 	private JScrollPane sourcePane;
+	private JScrollPane mutantPane;
 	private JPanel graphPane;
 	private JPanel rightPane;
 	
@@ -122,19 +123,19 @@ public class GuiDisplayFrame extends JFrame
 	private JRadioButton pickButton;
 	private JRadioButton translateButton;
 	
-	private JTextArea sourceArea;
-	
 	private VisualizationViewer<DefaultMutableTreeNode,String> viewer;
 	
 	private DefaultModalGraphMouse graphMouse;
 	
-	private SyntaxHighlighter highlighter;
+	private SyntaxHighlighter sourceHighlighter;
+	private SyntaxHighlighter mutantHighlighter;
 	
-	private Scanner javaScanner;
+	private Scanner sourceScanner;
+	private Scanner mutantScanner;
 	
 	private ArrayList<GraphEdge> edgeList;
 	
-	private JPopupMenu popup;
+	private JTabbedPane tabbedPane;
 	
 	
 	//Other entities.
@@ -283,9 +284,11 @@ public class GuiDisplayFrame extends JFrame
 	{
 		treePane = new JScrollPane();
 		sourcePane = new JScrollPane();
+		mutantPane = new JScrollPane();
 		graphPane = new JPanel();
 		controlPane = new JPanel();
 		rightPane = new JPanel();
+		tabbedPane = new JTabbedPane();
 		
 		selectionOptions = new ButtonGroup();
 		pickButton = new JRadioButton("Pick");
@@ -337,8 +340,9 @@ public class GuiDisplayFrame extends JFrame
 						TreePath path = new TreePath(selectedNode.getPath());
 						sourceTree.setExpandsSelectedPaths(true);
 						sourceTree.setSelectionPath(path);
-						highlighter.setText(selectedNode.getSource());
-						highlighter.setCaretPosition(0);
+						sourceHighlighter.setText(selectedNode.getSource());
+						sourceHighlighter.setCaretPosition(0);
+						tabbedPane.setTitleAt(0, "Source Code");
 						drawClassGraph(selectedNode);
 					}
 					else if (pickedNodes.toArray()[0] instanceof PackageNode)
@@ -371,20 +375,29 @@ public class GuiDisplayFrame extends JFrame
 		rightPane.add(graphPane,BorderLayout.CENTER);
 		rightPane.add(controlPane,BorderLayout.SOUTH);
 		
-		javaScanner = new JavaScanner();
-		highlighter = new SyntaxHighlighter(10,200,javaScanner);
-		highlighter.setEditable(false);
+		sourceScanner = new JavaScanner();
+		sourceHighlighter = new SyntaxHighlighter(10,200,sourceScanner);
+		sourceHighlighter.setEditable(false);
 		
-		sourcePane.setViewportView(new JLabel("Original Source Code"));
-		sourcePane.setViewportView(highlighter);
-		verticalSplit = new JSplitPane(JSplitPane.VERTICAL_SPLIT,treePane,sourcePane);
+		mutantScanner = new JavaScanner();
+		mutantHighlighter = new SyntaxHighlighter(10,200,mutantScanner);
+		mutantHighlighter.setEditable(false);
+		
+		sourcePane.setViewportView(sourceHighlighter);
+		mutantPane.setViewportView(mutantHighlighter);
+		verticalSplit = new JSplitPane(JSplitPane.VERTICAL_SPLIT,treePane,tabbedPane);
 		verticalSplit.setDividerLocation(250);
+		
+		tabbedPane.addTab("Aggregate Data",sourcePane);
+		tabbedPane.addTab("Mutant Code", mutantPane);
+		
 		horizontalSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,verticalSplit,rightPane);
 		horizontalSplit.setDividerLocation(450);
 		this.getContentPane().add(horizontalSplit);
 		
 		graphMouse = new DefaultModalGraphMouse();
 		graphMouse.setMode(ModalGraphMouse.Mode.PICKING);
+		
 	}
 	
 	/**
@@ -403,8 +416,9 @@ public class GuiDisplayFrame extends JFrame
 				{
 					ClassNode selectedNode = (ClassNode) sourceTree.getLastSelectedPathComponent();
 					//sourceArea.setText(selectedNode.getSource());
-					highlighter.setText(selectedNode.getSource());
-					highlighter.setCaretPosition(0);
+					tabbedPane.setTitleAt(0, "Source Code");
+					sourceHighlighter.setText(selectedNode.getSource());
+					sourceHighlighter.setCaretPosition(0);
 					//highlightSource(selectedNode);
 					drawClassGraph(selectedNode);
 				}
@@ -554,11 +568,32 @@ public class GuiDisplayFrame extends JFrame
 		layout.setSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
+		viewer.setBackground(Color.white);
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
 		viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
 		viewer.getRenderContext().setEdgeStrokeTransformer(edgeThickness);
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		viewer.getRenderer().getVertexLabelRenderer().setPosition(Position.CNTR);
+		
+		/* Add a listener to detect when a node in the class graph has been picked.  If the picked
+		 * node is a mutant node, display the mutated source code in the mutant tab.
+		 */
+		PickedState<DefaultMutableTreeNode> pickedState = viewer.getPickedVertexState();
+		
+		pickedState.addItemListener(new ItemListener()
+		{
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				Object selected = e.getItem();
+				if (selected instanceof DataMutant)
+				{
+					DataMutant mutant = (DataMutant) selected;
+					displayMutantSource(mutant);
+				}
+				
+			}
+			
+		});
 		
         viewer.setGraphMouse(graphMouse);
 		
@@ -611,6 +646,7 @@ public class GuiDisplayFrame extends JFrame
 		layout.setSize(new Dimension(300,300));
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
+		viewer.setBackground(Color.white);
 		viewer.getRenderContext().setVertexIconTransformer(barIcon);	
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		viewer.getRenderer().getVertexLabelRenderer().setPosition(Position.S);
@@ -658,17 +694,20 @@ public class GuiDisplayFrame extends JFrame
 				informationText += "---------------------------------\n";
 			}
 		}
-		highlighter.setText(informationText);
-		highlighter.setCaretPosition(0);
+		sourceHighlighter.setText(informationText);
+		sourceHighlighter.setCaretPosition(0);
+		mutantHighlighter.setText("");
+		tabbedPane.setTitleAt(0, "Aggregate Data");
 	}
 	
 	/**
-	 * This method will display the 
+	 * This method will display the mutant code of a picked node.
 	 * @param node
 	 */
 	public void displayMutantSource(DataMutant node)
 	{
-		highlighter.setText("//"+node.getName()+"\n"+node.getModifiedSource());
-		highlighter.setCaretPosition(0);
+		mutantHighlighter.setText("//"+node.getName()+"\n"+node.getModifiedSource());
+		mutantHighlighter.setCaretPosition(0);
+		mutantHighlighter.repaint();
 	}
 }
