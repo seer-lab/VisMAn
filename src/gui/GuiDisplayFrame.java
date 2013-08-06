@@ -112,6 +112,7 @@ public class GuiDisplayFrame extends JFrame
 	private JScrollPane treePane;
 	private JScrollPane sourcePane;
 	private JScrollPane mutantPane;
+	private JScrollPane testPane;
 	private JPanel graphPane;
 	private JPanel rightPane;
 	
@@ -136,6 +137,8 @@ public class GuiDisplayFrame extends JFrame
 	private ArrayList<GraphEdge> edgeList;
 	
 	private JTabbedPane tabbedPane;
+	
+	private JTextArea testResultsArea;
 	
 	
 	//Other entities.
@@ -289,6 +292,7 @@ public class GuiDisplayFrame extends JFrame
 		controlPane = new JPanel();
 		rightPane = new JPanel();
 		tabbedPane = new JTabbedPane();
+		testPane = new JScrollPane();
 		
 		selectionOptions = new ButtonGroup();
 		pickButton = new JRadioButton("Pick");
@@ -359,6 +363,7 @@ public class GuiDisplayFrame extends JFrame
 					{
 						DataMutant selectedNode = (DataMutant) pickedNodes.toArray()[0];
 						displayMutantSource(selectedNode);
+						displayTestResults(selectedNode);
 					}
 				}
 				//OTHERWISE DO NOTHING
@@ -388,8 +393,12 @@ public class GuiDisplayFrame extends JFrame
 		verticalSplit = new JSplitPane(JSplitPane.VERTICAL_SPLIT,treePane,tabbedPane);
 		verticalSplit.setDividerLocation(250);
 		
+		testResultsArea = new JTextArea();
+		testPane.setViewportView(testResultsArea);
+		
 		tabbedPane.addTab("Aggregate Data",sourcePane);
 		tabbedPane.addTab("Mutant Code", mutantPane);
+		tabbedPane.addTab("Test Results", testPane);
 		
 		horizontalSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,verticalSplit,rightPane);
 		horizontalSplit.setDividerLocation(450);
@@ -589,6 +598,7 @@ public class GuiDisplayFrame extends JFrame
 				{
 					DataMutant mutant = (DataMutant) selected;
 					displayMutantSource(mutant);
+					displayTestResults(mutant);
 				}
 				
 			}
@@ -697,8 +707,10 @@ public class GuiDisplayFrame extends JFrame
 		sourceHighlighter.setText(informationText);
 		sourceHighlighter.setCaretPosition(0);
 		mutantHighlighter.setText("");
+		testResultsArea.setText("");
 		tabbedPane.setTitleAt(0, "Aggregate Data");
 		tabbedPane.setEnabledAt(1,false);
+		tabbedPane.setEnabledAt(2,false);
 	}
 	
 	/**
@@ -711,5 +723,22 @@ public class GuiDisplayFrame extends JFrame
 		mutantHighlighter.setText("//"+node.getName()+"\n"+node.getModifiedSource());
 		mutantHighlighter.setCaretPosition(0);
 		mutantHighlighter.repaint();
+	}
+	
+	/**
+	 * This method will display the test results of a picked node.
+	 * @param node
+	 */
+	public void displayTestResults(DataMutant node)
+	{
+		tabbedPane.setEnabledAt(2, true);
+		String results = "Test:\t\tResult:\n";
+		for (DataTest test: node.getTestArray())
+		{
+			results = results + test.getName() +"\t\t" + test.getResult() + "\n";
+		}
+		testResultsArea.setText(results);
+		testResultsArea.setCaretPosition(0);
+		testResultsArea.repaint();
 	}
 }
