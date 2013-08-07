@@ -1,0 +1,215 @@
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+import machine.TicketMachineBackEnd;
+
+/**
+ * TicketMachineBackEnd jUnit Testing Class
+ * This class contains the methods to be used to conduct testing of the
+ * TicketMachineBackEnd.  This file is intended to be used in conjunction with
+ * JUnit in order to demonstrate the passing of all test cases.
+ * @author Michael Ferron, Mitchell George, David Petras, Victor Sawal
+ * @version 1.00
+ */
+public class Assignment_5_Unit_Tests {
+	
+	TicketMachineBackEnd back_end;
+	String error_log;
+	
+	
+	@Before
+	public void system_setup(){
+		back_end = new TicketMachineBackEnd();
+		back_end.generate_user_list("./current_user_accounts.cua");
+		back_end.generate_event_list("./active_tickets.atf");
+	}
+	
+	@Test
+	public void user_list_generation(){
+		assertEquals("user_list must match contents of current_user_file.","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+	}
+	
+	@Test
+	public void event_list_generation(){
+		assertEquals("event_list must match contents of active_tickets_file.","[Paul_McCartney_Show Paul 100 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0]",back_end.get_event_list());
+	}
+	
+	@Test
+	public void create_successful() {
+		back_end.process_DTF("./DTF_Test_Cases/dtf_05.txt");
+		assertEquals("user_list must have newly created user.","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99, user FS 100.0]",back_end.get_user_list());
+	}
+	
+	@Test
+	public void create_duplicate(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_06.txt");
+		assertEquals("user_list must only include 1 instance of the name user.", "[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99, user FS 100.0]", back_end.get_user_list());
+		assertEquals("error_log must show that the name already exists.","ERROR: Transaction: Create | Name: user | Type: FS | Credits: 100.0 | Reason: User name already exists in the system.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void delete_successful(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_07.txt");
+		assertEquals("user_list must not contain a user named Laura.","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+	}
+	
+	@Test
+	public void delete_invalid_name(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_08.txt");
+		assertEquals("user_list must not have an instance of the name Laura.","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("error_log must show the user does not exist.","ERROR: Transaction: Delete | Name: Laura | Reason: User does not exist in the system.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void sell_successful(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_09.txt");
+		assertEquals("an event called Symphony from Steve with 50 tickets at 100.00 each has been added to the event list","[Paul_McCartney_Show Paul 100 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0, Symphony Steve 50 100.0]",back_end.get_event_list());
+	}
+	
+	@Test
+	public void sell_invalid_seller(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_10.txt");
+		assertEquals("event_list should not be changed.","[Paul_McCartney_Show Paul 100 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0]",back_end.get_event_list());
+		assertEquals("error_log must show that Steven does not exist.","ERROR: Transaction: Sell | Event: Symphony | Seller: Steven | Tickets: 50 | Price: 100.0 | Reason: Seller does not exist.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void sell_invalid_event(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_11.txt");
+		assertEquals("event_list should not be changed.","[Paul_McCartney_Show Paul 100 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0]",back_end.get_event_list());
+		assertEquals("error_log must show that the event already exists.","ERROR: Transaction: Sell | Event: Paul_McCartney_Show | Seller: Paul | Tickets: 100 | Price: 100.0 | Reason: Event already exists in the system.",back_end.get_error_log());
+	}
+	
+	@Test 
+	public void buy_successful(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_12.txt");
+		assertEquals("Michael's account credit should be decremented by 100.","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999899.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 100.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("The number of tickets to Paul_McCartney_Show should be reduced to 99.","[Paul_McCartney_Show Paul 99 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0]",back_end.get_event_list());
+	}
+	
+	@Test
+	public void buy_invalid_buyer(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_13.txt");
+		assertEquals("error_log must show the buyer does not exist.","ERROR: Transaction: Buy | Event: Paul_McCartney_Show | Seller: Paul |  Tickets: 1 | Reason: Buyer does not exist.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void buy_invalid_seller(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_14.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("There should be no change to the event_list","[Paul_McCartney_Show Paul 100 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0]",back_end.get_event_list());
+		assertEquals("error_log must show that the seller does not exist.","ERROR: Transaction: Buy | Event: Paul_McCartney_Show | Seller: Paul | Buyer: Laura | Tickets: 1 | Reason: Seller does not exist.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void buy_invalid_event(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_15.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("There should be no change to the event_list","[Paul_McCartney_Show Paul 100 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0]",back_end.get_event_list());
+		assertEquals("error_log must show that the event does not exist.","ERROR: Transaction: Buy | Event: Paul_McCartney_Gig | Seller: Paul | Buyer: Laura | Tickets: 1 | Reason: Event does not exist.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void buy_invalid_tickets(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_16.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("There should be no change to the event_list","[Paul_McCartney_Show Paul 100 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0]",back_end.get_event_list());
+		assertEquals("error_log must show that there were insufficient tickets to the event.","ERROR: Transaction: Buy | Event: Paul_McCartney_Show | Seller: Paul | Buyer: Michael | Tickets: 101 | Reason: Insufficient tickets available to complete purchase.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void buy_invalid_buyer_credits(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_17.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("There should be no change to the event_list","[Paul_McCartney_Show Paul 100 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0]",back_end.get_event_list());
+		assertEquals("error_log must show that the buyer had insufficinet credits.","ERROR: Transaction: Buy | Event: Paul_McCartney_Show | Seller: Paul | Buyer: David_Petras | Tickets: 1 | Reason: Buyer has insufficient credits.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void buy_invalid_seller_credits(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_18.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("There should be no change to the event_list","[Paul_McCartney_Show Paul 100 100.0, Ringo_Plays_Drums Ringo 100 10.5, Companion_Cube_Song Aperture_Labs 100 0.0]",back_end.get_event_list());
+		assertEquals("error_log must show that the seller's account has too many credits.","ERROR: Transaction: Buy | Event: Ringo_Plays_Drums | Seller: Ringo | Buyer: Steve | Tickets: 1 | Reason: Completion of sale will result in seller's accout exceeding credit limit.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void addcredit_successful(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_19.txt");
+		assertEquals("David_Petras should have a credit of 100","[admin AA 0.0, David_Petras AA 100.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+	}
+	
+	@Test
+	public void addcredit_invalid_user(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_20.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("error_log must show the user does not exist.","ERROR: Transaction: Add Credit | Name: Adam | Amount: 100000.0 | Reason: User does not exist.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void addcredit_invalid_amount(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_21.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("error_log must show that the credit would exceed the user's limit.","ERROR: Transaction: Add Credit | Name: Steve | Amount: 0.01 | Reason: Adding credit would exceed the user's account limit.",back_end.get_error_log());
+		
+	}
+	
+	@Test
+	public void refund_successful(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_22.txt");
+		assertEquals("Allison's credit balance should increase by 100 and Ringo's should decrease by 100","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 100.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999899.99]",back_end.get_user_list());
+	}
+	
+	@Test
+	public void refund_invalid_buyer(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_23.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("error_log must show that the buyer does not exist.","ERROR: Transaction: Refund | Buyer: Bob | Seller: Ringo | Amount: 100.0 | Reason: Buyer does not exist.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void refund_invalid_seller(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_24.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("error_log must show that the seller does not exist.","ERROR: Transaction: Refund | Buyer: Allison | Seller: Dom | Amount: 100.0 | Reason: Seller does not exist.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void refund_insufficient_credit(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_25.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("error_log must show that the seller has insufficient credits","ERROR: Transaction: Refund | Buyer: Allison | Seller: Paul | Amount: 100.0 | Reason: Insufficient funds in seller's account to complete refund.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void refund_credit_limit(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_26.txt");
+		assertEquals("There should be no change to the user_list","[admin AA 0.0, David_Petras AA 0.0, Michael AA 999999.99, Steve FS 999999.99, Allison FS 0.05, Harrison BS 999999.99, Laura BS 500.0, Paul SS 0.0, Ringo SS 999999.99]",back_end.get_user_list());
+		assertEquals("error_log must show that the buyer's account would be over-credited","ERROR: Transaction: Refund | Buyer: Steve | Seller: Ringo | Amount: 100.0 | Reason: Refund would exceed the buyer's credit limit.",back_end.get_error_log());
+	}
+	
+	@Test
+	public void check_new_user_file(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_05.txt");
+		back_end.generate_new_user_file();
+		assertEquals("new_user_file must containt the new user in proper format."," admin___________AA_000000.00 David_Petras____AA_000000.00 Michael_________AA_999999.99 Steve___________FS_999999.99 Allison_________FS_000000.05 Harrison________BS_999999.99 Laura___________BS_000500.00 Paul____________SS_000000.00 Ringo___________SS_999999.99 user____________FS_000100.00 END_________________________",back_end.get_new_user_file());
+	}
+	
+	@Test
+	public void check_new_events_file(){
+		back_end.process_DTF("./DTF_Test_Cases/dtf_09.txt");
+		back_end.generate_new_event_file();
+		assertEquals("new_events_file must contain the new event in proper format."," Paul_McCartney_Show_Paul__________100_100.00 Ringo_Plays_Drums___Ringo_________100_010.50 Companion_Cube_Song_Aperture_Labs_100_000.00 Symphony____________Steve_________050_100.00 END_________________________________________",back_end.get_new_event_file());
+	}
+	
+	@Test
+	public void throw_exceptions(){
+		back_end = new TicketMachineBackEnd();
+		back_end.generate_user_list(null);
+		back_end.generate_event_list(null);
+		back_end.process_DTF(null);
+	}
+	
+	
+
+}

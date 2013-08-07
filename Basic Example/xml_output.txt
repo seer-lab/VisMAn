@@ -1,0 +1,3978 @@
+<?xml version="1.0"?>
+<data>
+<original_program>
+<source_code name="Employee.java" main="false">
+/**
+An employee has a name and a mechanism for computing weekly pay.
+*/
+public class Employee
+{
+private String name;
+
+/**
+Constructs an employee with an empty name.
+*/
+public Employee()
+{
+name = &quot;&quot;;
+}
+
+/**
+Sets the name of this employee.
+@param employee_name the new name 
+*/
+public void setName(String employeeName)
+{
+name = employeeName;
+}
+
+/**
+Gets the name of this employee.
+@return the name 
+*/
+public String getName()
+{
+return name; 
+}
+
+/**
+Computes the pay for one week of work.
+@param hoursWorked the number of hours worked in the week
+@return the pay for the given number of hours
+*/
+public double weeklyPay(int hoursWorked)
+{
+return 0; 
+}
+}
+</source_code>
+<source_code name="SalariedEmployee.3.java" main="false">
+/**
+A salaried employee is paid the same amount independent of the hours worked.
+*/
+public class SalariedEmployee extends Employee
+{
+private double annualSalary;
+
+/**
+Constructs a salaried employee with a given name and annual salary.
+@param name the name of this employee
+@param salary the annual salary
+*/
+public SalariedEmployee(String name, double salary)
+{
+setName(name);
+annualSalary = salary;
+}
+
+public double weeklyPay(int hoursWorked) 
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary / WEEKS_PER_YEAR;
+}
+}
+</source_code>
+<source_code name="HourlyEmployee.java" main="false">
+/**
+An hourly employee is paid for every hour worked.
+*/
+public class HourlyEmployee extends Employee
+{
+private double hourlyWage;
+
+/**
+Constructs an hourly employee with a given name and weekly wage.
+@param name the name of this employee
+@param wage the hourly wage 
+*/
+public HourlyEmployee(String name, double wage)
+{
+setName(name);
+hourlyWage = wage;
+}
+
+public double weeklyPay(int hoursWorked)
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40)
+{
+// Add overtime
+pay = pay + ((hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+}
+
+</source_code>
+<source_code name="Manager.java" main="false">
+/**
+A manager is a salaried employee who also receives a bonus.
+*/
+public class Manager extends SalariedEmployee
+{
+private double weeklyBonus;
+
+/**
+Constructs a manager with a given name, annual salary and weekly bonus.
+@param name the name of this employee
+@param salary the annual salary
+@param bonus the weekly bonus
+*/
+public Manager(String name, double salary, double bonus)
+{
+super(name, salary);
+weeklyBonus = bonus;
+}
+
+public double weeklyPay(int hoursWorked)
+{
+return super.weeklyPay(hoursWorked) + weeklyBonus;
+}
+}
+
+
+</source_code>
+</original_program>
+<mutant_program name="AOIS_10" type="AOIS">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked-- ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_4" type="AORB">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) - weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_9" type="AOIS">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked++ ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_14" type="AOIS">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus--;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_12" type="AOIS">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + --weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="LOI_3" type="LOI">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( ~hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_11" type="AOIS">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + ++weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_7" type="AOIS">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( ++hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_2" type="AORB">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) / weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_13" type="AOIS">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus++;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_1" type="AORB">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_3" type="AORB">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) % weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIU_3" type="AOIU">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( -hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_8" type="AOIS">
+<modified_source name="Manager.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( --hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIU_1" type="AOIU">
+<modified_source name="Manager.java" start_line="11" end_line="11">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, -salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_5" type="AOIS">
+<modified_source name="Manager.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus++;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_4" type="AOIS">
+<modified_source name="Manager.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = --bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIU_2" type="AOIU">
+<modified_source name="Manager.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = -bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_6" type="AOIS">
+<modified_source name="Manager.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus--;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_3" type="AOIS">
+<modified_source name="Manager.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = ++bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_1" type="AOIS">
+<modified_source name="Manager.java" start_line="11" end_line="11">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary++ );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_2" type="AOIS">
+<modified_source name="Manager.java" start_line="11" end_line="11">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary-- );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="JSI_1" type="JSI">
+<modified_source name="Manager.java" start_line="7" end_line="7">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private static double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return super.weeklyPay( hoursWorked ) + weeklyBonus;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>no</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="IOD_1" type="IOD">
+<modified_source name="Manager.java" start_line="15" end_line="15">
+// This is mutant program.
+// Author : ysma
+
+public class Manager extends SalariedEmployee
+{
+
+private double weeklyBonus;
+
+public Manager( java.lang.String name, double salary, double bonus )
+{
+super( name, salary );
+weeklyBonus = bonus;
+}
+
+// public double weeklyPay( int hoursWorked ){ ... }
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="JDC_1" type="JDC">
+<modified_source name="Employee.java" start_line="9" end_line="9">
+// This is mutant program.
+// Author : ysma
+
+public class Employee
+{
+
+private java.lang.String name;
+
+// public JDC_1() { ... }
+
+public void setName( java.lang.String employeeName )
+{
+name = employeeName;
+}
+
+public java.lang.String getName()
+{
+return name;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return 0;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="JSI_1" type="JSI">
+<modified_source name="Employee.java" start_line="7" end_line="7">
+// This is mutant program.
+// Author : ysma
+
+public class Employee
+{
+
+private static java.lang.String name;
+
+public Employee()
+{
+name = &quot;&quot;;
+}
+
+public void setName( java.lang.String employeeName )
+{
+name = employeeName;
+}
+
+public java.lang.String getName()
+{
+return name;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+return 0;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_10" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ --hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="ROR_1" type="ROR">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt;= 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_19" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay++ + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_4" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked - hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_8" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked + 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_9" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) / 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_16" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 - hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_17" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = ++pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_9" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ ++hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="ROR_3" type="ROR">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &lt;= 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_20" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay-- + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_14" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (--hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_23" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked++ - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_5" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = ++hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_12" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage--;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="ROR_2" type="ROR">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &lt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_18" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = --pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="ROR_4" type="ROR">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked == 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_11" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage++;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_15" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 + hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_12" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + hoursWorked - 40 - 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="COI_1" type="COI">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (!(hoursWorked &gt; 40)) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_5" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_17" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ ((hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage);
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_27" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="21" end_line="21">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay++;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_7" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked++ mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_18" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay / ((hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage);
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_25" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage++;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_21" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (++hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_2" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked % hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="ROR_5" type="ROR">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked != 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_13" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (++hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_1" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked / hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_7" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked % 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIU_2" type="AOIU">
+<modified_source name="HourlyEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = -hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_3" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked + hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_19" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay % ((hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage);
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_6" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = --hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="LOI_4" type="LOI">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (~hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_22" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (--hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_28" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="21" end_line="21">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay--;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_6" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked / 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="LOI_2" type="LOI">
+<modified_source name="HourlyEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = ~hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="ROR_7" type="ROR">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (false) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_11" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + hoursWorked - 40 + 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIU_3" type="AOIU">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = -pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="LOI_6" type="LOI">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (~hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIU_4" type="AOIU">
+<modified_source name="HourlyEmployee.java" start_line="21" end_line="21">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return -pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_8" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked-- mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_10" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) % 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_24" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked-- - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_26" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage--;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_20" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay - (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_16" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked-- &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="ROR_6" type="ROR">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (true) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_14" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 % hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_15" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="18" end_line="18">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked++ &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_13" type="AORB">
+<modified_source name="HourlyEmployee.java" start_line="19" end_line="19">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 / hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIU_1" type="AOIU">
+<modified_source name="HourlyEmployee.java" start_line="11" end_line="11">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = -wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_4" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage--;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_3" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage++;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_1" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="11" end_line="11">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = ++wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_2" type="AOIS">
+<modified_source name="HourlyEmployee.java" start_line="11" end_line="11">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = --wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="JSI_1" type="JSI">
+<modified_source name="HourlyEmployee.java" start_line="7" end_line="7">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private static double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+double pay = hoursWorked mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+if (hoursWorked &gt; 40) {
+pay = pay + (hoursWorked - 40) mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ 0.5 mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ hourlyWage;
+}
+return pay;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>no</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="IOD_1" type="IOD">
+<modified_source name="HourlyEmployee.java" start_line="15" end_line="15">
+// This is mutant program.
+// Author : ysma
+
+public class HourlyEmployee extends Employee
+{
+
+private double hourlyWage;
+
+public HourlyEmployee( java.lang.String name, double wage )
+{
+setName( name );
+hourlyWage = wage;
+}
+
+// public double weeklyPay( int hoursWorked ){ ... }
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_4" type="AORB">
+<modified_source name="SalariedEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary - WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_5" type="AOIS">
+<modified_source name="SalariedEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return ++annualSalary / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="LOI_3" type="LOI">
+<modified_source name="SalariedEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary / ~WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_7" type="AOIS">
+<modified_source name="SalariedEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary++ / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_2" type="AORB">
+<modified_source name="SalariedEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary % WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_1" type="AORB">
+<modified_source name="SalariedEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary mutants original PackagedTestHarness.sh PackagedTestHarness.sh~ testing_location XML Generation README XML Generation README~ XMLGenerator.sh XMLGenerator.sh~ xml_output.txt xml_output.txt~ WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIU_2" type="AOIU">
+<modified_source name="SalariedEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return -annualSalary / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="AORB_3" type="AORB">
+<modified_source name="SalariedEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary + WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_6" type="AOIS">
+<modified_source name="SalariedEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return --annualSalary / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_8" type="AOIS">
+<modified_source name="SalariedEmployee.java" start_line="17" end_line="17">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary-- / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIU_1" type="AOIU">
+<modified_source name="SalariedEmployee.java" start_line="11" end_line="11">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = -salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_4" type="AOIS">
+<modified_source name="SalariedEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary--;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_3" type="AOIS">
+<modified_source name="SalariedEmployee.java" start_line="12" end_line="12">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary++;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>no</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_1" type="AOIS">
+<modified_source name="SalariedEmployee.java" start_line="11" end_line="11">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = ++salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="AOIS_2" type="AOIS">
+<modified_source name="SalariedEmployee.java" start_line="11" end_line="11">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = --salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="JSI_1" type="JSI">
+<modified_source name="SalariedEmployee.java" start_line="7" end_line="7">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private static double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+public double weeklyPay( int hoursWorked )
+{
+final int WEEKS_PER_YEAR = 52;
+return annualSalary / WEEKS_PER_YEAR;
+}
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+<mutant_program name="IOD_1" type="IOD">
+<modified_source name="SalariedEmployee.java" start_line="15" end_line="15">
+// This is mutant program.
+// Author : ysma
+
+public class SalariedEmployee extends Employee
+{
+
+private double annualSalary;
+
+public SalariedEmployee( java.lang.String name, double salary )
+{
+setName( name );
+annualSalary = salary;
+}
+
+// public double weeklyPay( int hoursWorked ){ ... }
+
+}
+</modified_source>
+<test name="hourlyTest">
+<result>yes</result>
+</test>
+<test name="managerTest">
+<result>yes</result>
+</test>
+<test name="salariedTest">
+<result>yes</result>
+</test>
+</mutant_program>
+</data>

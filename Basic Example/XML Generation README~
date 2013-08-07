@@ -1,0 +1,32 @@
+Author: David Petras
+Date: July 8, 2013
+Description: This document describes the process required to generate an XML file for VisMAN using MuJava to perform the mutation and JUnit for testing.
+
+1) Use MuJava to generate a set of mutants for the program.
+2) Copy and paste the results from MuJava into a directory with the following internal structure:
+	Testing Directory
+	|
+	---mutants
+	|	|
+	|	--- [contents of mujava results folder]
+	|	
+	---original
+	|	|
+	|	--- [contents of mujava src folder]
+	|
+	---testing_location
+	|	|
+	|	--- junit-4.10.jar
+	|	|
+	|	--- TestResultsSingle.class
+	|	|
+	|	--- TestResultsSingle.java
+	|	|
+	|	--- {JUnitTests}.class
+	|	
+	---PackagedTestHarness.sh
+	|
+	---XMLGenerator.sh
+3) Run $PackagedTestHarness.sh <name of file to begin compilation process> <name of test file>
+4) Run $XMLGenerator.sh <location of test harness results file> <location of original directory> <location of JUnit source file> <location of mutant directory>
+5)

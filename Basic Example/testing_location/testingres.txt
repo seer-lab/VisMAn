@@ -1,0 +1,364 @@
+=Manager.java=AOIS_10=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AOIS_10/Manager.java=
+true
+=Manager.java=AORB_4=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AORB_4/Manager.java=
+true
+=Manager.java=AOIS_9=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AOIS_9/Manager.java=
+true
+=Manager.java=AOIS_14=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AOIS_14/Manager.java=
+true
+=Manager.java=AOIS_12=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AOIS_12/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<16.692307692307693>
+false
+=Manager.java=LOI_3=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/LOI_3/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<16.692307692307693>
+false
+=Manager.java=AOIS_11=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AOIS_11/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<18.692307692307693>
+false
+=Manager.java=AOIS_7=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AOIS_7/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<18.692307692307693>
+false
+=Manager.java=AORB_2=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AORB_2/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<0.7692307692307693>
+false
+=Manager.java=AOIS_13=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AOIS_13/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<0.7692307692307693>
+false
+=Manager.java=AORB_1=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AORB_1/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<0.7692307692307693>
+false
+=Manager.java=AORB_3=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AORB_3/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=Manager.java=AOIU_3=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AOIU_3/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=Manager.java=AOIS_8=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/double_weeklyPay(int)/AOIS_8/Manager.java=
+true
+=Manager.java=AOIU_1=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/Manager(java.lang.String,double,double)/AOIU_1/Manager.java=
+true
+=Manager.java=AOIS_5=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/Manager(java.lang.String,double,double)/AOIS_5/Manager.java=
+true
+=Manager.java=AOIS_4=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/Manager(java.lang.String,double,double)/AOIS_4/Manager.java=
+true
+=Manager.java=AOIU_2=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/Manager(java.lang.String,double,double)/AOIU_2/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<-2.3076923076923075>
+false
+=Manager.java=AOIS_6=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/Manager(java.lang.String,double,double)/AOIS_6/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<-2.3076923076923075>
+false
+=Manager.java=AOIS_3=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/Manager(java.lang.String,double,double)/AOIS_3/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<18.692307692307693>
+false
+=Manager.java=AOIS_1=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/Manager(java.lang.String,double,double)/AOIS_1/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<18.692307692307693>
+false
+=Manager.java=AOIS_2=/home/david/Desktop/TestZone/mutants/Manager/traditional_mutants/Manager(java.lang.String,double,double)/AOIS_2/Manager.java=
+true
+=Manager.java=JSI_1=/home/david/Desktop/TestZone/mutants/Manager/class_mutants/JSI_1/Manager.java=
+true
+=Manager.java=IOD_1=/home/david/Desktop/TestZone/mutants/Manager/class_mutants/IOD_1/Manager.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=Employee.java=JDC_1=/home/david/Desktop/TestZone/mutants/Employee/class_mutants/JDC_1/Employee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=Employee.java=JSI_1=/home/david/Desktop/TestZone/mutants/Employee/class_mutants/JSI_1/Employee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_10=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_10/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<38.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=ROR_1=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/ROR_1/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_19=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_19/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_4=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_4/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-18.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_8=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_8/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_9=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_9/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_16=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_16/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_17=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_17/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_9=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_9/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<42.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=ROR_3=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/ROR_3/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-340.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_20=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_20/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_14=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_14/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_23=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_23/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_5=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_5/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<60.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_12=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_12/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=ROR_2=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/ROR_2/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-340.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_18=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_18/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=ROR_4=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/ROR_4/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_11=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_11/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_15=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_15/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_12=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_12/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=COI_1=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/COI_1/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-340.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_5=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_5/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_17=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_17/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_27=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_27/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_7=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_7/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_18=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_18/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_25=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_25/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_21=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_21/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_2=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_2/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<2.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=ROR_5=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/ROR_5/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-340.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_13=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_13/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_1=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_1/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.1>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_7=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_7/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIU_2=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIU_2/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-40.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_3=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_3/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<22.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_19=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_19/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_6=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_6/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<20.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=LOI_4=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/LOI_4/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_22=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_22/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_28=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_28/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_6=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_6/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=LOI_2=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/LOI_2/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-60.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=ROR_7=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/ROR_7/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_11=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_11/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIU_3=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIU_3/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=LOI_6=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/LOI_6/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIU_4=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIU_4/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-40.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_8=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_8/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_10=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_10/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_24=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_24/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_26=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_26/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_20=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_20/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_16=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_16/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=ROR_6=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/ROR_6/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-340.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_14=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_14/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_15=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_15/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AORB_13=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/double_weeklyPay(int)/AORB_13/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIU_1=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/HourlyEmployee(java.lang.String,double)/AOIU_1/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<-40.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_4=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/HourlyEmployee(java.lang.String,double)/AOIS_4/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_3=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/HourlyEmployee(java.lang.String,double)/AOIS_3/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_1=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/HourlyEmployee(java.lang.String,double)/AOIS_1/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<42.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=AOIS_2=/home/david/Desktop/TestZone/mutants/HourlyEmployee/traditional_mutants/HourlyEmployee(java.lang.String,double)/AOIS_2/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<38.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=JSI_1=/home/david/Desktop/TestZone/mutants/HourlyEmployee/class_mutants/JSI_1/HourlyEmployee.java=
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=HourlyEmployee.java=IOD_1=/home/david/Desktop/TestZone/mutants/HourlyEmployee/class_mutants/IOD_1/HourlyEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=SalariedEmployee.java=AORB_4=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/AORB_4/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<348.0>
+salariedTest(EmployeeTester): expected:<9.61> but was:<448.0>
+false
+=SalariedEmployee.java=AOIS_5=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_5/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<348.0>
+salariedTest(EmployeeTester): expected:<9.61> but was:<448.0>
+false
+=SalariedEmployee.java=LOI_3=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/LOI_3/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<-7.547169811320755>
+salariedTest(EmployeeTester): expected:<9.61> but was:<-9.433962264150944>
+false
+=SalariedEmployee.java=AOIS_7=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_7/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<-7.547169811320755>
+salariedTest(EmployeeTester): expected:<9.61> but was:<-9.433962264150944>
+false
+=SalariedEmployee.java=AORB_2=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/AORB_2/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<36.0>
+salariedTest(EmployeeTester): expected:<9.61> but was:<32.0>
+false
+=SalariedEmployee.java=AORB_1=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/AORB_1/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<20800.0>
+salariedTest(EmployeeTester): expected:<9.61> but was:<26000.0>
+false
+=SalariedEmployee.java=AOIU_2=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/AOIU_2/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<20800.0>
+salariedTest(EmployeeTester): expected:<9.61> but was:<26000.0>
+false
+=SalariedEmployee.java=AORB_3=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/AORB_3/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<452.0>
+salariedTest(EmployeeTester): expected:<9.61> but was:<552.0>
+false
+=SalariedEmployee.java=AOIS_6=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_6/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<452.0>
+salariedTest(EmployeeTester): expected:<9.61> but was:<552.0>
+false
+=SalariedEmployee.java=AOIS_8=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/double_weeklyPay(int)/AOIS_8/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=SalariedEmployee.java=AOIU_1=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/SalariedEmployee(java.lang.String,double)/AOIU_1/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=SalariedEmployee.java=AOIS_4=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/SalariedEmployee(java.lang.String,double)/AOIS_4/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=SalariedEmployee.java=AOIS_3=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/SalariedEmployee(java.lang.String,double)/AOIS_3/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+false
+=SalariedEmployee.java=AOIS_1=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/SalariedEmployee(java.lang.String,double)/AOIS_1/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.711538461538462>
+salariedTest(EmployeeTester): expected:<9.61> but was:<9.634615384615385>
+false
+=SalariedEmployee.java=AOIS_2=/home/david/Desktop/TestZone/mutants/SalariedEmployee/traditional_mutants/SalariedEmployee(java.lang.String,double)/AOIS_2/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.711538461538462>
+salariedTest(EmployeeTester): expected:<9.61> but was:<9.634615384615385>
+false
+=SalariedEmployee.java=JSI_1=/home/david/Desktop/TestZone/mutants/SalariedEmployee/class_mutants/JSI_1/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+salariedTest(EmployeeTester): expected:<9.61> but was:<7.6923076923076925>
+false
+=SalariedEmployee.java=IOD_1=/home/david/Desktop/TestZone/mutants/SalariedEmployee/class_mutants/IOD_1/SalariedEmployee.java=
+hourlyTest(EmployeeTester): expected:<40.0> but was:<0.0>
+managerTest(EmployeeTester): expected:<17.69> but was:<7.6923076923076925>
+salariedTest(EmployeeTester): expected:<9.61> but was:<7.6923076923076925>
+false

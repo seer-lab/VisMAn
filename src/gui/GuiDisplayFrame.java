@@ -394,6 +394,7 @@ public class GuiDisplayFrame extends JFrame
 		verticalSplit.setDividerLocation(250);
 		
 		testResultsArea = new JTextArea();
+		testResultsArea.setEditable(false);
 		testPane.setViewportView(testResultsArea);
 		
 		tabbedPane.addTab("Aggregate Data",sourcePane);
@@ -732,11 +733,12 @@ public class GuiDisplayFrame extends JFrame
 	public void displayTestResults(DataMutant node)
 	{
 		tabbedPane.setEnabledAt(2, true);
-		String results = "Test:\t\tResult:\n";
+		String results = "Test Results For Mutant "+node.getName()+"\n\nTest\t\tDetected by Test\n";
 		for (DataTest test: node.getTestArray())
 		{
 			results = results + test.getName() +"\t\t" + test.getResult() + "\n";
 		}
+		results += "\nPercentage of Test Cases That Kill Mutant: " + node.getPercentKilled()*100;
 		testResultsArea.setText(results);
 		testResultsArea.setCaretPosition(0);
 		testResultsArea.repaint();

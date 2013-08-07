@@ -1,0 +1,4 @@
+Employee()
+void_setName(java.lang.String)
+java.lang.String_getName()
+double_weeklyPay(int)

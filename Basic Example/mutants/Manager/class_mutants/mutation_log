@@ -1,0 +1,3 @@
+IPC_1:11:super( name, salary ) is deleted
+JSI_1:7:static is inserted
+IOD_1:15:public double weeklyPay(int hoursWorked) is deleted.
