@@ -30,7 +30,11 @@ public class PieChartIcon implements Icon {
 	}
 	
 	@Override
-	public void paintIcon(Component c, Graphics g, int x, int y) {
+	public void paintIcon(Component c, Graphics g, int _x, int _y) {
+		
+		int x = _x;
+		int y = _y - 20; //This vertical translation of 20 pixels up is used to prevent the labels from overlapping the vertex.
+		
 		Graphics2D g2d = (Graphics2D) g.create();
 			
 		g2d.setColor(Color.red);

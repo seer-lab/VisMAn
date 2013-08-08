@@ -15,18 +15,34 @@ import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
+/**
+ * This class represents an XML parser which will take the XML file
+ * generated through the mutation and testing process and create DataMutants
+ * that are held in the DataManager.
+ * @author David Petras
+ *
+ */
 public class DataXMLParser {
 	
 	private DataManager manager;
 	private DataMutant mutant;
 	private DataTest test;
 	
-	
+	/**
+	 * Constructor used to create the XMLParser with a DataManager to
+	 * hold the created DataMutants.
+	 * @param _manager the DataManager that will hold the created DataMutants
+	 */
 	public DataXMLParser(DataManager _manager)
 	{
 		manager = _manager;
 	}
 	
+	/**
+	 * This method will parse the XML file passed to it and create proper instances
+	 * of DataMutant objects from the data.
+	 * @param xmlFile the XML file created through the mutation and testing process
+	 */
 	public void parseDocument(File xmlFile)
 	{
 		try 

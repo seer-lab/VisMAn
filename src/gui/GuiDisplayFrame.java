@@ -579,6 +579,7 @@ public class GuiDisplayFrame extends JFrame
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.setBackground(Color.white);
+		viewer.setBorder(BorderFactory.createLineBorder(Color.black));
 		viewer.getRenderContext().setVertexShapeTransformer(vertexSize);
 		viewer.getRenderContext().setVertexFillPaintTransformer(threeColour);
 		viewer.getRenderContext().setEdgeStrokeTransformer(edgeThickness);
@@ -658,6 +659,7 @@ public class GuiDisplayFrame extends JFrame
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.setBackground(Color.white);
+		viewer.setBorder(BorderFactory.createLineBorder(Color.black));
 		viewer.getRenderContext().setVertexIconTransformer(barIcon);	
 		viewer.getRenderContext().setVertexLabelTransformer(new ToStringLabeller());
 		viewer.getRenderer().getVertexLabelRenderer().setPosition(Position.S);
