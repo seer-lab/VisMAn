@@ -2,6 +2,7 @@ package gui;
 
 import graph.ClassNode;
 import graph.GraphEdge;
+import graph.GridLayout;
 import graph.PackageNode;
 import graph.PieChartIcon;
 import highlight.JavaScanner;
@@ -575,7 +576,6 @@ public class GuiDisplayFrame extends JFrame
 		};
 		
 		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout<DefaultMutableTreeNode, String>(classGraph);
-		layout.setSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.setBackground(Color.white);
@@ -654,8 +654,7 @@ public class GuiDisplayFrame extends JFrame
 			
 		};
 		
-		Layout<DefaultMutableTreeNode, String> layout = new ISOMLayout<DefaultMutableTreeNode, String>(packageGraph);
-		layout.setSize(new Dimension(300,300));
+		Layout<DefaultMutableTreeNode, String> layout = new GridLayout(packageGraph);
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.setBackground(Color.white);
