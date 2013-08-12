@@ -1,0 +1,3 @@
+BowlingException(java.lang.String)
+BowlingException()
+java.lang.String_getMessage()

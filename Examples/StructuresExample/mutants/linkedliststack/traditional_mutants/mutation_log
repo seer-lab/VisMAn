@@ -1,0 +1,4 @@
+ROR_1:30:java.lang.Object_pop(): first == null  =>   first != null
+ROR_2:40:boolean_empty(): first == null  =>   first != null
+COI_1:30:java.lang.Object_pop(): first == null  =>  !(first == null)
+COI_2:40:boolean_empty(): first == null  =>  !(first == null)

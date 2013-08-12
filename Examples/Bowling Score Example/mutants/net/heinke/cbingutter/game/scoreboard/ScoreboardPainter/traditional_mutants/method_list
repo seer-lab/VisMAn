@@ -1,0 +1,8 @@
+void_printScoreCard(java.util.List,int)
+java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int)
+void_printBottomLine(net.heinke.cbingutter.game.player.Player,int)
+void_printColumnHeadings(int,net.heinke.cbingutter.game.player.Player)
+void_printResultEffects(net.heinke.cbingutter.game.frame.Frame,net.heinke.cbingutter.game.player.Player)
+void_printMessage(java.lang.String)
+void_printWinners(java.util.List)
+void_welcomeMessage()

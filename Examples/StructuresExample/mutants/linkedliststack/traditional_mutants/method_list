@@ -1,0 +1,4 @@
+LinkedListStack()
+void_push(java.lang.Object)
+java.lang.Object_pop()
+boolean_empty()

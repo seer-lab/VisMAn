@@ -1,0 +1,60 @@
+AOIS_1:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => ++score
+AOIS_2:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => --score
+AOIS_3:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => score++
+AOIS_4:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => score--
+AOIS_5:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):Constants.MAX_PINS_PER_FRAME => ++Constants.MAX_PINS_PER_FRAME
+AOIS_6:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):Constants.MAX_PINS_PER_FRAME => --Constants.MAX_PINS_PER_FRAME
+AOIS_7:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME++
+AOIS_8:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME--
+AOIS_9:29:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => ++score
+AOIS_10:29:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => --score
+AOIS_11:29:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => score++
+AOIS_12:29:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => score--
+AOIS_13:35:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => ++score
+AOIS_14:35:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => --score
+AOIS_15:35:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => score++
+AOIS_16:35:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => score--
+ROR_1:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): score > Constants.MAX_PINS_PER_FRAME  =>   score >= Constants.MAX_PINS_PER_FRAME
+ROR_2:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): score > Constants.MAX_PINS_PER_FRAME  =>   score < Constants.MAX_PINS_PER_FRAME
+ROR_3:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): score > Constants.MAX_PINS_PER_FRAME  =>   score <= Constants.MAX_PINS_PER_FRAME
+ROR_4:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): score > Constants.MAX_PINS_PER_FRAME  =>   score == Constants.MAX_PINS_PER_FRAME
+ROR_5:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): score > Constants.MAX_PINS_PER_FRAME  =>   score != Constants.MAX_PINS_PER_FRAME
+ROR_6:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): score > Constants.MAX_PINS_PER_FRAME  =>   true
+ROR_7:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): score > Constants.MAX_PINS_PER_FRAME  =>   false
+ROR_8:34:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null  =>   f == null
+ROR_9:41:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null  =>   f == null
+ROR_10:45:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f == null  =>   f != null
+COR_1:23:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): !input.equals( \"/\" ) && !input.equalsIgnoreCase( \"X\" )  =>   !input.equals( \"/\" ) || !input.equalsIgnoreCase( \"X\" )
+COR_2:23:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): !input.equals( \"/\" ) && !input.equalsIgnoreCase( \"X\" )  =>   !input.equals( \"/\" ) ^ !input.equalsIgnoreCase( \"X\" )
+COR_3:34:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null && !f.isCompleted()  =>   f != null || !f.isCompleted()
+COR_4:34:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null && !f.isCompleted()  =>   f != null ^ !f.isCompleted()
+COR_5:41:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null && !f.isCompleted()  =>   f != null || !f.isCompleted()
+COR_6:41:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null && !f.isCompleted()  =>   f != null ^ !f.isCompleted()
+COR_7:41:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null && !f.isCompleted() && input.equalsIgnoreCase( \"X\" )  =>   f != null && !f.isCompleted() || input.equalsIgnoreCase( \"X\" )
+COR_8:41:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null && !f.isCompleted() && input.equalsIgnoreCase( \"X\" )  =>   (f != null && !f.isCompleted()) ^ input.equalsIgnoreCase( \"X\" )
+COR_9:45:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f == null || f.isCompleted()  =>   f == null && f.isCompleted()
+COR_10:45:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f == null || f.isCompleted()  =>   f == null ^ f.isCompleted()
+COR_11:45:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): input.equals( \"/\" ) && (f == null || f.isCompleted())  =>   input.equals( \"/\" ) || (f == null || f.isCompleted())
+COR_12:45:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): input.equals( \"/\" ) && (f == null || f.isCompleted())  =>   input.equals( \"/\" ) ^ (f == null || f.isCompleted())
+COD_1:18:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):!input.matches( pattern ) => input.matches( pattern )
+COD_2:23:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):!input.equals( "/" ) => input.equals( "/" )
+COD_3:23:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):!input.equalsIgnoreCase( "X" ) => input.equalsIgnoreCase( "X" )
+COD_4:34:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):!f.isCompleted() => f.isCompleted()
+COD_5:41:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):!f.isCompleted() => f.isCompleted()
+COD_6:57:boolean_validateNumberOfPlayers(java.lang.String):!input.matches( pattern ) => input.matches( pattern )
+COI_1:23:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): !input.equals( \"/\" ) && !input.equalsIgnoreCase( \"X\" )  =>  !(!input.equals( "/" ) && !input.equalsIgnoreCase( "X" ))
+COI_2:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): score > Constants.MAX_PINS_PER_FRAME  =>  !(score > Constants.MAX_PINS_PER_FRAME)
+COI_3:29:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): score < 0  =>  !(score < 0)
+COI_4:34:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null  =>  !(f != null)
+COI_5:34:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null && !f.isCompleted()  =>  !(f != null && !f.isCompleted())
+COI_6:35:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f.pinsRemaining() < score  =>  !(f.pinsRemaining() < score)
+COI_7:41:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null  =>  !(f != null)
+COI_8:41:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null && !f.isCompleted()  =>  !(f != null && !f.isCompleted())
+COI_9:41:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f != null && !f.isCompleted() && input.equalsIgnoreCase( \"X\" )  =>  !(f != null && !f.isCompleted() && input.equalsIgnoreCase( "X" ))
+COI_10:45:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f == null  =>  !(f == null)
+COI_11:45:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): f == null || f.isCompleted()  =>  !(f == null || f.isCompleted())
+COI_12:45:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player): input.equals( \"/\" ) && (f == null || f.isCompleted())  =>  !(input.equals( "/" ) && (f == null || f.isCompleted()))
+LOI_1:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => ~score
+LOI_2:25:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):Constants.MAX_PINS_PER_FRAME => ~Constants.MAX_PINS_PER_FRAME
+LOI_3:29:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => ~score
+LOI_4:35:boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player):score => ~score

@@ -1,0 +1,176 @@
+AORB_1:30:boolean_contains(java.lang.Object):h % buckets.length => h * buckets.length
+AORB_2:30:boolean_contains(java.lang.Object):h % buckets.length => h / buckets.length
+AORB_3:30:boolean_contains(java.lang.Object):h % buckets.length => h + buckets.length
+AORB_4:30:boolean_contains(java.lang.Object):h % buckets.length => h - buckets.length
+AORB_5:47:boolean_add(java.lang.Object):h % buckets.length => h * buckets.length
+AORB_6:47:boolean_add(java.lang.Object):h % buckets.length => h / buckets.length
+AORB_7:47:boolean_add(java.lang.Object):h % buckets.length => h + buckets.length
+AORB_8:47:boolean_add(java.lang.Object):h % buckets.length => h - buckets.length
+AORB_9:69:boolean_remove(java.lang.Object):h % buckets.length => h * buckets.length
+AORB_10:69:boolean_remove(java.lang.Object):h % buckets.length => h / buckets.length
+AORB_11:69:boolean_remove(java.lang.Object):h % buckets.length => h + buckets.length
+AORB_12:69:boolean_remove(java.lang.Object):h % buckets.length => h - buckets.length
+AORS_1:59:boolean_add(java.lang.Object):currentSize++ => currentSize--
+AORS_2:79:boolean_remove(java.lang.Object):currentSize-- => currentSize++
+AORS_3:125:boolean_hasNext():b++ => b--
+AORS_4:139:java.lang.Object_next():bucketIndex++ => bucketIndex--
+AODU_1:28:boolean_contains(java.lang.Object):-h => h
+AODU_2:45:boolean_add(java.lang.Object):-h => h
+AODU_3:67:boolean_remove(java.lang.Object):-h => h
+AODU_4:117:HashSetIterator():-1 => 1
+AODS_1:59:boolean_add(java.lang.Object):currentSize++ => currentSize
+AODS_2:79:boolean_remove(java.lang.Object):currentSize-- => currentSize
+AODS_3:139:java.lang.Object_next():bucketIndex++ => bucketIndex
+AOIU_1:20:HashSet(int):bucketsLength => -bucketsLength
+AOIU_2:30:boolean_contains(java.lang.Object):h => -h
+AOIU_3:31:boolean_contains(java.lang.Object):h => -h
+AOIU_4:47:boolean_add(java.lang.Object):h => -h
+AOIU_5:48:boolean_add(java.lang.Object):h => -h
+AOIU_6:57:boolean_add(java.lang.Object):h => -h
+AOIU_7:69:boolean_remove(java.lang.Object):h => -h
+AOIU_8:70:boolean_remove(java.lang.Object):h => -h
+AOIU_9:95:int_size():currentSize => -currentSize
+AOIU_10:143:java.lang.Object_next():bucketIndex => -bucketIndex
+AOIS_1:20:HashSet(int):bucketsLength => ++bucketsLength
+AOIS_2:20:HashSet(int):bucketsLength => --bucketsLength
+AOIS_3:20:HashSet(int):bucketsLength => bucketsLength++
+AOIS_4:20:HashSet(int):bucketsLength => bucketsLength--
+AOIS_5:27:boolean_contains(java.lang.Object):h => ++h
+AOIS_6:27:boolean_contains(java.lang.Object):h => --h
+AOIS_7:27:boolean_contains(java.lang.Object):h => h++
+AOIS_8:27:boolean_contains(java.lang.Object):h => h--
+AOIS_9:30:boolean_contains(java.lang.Object):h => ++h
+AOIS_10:30:boolean_contains(java.lang.Object):h => --h
+AOIS_11:30:boolean_contains(java.lang.Object):h => h++
+AOIS_12:30:boolean_contains(java.lang.Object):h => h--
+AOIS_13:30:boolean_contains(java.lang.Object):buckets.length => ++buckets.length
+AOIS_14:30:boolean_contains(java.lang.Object):buckets.length => --buckets.length
+AOIS_15:30:boolean_contains(java.lang.Object):buckets.length => buckets.length++
+AOIS_16:30:boolean_contains(java.lang.Object):buckets.length => buckets.length--
+AOIS_17:31:boolean_contains(java.lang.Object):h => h++
+AOIS_18:31:boolean_contains(java.lang.Object):h => h--
+AOIS_19:44:boolean_add(java.lang.Object):h => ++h
+AOIS_20:44:boolean_add(java.lang.Object):h => --h
+AOIS_21:44:boolean_add(java.lang.Object):h => h++
+AOIS_22:44:boolean_add(java.lang.Object):h => h--
+AOIS_23:47:boolean_add(java.lang.Object):h => ++h
+AOIS_24:47:boolean_add(java.lang.Object):h => --h
+AOIS_25:47:boolean_add(java.lang.Object):h => h++
+AOIS_26:47:boolean_add(java.lang.Object):h => h--
+AOIS_27:47:boolean_add(java.lang.Object):buckets.length => ++buckets.length
+AOIS_28:47:boolean_add(java.lang.Object):buckets.length => --buckets.length
+AOIS_29:47:boolean_add(java.lang.Object):buckets.length => buckets.length++
+AOIS_30:47:boolean_add(java.lang.Object):buckets.length => buckets.length--
+AOIS_31:48:boolean_add(java.lang.Object):h => h++
+AOIS_32:48:boolean_add(java.lang.Object):h => h--
+AOIS_33:57:boolean_add(java.lang.Object):h => ++h
+AOIS_34:57:boolean_add(java.lang.Object):h => --h
+AOIS_35:57:boolean_add(java.lang.Object):h => h++
+AOIS_36:57:boolean_add(java.lang.Object):h => h--
+AOIS_37:66:boolean_remove(java.lang.Object):h => ++h
+AOIS_38:66:boolean_remove(java.lang.Object):h => --h
+AOIS_39:66:boolean_remove(java.lang.Object):h => h++
+AOIS_40:66:boolean_remove(java.lang.Object):h => h--
+AOIS_41:69:boolean_remove(java.lang.Object):h => ++h
+AOIS_42:69:boolean_remove(java.lang.Object):h => --h
+AOIS_43:69:boolean_remove(java.lang.Object):h => h++
+AOIS_44:69:boolean_remove(java.lang.Object):h => h--
+AOIS_45:69:boolean_remove(java.lang.Object):buckets.length => ++buckets.length
+AOIS_46:69:boolean_remove(java.lang.Object):buckets.length => --buckets.length
+AOIS_47:69:boolean_remove(java.lang.Object):buckets.length => buckets.length++
+AOIS_48:69:boolean_remove(java.lang.Object):buckets.length => buckets.length--
+AOIS_49:70:boolean_remove(java.lang.Object):h => h++
+AOIS_50:70:boolean_remove(java.lang.Object):h => h--
+AOIS_51:95:int_size():currentSize => currentSize++
+AOIS_52:95:int_size():currentSize => currentSize--
+AOIS_53:125:boolean_hasNext():b => ++b
+AOIS_54:125:boolean_hasNext():b => --b
+AOIS_55:125:boolean_hasNext():b => b++
+AOIS_56:125:boolean_hasNext():b => b--
+AOIS_57:125:boolean_hasNext():buckets.length => ++buckets.length
+AOIS_58:125:boolean_hasNext():buckets.length => --buckets.length
+AOIS_59:125:boolean_hasNext():buckets.length => buckets.length++
+AOIS_60:125:boolean_hasNext():buckets.length => buckets.length--
+AOIS_61:126:boolean_hasNext():b => ++b
+AOIS_62:126:boolean_hasNext():b => --b
+AOIS_63:126:boolean_hasNext():b => b++
+AOIS_65:140:java.lang.Object_next():bucketIndex => ++bucketIndex
+AOIS_66:140:java.lang.Object_next():bucketIndex => --bucketIndex
+AOIS_67:140:java.lang.Object_next():bucketIndex => bucketIndex++
+AOIS_68:140:java.lang.Object_next():bucketIndex => bucketIndex--
+AOIS_69:140:java.lang.Object_next():buckets.length => ++buckets.length
+AOIS_70:140:java.lang.Object_next():buckets.length => --buckets.length
+AOIS_71:140:java.lang.Object_next():buckets.length => buckets.length++
+AOIS_72:140:java.lang.Object_next():buckets.length => buckets.length--
+AOIS_73:143:java.lang.Object_next():bucketIndex => ++bucketIndex
+AOIS_74:143:java.lang.Object_next():bucketIndex => --bucketIndex
+AOIS_75:143:java.lang.Object_next():bucketIndex => bucketIndex++
+AOIS_76:143:java.lang.Object_next():bucketIndex => bucketIndex--
+ROR_1:32:boolean_contains(java.lang.Object): current != null  =>   current == null
+ROR_2:49:boolean_add(java.lang.Object): current != null  =>   current == null
+ROR_3:72:boolean_remove(java.lang.Object): current != null  =>   current == null
+ROR_4:74:boolean_remove(java.lang.Object): previous == null  =>   previous != null
+ROR_5:122:boolean_hasNext(): current != null  =>   current == null
+ROR_6:122:boolean_hasNext(): current.next != null  =>   current.next == null
+ROR_7:126:boolean_hasNext(): buckets[b] != null  =>   buckets[b] == null
+ROR_8:135:java.lang.Object_next(): current != null  =>   current == null
+ROR_9:135:java.lang.Object_next(): current.next != null  =>   current.next == null
+ROR_10:140:java.lang.Object_next(): bucketIndex == buckets.length  =>   bucketIndex > buckets.length
+ROR_11:140:java.lang.Object_next(): bucketIndex == buckets.length  =>   bucketIndex >= buckets.length
+ROR_12:140:java.lang.Object_next(): bucketIndex == buckets.length  =>   bucketIndex < buckets.length
+ROR_13:140:java.lang.Object_next(): bucketIndex == buckets.length  =>   bucketIndex <= buckets.length
+ROR_14:140:java.lang.Object_next(): bucketIndex == buckets.length  =>   bucketIndex != buckets.length
+ROR_15:140:java.lang.Object_next(): bucketIndex == buckets.length  =>   true
+ROR_16:140:java.lang.Object_next(): bucketIndex == buckets.length  =>   false
+ROR_17:144:java.lang.Object_next(): current == null  =>   current != null
+COR_1:122:boolean_hasNext(): current != null && current.next != null  =>   current != null || current.next != null
+COR_2:122:boolean_hasNext(): current != null && current.next != null  =>   current != null ^ current.next != null
+COR_3:135:java.lang.Object_next(): current != null && current.next != null  =>   current != null || current.next != null
+COR_4:135:java.lang.Object_next(): current != null && current.next != null  =>   current != null ^ current.next != null
+COI_1:27:boolean_contains(java.lang.Object): h < 0  =>  !(h < 0)
+COI_2:32:boolean_contains(java.lang.Object): current != null  =>  !(current != null)
+COI_3:44:boolean_add(java.lang.Object): h < 0  =>  !(h < 0)
+COI_4:49:boolean_add(java.lang.Object): current != null  =>  !(current != null)
+COI_5:66:boolean_remove(java.lang.Object): h < 0  =>  !(h < 0)
+COI_6:72:boolean_remove(java.lang.Object): current != null  =>  !(current != null)
+COI_7:74:boolean_remove(java.lang.Object): previous == null  =>  !(previous == null)
+COI_8:122:boolean_hasNext(): current != null  =>  !(current != null)
+COI_9:122:boolean_hasNext(): current.next != null  =>  !(current.next != null)
+COI_10:122:boolean_hasNext(): current != null && current.next != null  =>  !(current != null && current.next != null)
+COI_11:125:boolean_hasNext(): b < buckets.length  =>  !(b < buckets.length)
+COI_12:126:boolean_hasNext(): buckets[b] != null  =>  !(buckets[b] != null)
+COI_13:135:java.lang.Object_next(): current != null  =>  !(current != null)
+COI_14:135:java.lang.Object_next(): current.next != null  =>  !(current.next != null)
+COI_15:135:java.lang.Object_next(): current != null && current.next != null  =>  !(current != null && current.next != null)
+COI_16:140:java.lang.Object_next(): bucketIndex == buckets.length  =>  !(bucketIndex == buckets.length)
+COI_17:144:java.lang.Object_next(): current == null  =>  !(current == null)
+LOI_1:20:HashSet(int):bucketsLength => ~bucketsLength
+LOI_2:27:boolean_contains(java.lang.Object):h => ~h
+LOI_3:28:boolean_contains(java.lang.Object):h => ~h
+LOI_4:30:boolean_contains(java.lang.Object):h => ~h
+LOI_5:30:boolean_contains(java.lang.Object):buckets.length => -buckets.length
+LOI_6:31:boolean_contains(java.lang.Object):h => ~h
+LOI_7:44:boolean_add(java.lang.Object):h => ~h
+LOI_8:45:boolean_add(java.lang.Object):h => ~h
+LOI_9:47:boolean_add(java.lang.Object):h => ~h
+LOI_10:47:boolean_add(java.lang.Object):buckets.length => -buckets.length
+LOI_11:48:boolean_add(java.lang.Object):h => ~h
+LOI_12:57:boolean_add(java.lang.Object):h => ~h
+LOI_13:58:boolean_add(java.lang.Object):h => ~h
+LOI_14:59:boolean_add(java.lang.Object):currentSize => ~currentSize
+LOI_15:66:boolean_remove(java.lang.Object):h => ~h
+LOI_16:67:boolean_remove(java.lang.Object):h => ~h
+LOI_17:69:boolean_remove(java.lang.Object):h => ~h
+LOI_18:69:boolean_remove(java.lang.Object):buckets.length => -buckets.length
+LOI_19:70:boolean_remove(java.lang.Object):h => ~h
+LOI_20:75:boolean_remove(java.lang.Object):h => ~h
+LOI_21:79:boolean_remove(java.lang.Object):currentSize => ~currentSize
+LOI_22:95:int_size():currentSize => ~currentSize
+LOI_23:125:boolean_hasNext():b => ~b
+LOI_24:125:boolean_hasNext():buckets.length => -buckets.length
+LOI_25:125:boolean_hasNext():b => ~b
+LOI_26:126:boolean_hasNext():b => ~b
+LOI_27:139:java.lang.Object_next():bucketIndex => ~bucketIndex
+LOI_28:140:java.lang.Object_next():bucketIndex => ~bucketIndex
+LOI_29:140:java.lang.Object_next():buckets.length => -buckets.length
+LOI_30:143:java.lang.Object_next():bucketIndex => ~bucketIndex

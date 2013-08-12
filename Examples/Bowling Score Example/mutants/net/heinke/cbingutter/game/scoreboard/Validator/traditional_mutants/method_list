@@ -1,0 +1,3 @@
+boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)
+boolean_validateNumberOfPlayers(java.lang.String)
+boolean_validatePlayerName(java.lang.String)

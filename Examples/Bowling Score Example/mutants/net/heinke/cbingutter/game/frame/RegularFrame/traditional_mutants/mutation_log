@@ -1,0 +1,281 @@
+AORB_1:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME - runningRawScore => Constants.MAX_PINS_PER_FRAME * runningRawScore
+AORB_2:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME - runningRawScore => Constants.MAX_PINS_PER_FRAME / runningRawScore
+AORB_3:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME - runningRawScore => Constants.MAX_PINS_PER_FRAME % runningRawScore
+AORB_4:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME - runningRawScore => Constants.MAX_PINS_PER_FRAME + runningRawScore
+AORB_5:85:int_setAbsoluteScore(int,int):score1 + score2 => score1 * score2
+AORB_6:85:int_setAbsoluteScore(int,int):score1 + score2 => score1 / score2
+AORB_7:85:int_setAbsoluteScore(int,int):score1 + score2 => score1 % score2
+AORB_8:85:int_setAbsoluteScore(int,int):score1 + score2 => score1 - score2
+AORB_9:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME - runningRawScore => Constants.MAX_PINS_PER_FRAME * runningRawScore
+AORB_10:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME - runningRawScore => Constants.MAX_PINS_PER_FRAME / runningRawScore
+AORB_11:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME - runningRawScore => Constants.MAX_PINS_PER_FRAME % runningRawScore
+AORB_12:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME - runningRawScore => Constants.MAX_PINS_PER_FRAME + runningRawScore
+AOIU_2:27:RegularFrame(int):bowlsPerFrame => -bowlsPerFrame
+AOIU_3:32:RegularFrame():Constants.SHOTS_PER_FRAME => -Constants.SHOTS_PER_FRAME
+AOIU_4:49:void_playShot(int):score => -score
+AOIU_5:50:void_playShot(int):score => -score
+AOIU_6:55:int_fetchScore(int):index => -index
+AOIU_7:83:int_setAbsoluteScore(int,int):runningRawScore => -runningRawScore
+AOIU_8:85:int_setAbsoluteScore(int,int):score1 => -score1
+AOIU_9:87:int_setAbsoluteScore(int,int):absoluteScore => -absoluteScore
+AOIU_10:92:int_setAbsoluteScore(int):runningRawScore => -runningRawScore
+AOIU_11:94:int_setAbsoluteScore(int):score => -score
+AOIU_12:96:int_setAbsoluteScore(int):absoluteScore => -absoluteScore
+AOIU_13:101:int_setAbsoluteScoreNoBonus():runningRawScore => -runningRawScore
+AOIU_14:102:int_setAbsoluteScoreNoBonus():absoluteScore => -absoluteScore
+AOIU_15:107:int_getAbsoluteScore():absoluteScore => -absoluteScore
+AOIU_16:112:java.lang.String_printAbsoluteScore():absoluteScore => -absoluteScore
+AOIU_17:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME => -Constants.MAX_PINS_PER_FRAME
+AOIS_3:27:RegularFrame(int):bowlsPerFrame => ++bowlsPerFrame
+AOIS_4:27:RegularFrame(int):bowlsPerFrame => --bowlsPerFrame
+AOIS_5:27:RegularFrame(int):bowlsPerFrame => bowlsPerFrame++
+AOIS_6:27:RegularFrame(int):bowlsPerFrame => bowlsPerFrame--
+AOIS_7:32:RegularFrame():Constants.SHOTS_PER_FRAME => ++Constants.SHOTS_PER_FRAME
+AOIS_8:32:RegularFrame():Constants.SHOTS_PER_FRAME => --Constants.SHOTS_PER_FRAME
+AOIS_9:32:RegularFrame():Constants.SHOTS_PER_FRAME => Constants.SHOTS_PER_FRAME++
+AOIS_10:32:RegularFrame():Constants.SHOTS_PER_FRAME => Constants.SHOTS_PER_FRAME--
+AOIS_11:38:void_playShot(int):score => ++score
+AOIS_12:38:void_playShot(int):score => --score
+AOIS_13:38:void_playShot(int):score => score++
+AOIS_14:38:void_playShot(int):score => score--
+AOIS_15:41:void_playShot(int):score => ++score
+AOIS_16:41:void_playShot(int):score => --score
+AOIS_17:41:void_playShot(int):score => score++
+AOIS_18:41:void_playShot(int):score => score--
+AOIS_19:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => ++Constants.MAX_PINS_PER_FRAME
+AOIS_20:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => --Constants.MAX_PINS_PER_FRAME
+AOIS_21:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME++
+AOIS_22:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME--
+AOIS_23:41:void_playShot(int):score => ++score
+AOIS_24:41:void_playShot(int):score => --score
+AOIS_25:41:void_playShot(int):score => score++
+AOIS_26:41:void_playShot(int):score => score--
+AOIS_27:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => ++Constants.MAX_PINS_PER_FRAME
+AOIS_28:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => --Constants.MAX_PINS_PER_FRAME
+AOIS_29:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME++
+AOIS_30:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME--
+AOIS_31:41:void_playShot(int):runningRawScore => ++runningRawScore
+AOIS_32:41:void_playShot(int):runningRawScore => --runningRawScore
+AOIS_33:41:void_playShot(int):runningRawScore => runningRawScore++
+AOIS_34:41:void_playShot(int):runningRawScore => runningRawScore--
+AOIS_35:44:void_playShot(int):Constants.SHOTS_PER_FRAME => ++Constants.SHOTS_PER_FRAME
+AOIS_36:44:void_playShot(int):Constants.SHOTS_PER_FRAME => --Constants.SHOTS_PER_FRAME
+AOIS_37:44:void_playShot(int):Constants.SHOTS_PER_FRAME => Constants.SHOTS_PER_FRAME++
+AOIS_38:44:void_playShot(int):Constants.SHOTS_PER_FRAME => Constants.SHOTS_PER_FRAME--
+AOIS_39:49:void_playShot(int):score => score++
+AOIS_40:49:void_playShot(int):score => score--
+AOIS_41:50:void_playShot(int):score => ++score
+AOIS_42:50:void_playShot(int):score => --score
+AOIS_43:50:void_playShot(int):score => score++
+AOIS_44:50:void_playShot(int):score => score--
+AOIS_45:55:int_fetchScore(int):index => index++
+AOIS_46:55:int_fetchScore(int):index => index--
+AOIS_47:70:boolean_isSpareOrStrike():runningRawScore => ++runningRawScore
+AOIS_48:70:boolean_isSpareOrStrike():runningRawScore => --runningRawScore
+AOIS_49:70:boolean_isSpareOrStrike():runningRawScore => runningRawScore++
+AOIS_50:70:boolean_isSpareOrStrike():runningRawScore => runningRawScore--
+AOIS_51:70:boolean_isSpareOrStrike():Constants.MAX_PINS_PER_FRAME => ++Constants.MAX_PINS_PER_FRAME
+AOIS_52:70:boolean_isSpareOrStrike():Constants.MAX_PINS_PER_FRAME => --Constants.MAX_PINS_PER_FRAME
+AOIS_53:70:boolean_isSpareOrStrike():Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME++
+AOIS_54:70:boolean_isSpareOrStrike():Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME--
+AOIS_55:78:boolean_isCompleted():Constants.SHOTS_PER_FRAME => ++Constants.SHOTS_PER_FRAME
+AOIS_56:78:boolean_isCompleted():Constants.SHOTS_PER_FRAME => --Constants.SHOTS_PER_FRAME
+AOIS_57:78:boolean_isCompleted():Constants.SHOTS_PER_FRAME => Constants.SHOTS_PER_FRAME++
+AOIS_58:78:boolean_isCompleted():Constants.SHOTS_PER_FRAME => Constants.SHOTS_PER_FRAME--
+AOIS_59:83:int_setAbsoluteScore(int,int):runningRawScore => ++runningRawScore
+AOIS_60:83:int_setAbsoluteScore(int,int):runningRawScore => --runningRawScore
+AOIS_61:83:int_setAbsoluteScore(int,int):runningRawScore => runningRawScore++
+AOIS_62:83:int_setAbsoluteScore(int,int):runningRawScore => runningRawScore--
+AOIS_63:85:int_setAbsoluteScore(int,int):score1 => ++score1
+AOIS_64:85:int_setAbsoluteScore(int,int):score1 => --score1
+AOIS_65:85:int_setAbsoluteScore(int,int):score1 => score1++
+AOIS_66:85:int_setAbsoluteScore(int,int):score1 => score1--
+AOIS_67:85:int_setAbsoluteScore(int,int):score2 => ++score2
+AOIS_68:85:int_setAbsoluteScore(int,int):score2 => --score2
+AOIS_69:85:int_setAbsoluteScore(int,int):score2 => score2++
+AOIS_70:85:int_setAbsoluteScore(int,int):score2 => score2--
+AOIS_71:87:int_setAbsoluteScore(int,int):absoluteScore => absoluteScore++
+AOIS_72:87:int_setAbsoluteScore(int,int):absoluteScore => absoluteScore--
+AOIS_73:92:int_setAbsoluteScore(int):runningRawScore => ++runningRawScore
+AOIS_74:92:int_setAbsoluteScore(int):runningRawScore => --runningRawScore
+AOIS_75:92:int_setAbsoluteScore(int):runningRawScore => runningRawScore++
+AOIS_76:92:int_setAbsoluteScore(int):runningRawScore => runningRawScore--
+AOIS_77:94:int_setAbsoluteScore(int):score => ++score
+AOIS_78:94:int_setAbsoluteScore(int):score => --score
+AOIS_79:94:int_setAbsoluteScore(int):score => score++
+AOIS_80:94:int_setAbsoluteScore(int):score => score--
+AOIS_81:96:int_setAbsoluteScore(int):absoluteScore => absoluteScore++
+AOIS_82:96:int_setAbsoluteScore(int):absoluteScore => absoluteScore--
+AOIS_83:101:int_setAbsoluteScoreNoBonus():runningRawScore => ++runningRawScore
+AOIS_84:101:int_setAbsoluteScoreNoBonus():runningRawScore => --runningRawScore
+AOIS_85:101:int_setAbsoluteScoreNoBonus():runningRawScore => runningRawScore++
+AOIS_86:101:int_setAbsoluteScoreNoBonus():runningRawScore => runningRawScore--
+AOIS_87:102:int_setAbsoluteScoreNoBonus():absoluteScore => absoluteScore++
+AOIS_88:102:int_setAbsoluteScoreNoBonus():absoluteScore => absoluteScore--
+AOIS_89:107:int_getAbsoluteScore():absoluteScore => absoluteScore++
+AOIS_90:107:int_getAbsoluteScore():absoluteScore => absoluteScore--
+AOIS_91:112:java.lang.String_printAbsoluteScore():absoluteScore => ++absoluteScore
+AOIS_92:112:java.lang.String_printAbsoluteScore():absoluteScore => --absoluteScore
+AOIS_93:112:java.lang.String_printAbsoluteScore():absoluteScore => absoluteScore++
+AOIS_94:112:java.lang.String_printAbsoluteScore():absoluteScore => absoluteScore--
+AOIS_95:112:java.lang.String_printAbsoluteScore():Constants.DUMMY_ABS_SCORE => ++Constants.DUMMY_ABS_SCORE
+AOIS_96:112:java.lang.String_printAbsoluteScore():Constants.DUMMY_ABS_SCORE => --Constants.DUMMY_ABS_SCORE
+AOIS_97:112:java.lang.String_printAbsoluteScore():Constants.DUMMY_ABS_SCORE => Constants.DUMMY_ABS_SCORE++
+AOIS_98:112:java.lang.String_printAbsoluteScore():Constants.DUMMY_ABS_SCORE => Constants.DUMMY_ABS_SCORE--
+AOIS_99:112:java.lang.String_printAbsoluteScore():absoluteScore => absoluteScore++
+AOIS_100:112:java.lang.String_printAbsoluteScore():absoluteScore => absoluteScore--
+AOIS_101:126:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => ++Constants.MAX_PINS_PER_FRAME
+AOIS_102:126:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => --Constants.MAX_PINS_PER_FRAME
+AOIS_103:126:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME++
+AOIS_104:126:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME--
+AOIS_105:129:java.lang.String_toString():runTot => ++runTot
+AOIS_106:129:java.lang.String_toString():runTot => --runTot
+AOIS_107:129:java.lang.String_toString():runTot => runTot++
+AOIS_108:129:java.lang.String_toString():runTot => runTot--
+AOIS_109:129:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => ++Constants.MAX_PINS_PER_FRAME
+AOIS_110:129:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => --Constants.MAX_PINS_PER_FRAME
+AOIS_111:129:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME++
+AOIS_112:129:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME--
+AOIS_113:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME => ++Constants.MAX_PINS_PER_FRAME
+AOIS_114:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME => --Constants.MAX_PINS_PER_FRAME
+AOIS_115:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME++
+AOIS_116:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME--
+AOIS_117:146:int_pinsRemaining():runningRawScore => ++runningRawScore
+AOIS_118:146:int_pinsRemaining():runningRawScore => --runningRawScore
+AOIS_119:146:int_pinsRemaining():runningRawScore => runningRawScore++
+AOIS_120:146:int_pinsRemaining():runningRawScore => runningRawScore--
+ROR_1:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME  =>   score >= Constants.MAX_PINS_PER_FRAME
+ROR_2:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME  =>   score < Constants.MAX_PINS_PER_FRAME
+ROR_3:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME  =>   score <= Constants.MAX_PINS_PER_FRAME
+ROR_4:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME  =>   score == Constants.MAX_PINS_PER_FRAME
+ROR_5:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME  =>   score != Constants.MAX_PINS_PER_FRAME
+ROR_6:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME  =>   true
+ROR_7:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME  =>   false
+ROR_8:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>   score >= Constants.MAX_PINS_PER_FRAME - runningRawScore
+ROR_9:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>   score < Constants.MAX_PINS_PER_FRAME - runningRawScore
+ROR_10:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>   score <= Constants.MAX_PINS_PER_FRAME - runningRawScore
+ROR_11:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>   score == Constants.MAX_PINS_PER_FRAME - runningRawScore
+ROR_12:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>   score != Constants.MAX_PINS_PER_FRAME - runningRawScore
+ROR_13:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>   true
+ROR_14:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>   false
+ROR_15:44:void_playShot(int): bowls.size() >= Constants.SHOTS_PER_FRAME  =>   bowls.size() > Constants.SHOTS_PER_FRAME
+ROR_16:44:void_playShot(int): bowls.size() >= Constants.SHOTS_PER_FRAME  =>   bowls.size() < Constants.SHOTS_PER_FRAME
+ROR_17:44:void_playShot(int): bowls.size() >= Constants.SHOTS_PER_FRAME  =>   bowls.size() <= Constants.SHOTS_PER_FRAME
+ROR_18:44:void_playShot(int): bowls.size() >= Constants.SHOTS_PER_FRAME  =>   bowls.size() == Constants.SHOTS_PER_FRAME
+ROR_19:44:void_playShot(int): bowls.size() >= Constants.SHOTS_PER_FRAME  =>   bowls.size() != Constants.SHOTS_PER_FRAME
+ROR_20:44:void_playShot(int): bowls.size() >= Constants.SHOTS_PER_FRAME  =>   true
+ROR_21:44:void_playShot(int): bowls.size() >= Constants.SHOTS_PER_FRAME  =>   false
+ROR_22:60:boolean_isStrike(): bowls.size() == 1  =>   bowls.size() > 1
+ROR_23:60:boolean_isStrike(): bowls.size() == 1  =>   bowls.size() >= 1
+ROR_24:60:boolean_isStrike(): bowls.size() == 1  =>   bowls.size() < 1
+ROR_25:60:boolean_isStrike(): bowls.size() == 1  =>   bowls.size() <= 1
+ROR_26:60:boolean_isStrike(): bowls.size() == 1  =>   bowls.size() != 1
+ROR_27:60:boolean_isStrike(): bowls.size() == 1  =>   true
+ROR_28:60:boolean_isStrike(): bowls.size() == 1  =>   false
+ROR_29:65:boolean_isSpare(): bowls.size() > 1  =>   bowls.size() >= 1
+ROR_30:65:boolean_isSpare(): bowls.size() > 1  =>   bowls.size() < 1
+ROR_31:65:boolean_isSpare(): bowls.size() > 1  =>   bowls.size() <= 1
+ROR_32:65:boolean_isSpare(): bowls.size() > 1  =>   bowls.size() == 1
+ROR_33:65:boolean_isSpare(): bowls.size() > 1  =>   bowls.size() != 1
+ROR_34:65:boolean_isSpare(): bowls.size() > 1  =>   true
+ROR_35:65:boolean_isSpare(): bowls.size() > 1  =>   false
+ROR_36:70:boolean_isSpareOrStrike(): runningRawScore == Constants.MAX_PINS_PER_FRAME  =>   runningRawScore > Constants.MAX_PINS_PER_FRAME
+ROR_37:70:boolean_isSpareOrStrike(): runningRawScore == Constants.MAX_PINS_PER_FRAME  =>   runningRawScore >= Constants.MAX_PINS_PER_FRAME
+ROR_38:70:boolean_isSpareOrStrike(): runningRawScore == Constants.MAX_PINS_PER_FRAME  =>   runningRawScore < Constants.MAX_PINS_PER_FRAME
+ROR_39:70:boolean_isSpareOrStrike(): runningRawScore == Constants.MAX_PINS_PER_FRAME  =>   runningRawScore <= Constants.MAX_PINS_PER_FRAME
+ROR_40:70:boolean_isSpareOrStrike(): runningRawScore == Constants.MAX_PINS_PER_FRAME  =>   runningRawScore != Constants.MAX_PINS_PER_FRAME
+ROR_41:70:boolean_isSpareOrStrike(): runningRawScore == Constants.MAX_PINS_PER_FRAME  =>   true
+ROR_42:70:boolean_isSpareOrStrike(): runningRawScore == Constants.MAX_PINS_PER_FRAME  =>   false
+ROR_43:78:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() > Constants.SHOTS_PER_FRAME
+ROR_44:78:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() >= Constants.SHOTS_PER_FRAME
+ROR_45:78:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() < Constants.SHOTS_PER_FRAME
+ROR_46:78:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() <= Constants.SHOTS_PER_FRAME
+ROR_47:78:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() != Constants.SHOTS_PER_FRAME
+ROR_48:78:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   true
+ROR_49:78:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   false
+ROR_50:112:java.lang.String_printAbsoluteScore(): absoluteScore == Constants.DUMMY_ABS_SCORE  =>   absoluteScore > Constants.DUMMY_ABS_SCORE
+ROR_51:112:java.lang.String_printAbsoluteScore(): absoluteScore == Constants.DUMMY_ABS_SCORE  =>   absoluteScore >= Constants.DUMMY_ABS_SCORE
+ROR_52:112:java.lang.String_printAbsoluteScore(): absoluteScore == Constants.DUMMY_ABS_SCORE  =>   absoluteScore < Constants.DUMMY_ABS_SCORE
+ROR_53:112:java.lang.String_printAbsoluteScore(): absoluteScore == Constants.DUMMY_ABS_SCORE  =>   absoluteScore <= Constants.DUMMY_ABS_SCORE
+ROR_54:112:java.lang.String_printAbsoluteScore(): absoluteScore == Constants.DUMMY_ABS_SCORE  =>   absoluteScore != Constants.DUMMY_ABS_SCORE
+ROR_55:112:java.lang.String_printAbsoluteScore(): absoluteScore == Constants.DUMMY_ABS_SCORE  =>   true
+ROR_56:112:java.lang.String_printAbsoluteScore(): absoluteScore == Constants.DUMMY_ABS_SCORE  =>   false
+ROR_57:126:java.lang.String_toString(): bowl == Constants.MAX_PINS_PER_FRAME  =>   bowl != Constants.MAX_PINS_PER_FRAME
+ROR_58:129:java.lang.String_toString(): runTot == Constants.MAX_PINS_PER_FRAME  =>   runTot > Constants.MAX_PINS_PER_FRAME
+ROR_59:129:java.lang.String_toString(): runTot == Constants.MAX_PINS_PER_FRAME  =>   runTot >= Constants.MAX_PINS_PER_FRAME
+ROR_60:129:java.lang.String_toString(): runTot == Constants.MAX_PINS_PER_FRAME  =>   runTot < Constants.MAX_PINS_PER_FRAME
+ROR_61:129:java.lang.String_toString(): runTot == Constants.MAX_PINS_PER_FRAME  =>   runTot <= Constants.MAX_PINS_PER_FRAME
+ROR_62:129:java.lang.String_toString(): runTot == Constants.MAX_PINS_PER_FRAME  =>   runTot != Constants.MAX_PINS_PER_FRAME
+ROR_63:129:java.lang.String_toString(): runTot == Constants.MAX_PINS_PER_FRAME  =>   true
+ROR_64:129:java.lang.String_toString(): runTot == Constants.MAX_PINS_PER_FRAME  =>   false
+ROR_65:132:java.lang.String_toString(): bowl == 0  =>   bowl != 0
+COR_1:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME || score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>   score > Constants.MAX_PINS_PER_FRAME && score > Constants.MAX_PINS_PER_FRAME - runningRawScore
+COR_2:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME || score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>   score > Constants.MAX_PINS_PER_FRAME ^ score > Constants.MAX_PINS_PER_FRAME - runningRawScore
+COR_3:60:boolean_isStrike(): isSpareOrStrike() && bowls.size() == 1  =>   isSpareOrStrike() || bowls.size() == 1
+COR_4:60:boolean_isStrike(): isSpareOrStrike() && bowls.size() == 1  =>   isSpareOrStrike() ^ bowls.size() == 1
+COR_5:65:boolean_isSpare(): isSpareOrStrike() && bowls.size() > 1  =>   isSpareOrStrike() || bowls.size() > 1
+COR_6:65:boolean_isSpare(): isSpareOrStrike() && bowls.size() > 1  =>   isSpareOrStrike() ^ bowls.size() > 1
+COI_1:38:void_playShot(int): score < 0  =>  !(score < 0)
+COI_2:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME  =>  !(score > Constants.MAX_PINS_PER_FRAME)
+COI_3:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>  !(score > Constants.MAX_PINS_PER_FRAME - runningRawScore)
+COI_4:41:void_playShot(int): score > Constants.MAX_PINS_PER_FRAME || score > Constants.MAX_PINS_PER_FRAME - runningRawScore  =>  !(score > Constants.MAX_PINS_PER_FRAME || score > Constants.MAX_PINS_PER_FRAME - runningRawScore)
+COI_5:44:void_playShot(int): bowls.size() >= Constants.SHOTS_PER_FRAME  =>  !(bowls.size() >= Constants.SHOTS_PER_FRAME)
+COI_6:60:boolean_isStrike(): bowls.size() == 1  =>  !(bowls.size() == 1)
+COI_7:60:boolean_isStrike(): isSpareOrStrike() && bowls.size() == 1  =>  !(isSpareOrStrike() && bowls.size() == 1)
+COI_8:65:boolean_isSpare(): bowls.size() > 1  =>  !(bowls.size() > 1)
+COI_9:65:boolean_isSpare(): isSpareOrStrike() && bowls.size() > 1  =>  !(isSpareOrStrike() && bowls.size() > 1)
+COI_10:70:boolean_isSpareOrStrike(): runningRawScore == Constants.MAX_PINS_PER_FRAME  =>  !(runningRawScore == Constants.MAX_PINS_PER_FRAME)
+COI_11:78:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>  !(bowls.size() == Constants.SHOTS_PER_FRAME)
+COI_12:112:java.lang.String_printAbsoluteScore(): absoluteScore == Constants.DUMMY_ABS_SCORE  =>  !(absoluteScore == Constants.DUMMY_ABS_SCORE)
+COI_13:126:java.lang.String_toString(): bowl == Constants.MAX_PINS_PER_FRAME  =>  !(bowl == Constants.MAX_PINS_PER_FRAME)
+COI_14:129:java.lang.String_toString(): runTot == Constants.MAX_PINS_PER_FRAME  =>  !(runTot == Constants.MAX_PINS_PER_FRAME)
+COI_15:132:java.lang.String_toString(): bowl == 0  =>  !(bowl == 0)
+LOI_2:27:RegularFrame(int):bowlsPerFrame => ~bowlsPerFrame
+LOI_3:32:RegularFrame():Constants.SHOTS_PER_FRAME => ~Constants.SHOTS_PER_FRAME
+LOI_4:38:void_playShot(int):score => ~score
+LOI_5:41:void_playShot(int):score => ~score
+LOI_6:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => ~Constants.MAX_PINS_PER_FRAME
+LOI_7:41:void_playShot(int):score => ~score
+LOI_8:41:void_playShot(int):Constants.MAX_PINS_PER_FRAME => ~Constants.MAX_PINS_PER_FRAME
+LOI_9:41:void_playShot(int):runningRawScore => ~runningRawScore
+LOI_10:44:void_playShot(int):Constants.SHOTS_PER_FRAME => ~Constants.SHOTS_PER_FRAME
+LOI_11:49:void_playShot(int):score => ~score
+LOI_12:50:void_playShot(int):score => ~score
+LOI_13:55:int_fetchScore(int):index => ~index
+LOI_14:70:boolean_isSpareOrStrike():runningRawScore => ~runningRawScore
+LOI_15:70:boolean_isSpareOrStrike():Constants.MAX_PINS_PER_FRAME => ~Constants.MAX_PINS_PER_FRAME
+LOI_16:78:boolean_isCompleted():Constants.SHOTS_PER_FRAME => ~Constants.SHOTS_PER_FRAME
+LOI_17:83:int_setAbsoluteScore(int,int):runningRawScore => ~runningRawScore
+LOI_18:85:int_setAbsoluteScore(int,int):score1 => ~score1
+LOI_19:85:int_setAbsoluteScore(int,int):score2 => ~score2
+LOI_20:87:int_setAbsoluteScore(int,int):absoluteScore => ~absoluteScore
+LOI_21:92:int_setAbsoluteScore(int):runningRawScore => ~runningRawScore
+LOI_22:94:int_setAbsoluteScore(int):score => ~score
+LOI_23:96:int_setAbsoluteScore(int):absoluteScore => ~absoluteScore
+LOI_24:101:int_setAbsoluteScoreNoBonus():runningRawScore => ~runningRawScore
+LOI_25:102:int_setAbsoluteScoreNoBonus():absoluteScore => ~absoluteScore
+LOI_26:107:int_getAbsoluteScore():absoluteScore => ~absoluteScore
+LOI_27:112:java.lang.String_printAbsoluteScore():absoluteScore => ~absoluteScore
+LOI_28:112:java.lang.String_printAbsoluteScore():Constants.DUMMY_ABS_SCORE => ~Constants.DUMMY_ABS_SCORE
+LOI_29:112:java.lang.String_printAbsoluteScore():absoluteScore => ~absoluteScore
+LOI_30:126:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => ~Constants.MAX_PINS_PER_FRAME
+LOI_31:129:java.lang.String_toString():runTot => ~runTot
+LOI_32:129:java.lang.String_toString():Constants.MAX_PINS_PER_FRAME => ~Constants.MAX_PINS_PER_FRAME
+LOI_33:146:int_pinsRemaining():Constants.MAX_PINS_PER_FRAME => ~Constants.MAX_PINS_PER_FRAME
+LOI_34:146:int_pinsRemaining():runningRawScore => ~runningRawScore
+ASRS_1:50:void_playShot(int):runningRawScore += score => runningRawScore /= score
+ASRS_2:50:void_playShot(int):runningRawScore += score => runningRawScore *= score
+ASRS_3:50:void_playShot(int):runningRawScore += score => runningRawScore -= score
+ASRS_4:50:void_playShot(int):runningRawScore += score => runningRawScore %= score
+ASRS_5:85:int_setAbsoluteScore(int,int):absoluteScore += score1 + score2 => absoluteScore /= score1 + score2
+ASRS_6:85:int_setAbsoluteScore(int,int):absoluteScore += score1 + score2 => absoluteScore *= score1 + score2
+ASRS_7:85:int_setAbsoluteScore(int,int):absoluteScore += score1 + score2 => absoluteScore -= score1 + score2
+ASRS_8:85:int_setAbsoluteScore(int,int):absoluteScore += score1 + score2 => absoluteScore %= score1 + score2
+ASRS_9:94:int_setAbsoluteScore(int):absoluteScore += score => absoluteScore /= score
+ASRS_10:94:int_setAbsoluteScore(int):absoluteScore += score => absoluteScore *= score
+ASRS_11:94:int_setAbsoluteScore(int):absoluteScore += score => absoluteScore -= score
+ASRS_12:94:int_setAbsoluteScore(int):absoluteScore += score => absoluteScore %= score
+ASRS_13:125:java.lang.String_toString():runTot += bowl => runTot /= bowl
+ASRS_14:125:java.lang.String_toString():runTot += bowl => runTot *= bowl
+ASRS_15:125:java.lang.String_toString():runTot += bowl => runTot -= bowl
+ASRS_16:125:java.lang.String_toString():runTot += bowl => runTot %= bowl

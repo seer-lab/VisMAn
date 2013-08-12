@@ -1,0 +1,763 @@
+=HashSet.java=AODU_4=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/HashSetIterator()/AODU_4/HashSet.java=
+true
+=HashSet.java=AOIS_10=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_10/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+false
+=HashSet.java=ROR_1=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/ROR_1/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest2(structureTests): null
+hashTest3(structureTests): null
+false
+=HashSet.java=AORB_4=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AORB_4/HashSet.java=
+hashTest1(structureTests): 65805857
+hashTest2(structureTests): 65805857
+hashTest3(structureTests): 65805857
+false
+=HashSet.java=AOIS_17=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_17/HashSet.java=
+true
+=HashSet.java=AOIS_9=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_9/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+false
+=HashSet.java=AOIS_5=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_5/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+false
+=HashSet.java=AOIS_12=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_12/HashSet.java=
+true
+=HashSet.java=LOI_3=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/LOI_3/HashSet.java=
+true
+=HashSet.java=AOIS_18=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_18/HashSet.java=
+true
+=HashSet.java=AOIS_11=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_11/HashSet.java=
+true
+=HashSet.java=LOI_5=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/LOI_5/HashSet.java=
+true
+=HashSet.java=COI_1=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/COI_1/HashSet.java=
+hashTest1(structureTests): -47
+hashTest2(structureTests): -47
+hashTest3(structureTests): -47
+false
+=HashSet.java=AOIS_7=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_7/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+false
+=HashSet.java=COI_2=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/COI_2/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest2(structureTests): null
+hashTest3(structureTests): null
+false
+=HashSet.java=AORB_2=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AORB_2/HashSet.java=
+hashTest1(structureTests): 1290311
+hashTest2(structureTests): 1290311
+hashTest3(structureTests): 1290311
+false
+=HashSet.java=AORB_1=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AORB_1/HashSet.java=
+hashTest1(structureTests): -938865988
+hashTest2(structureTests): -938865988
+hashTest3(structureTests): -938865988
+false
+=HashSet.java=AODU_1=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AODU_1/HashSet.java=
+true
+=HashSet.java=AOIU_2=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIU_2/HashSet.java=
+hashTest1(structureTests): -47
+hashTest2(structureTests): -47
+hashTest3(structureTests): -47
+false
+=HashSet.java=AORB_3=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AORB_3/HashSet.java=
+hashTest1(structureTests): 65805959
+hashTest2(structureTests): 65805959
+hashTest3(structureTests): 65805959
+false
+=HashSet.java=AOIS_6=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_6/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+false
+=HashSet.java=LOI_4=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/LOI_4/HashSet.java=
+hashTest1(structureTests): -48
+hashTest2(structureTests): -48
+hashTest3(structureTests): -48
+false
+=HashSet.java=LOI_2=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/LOI_2/HashSet.java=
+hashTest1(structureTests): -47
+hashTest2(structureTests): -47
+hashTest3(structureTests): -47
+false
+=HashSet.java=AOIU_3=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIU_3/HashSet.java=
+hashTest1(structureTests): -47
+hashTest2(structureTests): -47
+hashTest3(structureTests): -47
+false
+=HashSet.java=LOI_6=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/LOI_6/HashSet.java=
+hashTest1(structureTests): -48
+hashTest2(structureTests): -48
+hashTest3(structureTests): -48
+false
+=HashSet.java=AOIS_8=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_contains(java.lang.Object)/AOIS_8/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+false
+=HashSet.java=ROR_15=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_15/HashSet.java=
+true
+=HashSet.java=COI_17=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/COI_17/HashSet.java=
+true
+=HashSet.java=AOIS_65=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AOIS_65/HashSet.java=
+true
+=HashSet.java=AOIS_73=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AOIS_73/HashSet.java=
+true
+=HashSet.java=AOIS_75=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AOIS_75/HashSet.java=
+true
+=HashSet.java=COI_16=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/COI_16/HashSet.java=
+true
+=HashSet.java=LOI_28=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/LOI_28/HashSet.java=
+true
+=HashSet.java=AOIS_66=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AOIS_66/HashSet.java=
+true
+=HashSet.java=ROR_8=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_8/HashSet.java=
+true
+=HashSet.java=COI_15=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/COI_15/HashSet.java=
+true
+=HashSet.java=ROR_11=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_11/HashSet.java=
+true
+=HashSet.java=COI_13=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/COI_13/HashSet.java=
+true
+=HashSet.java=ROR_17=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_17/HashSet.java=
+true
+=HashSet.java=COR_3=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/COR_3/HashSet.java=
+true
+=HashSet.java=AOIS_68=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AOIS_68/HashSet.java=
+true
+=HashSet.java=AOIS_76=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AOIS_76/HashSet.java=
+true
+=HashSet.java=LOI_30=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/LOI_30/HashSet.java=
+true
+=HashSet.java=ROR_13=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_13/HashSet.java=
+true
+=HashSet.java=COI_14=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/COI_14/HashSet.java=
+true
+=HashSet.java=ROR_14=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_14/HashSet.java=
+true
+=HashSet.java=COR_4=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/COR_4/HashSet.java=
+true
+=HashSet.java=ROR_9=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_9/HashSet.java=
+true
+=HashSet.java=ROR_12=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_12/HashSet.java=
+true
+=HashSet.java=AORS_4=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AORS_4/HashSet.java=
+true
+=HashSet.java=AOIU_10=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AOIU_10/HashSet.java=
+true
+=HashSet.java=LOI_29=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/LOI_29/HashSet.java=
+true
+=HashSet.java=AOIS_74=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AOIS_74/HashSet.java=
+true
+=HashSet.java=ROR_10=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_10/HashSet.java=
+true
+=HashSet.java=AOIS_67=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/AOIS_67/HashSet.java=
+true
+=HashSet.java=ROR_16=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/java.lang.Object_next()/ROR_16/HashSet.java=
+true
+=HashSet.java=AOIS_50=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_50/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+false
+=HashSet.java=AOIS_44=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_44/HashSet.java=
+true
+=HashSet.java=AORB_9=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AORB_9/HashSet.java=
+hashTest3(structureTests): -938865988
+hashTest5(structureTests): 796365491
+false
+=HashSet.java=COI_5=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/COI_5/HashSet.java=
+hashTest3(structureTests): -47
+hashTest5(structureTests): -6
+false
+=HashSet.java=LOI_16=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/LOI_16/HashSet.java=
+true
+=HashSet.java=AOIS_42=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_42/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AOIS_39=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_39/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=ROR_3=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/ROR_3/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=ROR_4=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/ROR_4/HashSet.java=
+hashTest3(structureTests): null
+hashTest5(structureTests): null
+false
+=HashSet.java=AOIU_7=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIU_7/HashSet.java=
+hashTest3(structureTests): -47
+hashTest5(structureTests): -6
+false
+=HashSet.java=AOIS_40=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_40/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=LOI_15=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/LOI_15/HashSet.java=
+hashTest3(structureTests): -47
+hashTest5(structureTests): -6
+false
+=HashSet.java=AORB_12=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AORB_12/HashSet.java=
+hashTest3(structureTests): 65805857
+hashTest5(structureTests): 1615700814
+false
+=HashSet.java=LOI_18=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/LOI_18/HashSet.java=
+true
+=HashSet.java=AOIS_41=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_41/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=COI_7=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/COI_7/HashSet.java=
+hashTest3(structureTests): null
+hashTest5(structureTests): null
+false
+=HashSet.java=LOI_19=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/LOI_19/HashSet.java=
+hashTest3(structureTests): -48
+hashTest5(structureTests): -7
+false
+=HashSet.java=COI_6=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/COI_6/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AOIU_8=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIU_8/HashSet.java=
+hashTest3(structureTests): -47
+hashTest5(structureTests): -6
+false
+=HashSet.java=AOIS_49=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_49/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+false
+=HashSet.java=AOIS_43=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_43/HashSet.java=
+true
+=HashSet.java=LOI_17=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/LOI_17/HashSet.java=
+hashTest3(structureTests): -48
+hashTest5(structureTests): -7
+false
+=HashSet.java=AOIS_37=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_37/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AORS_2=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AORS_2/HashSet.java=
+hashTest5(structureTests): expected:<2> but was:<4>
+false
+=HashSet.java=AODU_3=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AODU_3/HashSet.java=
+true
+=HashSet.java=AOIS_38=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AOIS_38/HashSet.java=
+hashTest3(structureTests): expected:<false> but was:<true>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AORB_11=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AORB_11/HashSet.java=
+hashTest3(structureTests): 65805959
+hashTest5(structureTests): 1615700916
+false
+=HashSet.java=AORB_10=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/AORB_10/HashSet.java=
+hashTest3(structureTests): 1290311
+hashTest5(structureTests): 31680409
+false
+=HashSet.java=LOI_20=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_remove(java.lang.Object)/LOI_20/HashSet.java=
+hashTest3(structureTests): -48
+hashTest5(structureTests): -7
+false
+=HashSet.java=AOIS_63=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/AOIS_63/HashSet.java=
+true
+=HashSet.java=AOIS_56=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/AOIS_56/HashSet.java=
+hashTest6(structureTests): -1
+hashTest7(structureTests): -1
+false
+=HashSet.java=AOIS_55=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/AOIS_55/HashSet.java=
+hashTest7(structureTests): 51
+false
+=HashSet.java=AORS_3=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/AORS_3/HashSet.java=
+hashTest6(structureTests): -1
+hashTest7(structureTests): -1
+false
+=HashSet.java=COR_2=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/COR_2/HashSet.java=
+hashTest6(structureTests): null
+hashTest7(structureTests): null
+false
+=HashSet.java=AOIS_53=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/AOIS_53/HashSet.java=
+true
+=HashSet.java=LOI_26=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/LOI_26/HashSet.java=
+hashTest6(structureTests): -1
+hashTest7(structureTests): -1
+false
+=HashSet.java=COI_11=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/COI_11/HashSet.java=
+hashTest6(structureTests): expected:<true> but was:<false>
+false
+=HashSet.java=COI_10=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/COI_10/HashSet.java=
+hashTest7(structureTests): expected:<false> but was:<true>
+false
+=HashSet.java=ROR_5=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/ROR_5/HashSet.java=
+hashTest6(structureTests): null
+hashTest7(structureTests): null
+false
+=HashSet.java=AOIS_62=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/AOIS_62/HashSet.java=
+hashTest6(structureTests): -1
+hashTest7(structureTests): -1
+false
+=HashSet.java=COI_9=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/COI_9/HashSet.java=
+true
+=HashSet.java=LOI_24=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/LOI_24/HashSet.java=
+hashTest6(structureTests): expected:<true> but was:<false>
+false
+=HashSet.java=AOIS_54=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/AOIS_54/HashSet.java=
+hashTest6(structureTests): -1
+hashTest7(structureTests): -1
+false
+=HashSet.java=AOIS_61=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/AOIS_61/HashSet.java=
+hashTest7(structureTests): 51
+false
+=HashSet.java=COI_8=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/COI_8/HashSet.java=
+hashTest6(structureTests): null
+hashTest7(structureTests): null
+false
+=HashSet.java=COR_1=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/COR_1/HashSet.java=
+hashTest6(structureTests): null
+hashTest7(structureTests): null
+false
+=HashSet.java=ROR_7=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/ROR_7/HashSet.java=
+hashTest7(structureTests): expected:<false> but was:<true>
+false
+=HashSet.java=COI_12=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/COI_12/HashSet.java=
+hashTest7(structureTests): expected:<false> but was:<true>
+false
+=HashSet.java=ROR_6=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/ROR_6/HashSet.java=
+true
+=HashSet.java=LOI_23=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_hasNext()/LOI_23/HashSet.java=
+hashTest7(structureTests): 51
+false
+=HashSet.java=LOI_13=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/LOI_13/HashSet.java=
+hashTest1(structureTests): -48
+hashTest2(structureTests): -7
+hashTest3(structureTests): -48
+hashTest4(structureTests): -48
+hashTest5(structureTests): -48
+hashTest6(structureTests): -48
+false
+=HashSet.java=LOI_11=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/LOI_11/HashSet.java=
+hashTest1(structureTests): -48
+hashTest2(structureTests): -7
+hashTest3(structureTests): -48
+hashTest4(structureTests): -48
+hashTest5(structureTests): -48
+hashTest6(structureTests): -48
+false
+=HashSet.java=AOIS_36=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_36/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AOIS_19=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_19/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=LOI_9=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/LOI_9/HashSet.java=
+hashTest1(structureTests): -48
+hashTest2(structureTests): -7
+hashTest3(structureTests): -48
+hashTest4(structureTests): -48
+hashTest5(structureTests): -48
+hashTest6(structureTests): -48
+false
+=HashSet.java=AORB_8=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AORB_8/HashSet.java=
+hashTest1(structureTests): 65805857
+hashTest2(structureTests): 1615700814
+hashTest3(structureTests): 65805857
+hashTest4(structureTests): 65805857
+hashTest5(structureTests): 65805857
+hashTest6(structureTests): 65805857
+false
+=HashSet.java=AOIS_32=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_32/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AOIS_20=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_20/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=COI_4=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/COI_4/HashSet.java=
+hashTest1(structureTests): null
+hashTest2(structureTests): null
+hashTest3(structureTests): null
+hashTest4(structureTests): null
+hashTest5(structureTests): null
+hashTest6(structureTests): null
+false
+=HashSet.java=AOIS_23=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_23/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=ROR_2=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/ROR_2/HashSet.java=
+hashTest1(structureTests): null
+hashTest2(structureTests): null
+hashTest3(structureTests): null
+hashTest4(structureTests): null
+hashTest5(structureTests): null
+hashTest6(structureTests): null
+false
+=HashSet.java=AODU_2=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AODU_2/HashSet.java=
+true
+=HashSet.java=LOI_7=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/LOI_7/HashSet.java=
+hashTest1(structureTests): -47
+hashTest2(structureTests): -6
+hashTest3(structureTests): -47
+hashTest4(structureTests): -47
+hashTest5(structureTests): -47
+hashTest6(structureTests): -47
+false
+=HashSet.java=AOIS_34=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_34/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AOIS_31=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_31/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AORB_5=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AORB_5/HashSet.java=
+hashTest1(structureTests): -938865988
+hashTest2(structureTests): 796365491
+hashTest3(structureTests): -938865988
+hashTest4(structureTests): -938865988
+hashTest5(structureTests): -938865988
+hashTest6(structureTests): -938865988
+false
+=HashSet.java=AOIU_6=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIU_6/HashSet.java=
+hashTest1(structureTests): -47
+hashTest2(structureTests): -6
+hashTest3(structureTests): -47
+hashTest4(structureTests): -47
+hashTest5(structureTests): -47
+hashTest6(structureTests): -47
+false
+=HashSet.java=AOIS_25=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_25/HashSet.java=
+true
+=HashSet.java=AOIS_21=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_21/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AORS_1=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AORS_1/HashSet.java=
+hashTest4(structureTests): expected:<2> but was:<-2>
+hashTest5(structureTests): expected:<2> but was:<-4>
+false
+=HashSet.java=AOIS_35=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_35/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=LOI_10=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/LOI_10/HashSet.java=
+true
+=HashSet.java=AORB_7=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AORB_7/HashSet.java=
+hashTest1(structureTests): 65805959
+hashTest2(structureTests): 1615700916
+hashTest3(structureTests): 65805959
+hashTest4(structureTests): 65805959
+hashTest5(structureTests): 65805959
+hashTest6(structureTests): 65805959
+false
+=HashSet.java=LOI_8=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/LOI_8/HashSet.java=
+true
+=HashSet.java=AOIU_5=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIU_5/HashSet.java=
+hashTest1(structureTests): -47
+hashTest2(structureTests): -6
+hashTest3(structureTests): -47
+hashTest4(structureTests): -47
+hashTest5(structureTests): -47
+hashTest6(structureTests): -47
+false
+=HashSet.java=AOIS_33=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_33/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AOIS_22=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_22/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AORB_6=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AORB_6/HashSet.java=
+hashTest1(structureTests): 1290311
+hashTest2(structureTests): 31680409
+hashTest3(structureTests): 1290311
+hashTest4(structureTests): 1290311
+hashTest5(structureTests): 1290311
+hashTest6(structureTests): 1290311
+false
+=HashSet.java=LOI_12=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/LOI_12/HashSet.java=
+hashTest1(structureTests): -48
+hashTest2(structureTests): -7
+hashTest3(structureTests): -48
+hashTest4(structureTests): -48
+hashTest5(structureTests): -48
+hashTest6(structureTests): -48
+false
+=HashSet.java=AOIU_4=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIU_4/HashSet.java=
+hashTest1(structureTests): -47
+hashTest2(structureTests): -6
+hashTest3(structureTests): -47
+hashTest4(structureTests): -47
+hashTest5(structureTests): -47
+hashTest6(structureTests): -47
+false
+=HashSet.java=AOIS_24=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_24/HashSet.java=
+hashTest1(structureTests): expected:<true> but was:<false>
+hashTest5(structureTests): expected:<2> but was:<3>
+false
+=HashSet.java=AOIS_26=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/AOIS_26/HashSet.java=
+true
+=HashSet.java=COI_3=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/boolean_add(java.lang.Object)/COI_3/HashSet.java=
+hashTest1(structureTests): -47
+hashTest2(structureTests): -6
+hashTest3(structureTests): -47
+hashTest4(structureTests): -47
+hashTest5(structureTests): -47
+hashTest6(structureTests): -47
+false
+=HashSet.java=AOIU_1=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/HashSet(int)/AOIU_1/HashSet.java=
+hashTest1(structureTests): null
+hashTest2(structureTests): null
+hashTest3(structureTests): null
+hashTest4(structureTests): null
+hashTest5(structureTests): null
+hashTest6(structureTests): null
+hashTest7(structureTests): null
+false
+=HashSet.java=AOIS_4=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/HashSet(int)/AOIS_4/HashSet.java=
+true
+=HashSet.java=LOI_1=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/HashSet(int)/LOI_1/HashSet.java=
+hashTest1(structureTests): null
+hashTest2(structureTests): null
+hashTest3(structureTests): null
+hashTest4(structureTests): null
+hashTest5(structureTests): null
+hashTest6(structureTests): null
+hashTest7(structureTests): null
+false
+=HashSet.java=AOIS_3=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/HashSet(int)/AOIS_3/HashSet.java=
+true
+=HashSet.java=AOIS_1=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/HashSet(int)/AOIS_1/HashSet.java=
+true
+=HashSet.java=AOIS_2=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/HashSet(int)/AOIS_2/HashSet.java=
+true
+=HashSet.java=AOIS_52=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/int_size()/AOIS_52/HashSet.java=
+true
+=HashSet.java=AOIU_9=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/int_size()/AOIU_9/HashSet.java=
+hashTest4(structureTests): expected:<2> but was:<-2>
+hashTest5(structureTests): expected:<2> but was:<-2>
+false
+=HashSet.java=AOIS_51=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/int_size()/AOIS_51/HashSet.java=
+true
+=HashSet.java=LOI_22=/home/david/Desktop/StructuresExample/mutants/hashset/traditional_mutants/int_size()/LOI_22/HashSet.java=
+hashTest4(structureTests): expected:<2> but was:<-3>
+hashTest5(structureTests): expected:<2> but was:<-3>
+false
+=HashSet.java=JSI_1=/home/david/Desktop/StructuresExample/mutants/hashset/class_mutants/JSI_1/HashSet.java=
+true
+=HashSet.java=JSI_2=/home/david/Desktop/StructuresExample/mutants/hashset/class_mutants/JSI_2/HashSet.java=
+true
+=LinkedList.java=COD_2=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_previous()/COD_2/LinkedList.java=
+linkedListTest2(structureTests): null
+false
+=LinkedList.java=COI_13=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_next()/COI_13/LinkedList.java=
+linkedListTest2(structureTests): null
+false
+=LinkedList.java=COD_1=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_next()/COD_1/LinkedList.java=
+linkedListTest1(structureTests): null
+linkedListTest2(structureTests): null
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+false
+=LinkedList.java=ROR_9=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_next()/ROR_9/LinkedList.java=
+linkedListTest1(structureTests): null
+linkedListTest2(structureTests): null
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+false
+=LinkedList.java=COI_5=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_getLast()/COI_5/LinkedList.java=
+linkedListTest7(structureTests): null
+false
+=LinkedList.java=ROR_5=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_getLast()/ROR_5/LinkedList.java=
+linkedListTest7(structureTests): null
+false
+=LinkedList.java=ROR_3=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_removeFirst()/ROR_3/LinkedList.java=
+linkedListTest7(structureTests): null
+false
+=LinkedList.java=ROR_2=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_removeFirst()/ROR_2/LinkedList.java=
+true
+=LinkedList.java=COI_2=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_removeFirst()/COI_2/LinkedList.java=
+true
+=LinkedList.java=COI_3=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_removeFirst()/COI_3/LinkedList.java=
+true
+=LinkedList.java=ROR_8=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_addLast(java.lang.Object)/ROR_8/LinkedList.java=
+true
+=LinkedList.java=COI_8=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_addLast(java.lang.Object)/COI_8/LinkedList.java=
+linkedListTest1(structureTests): null
+linkedListTest2(structureTests): null
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+linkedListTest7(structureTests): null
+false
+=LinkedList.java=COI_16=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/boolean_hasNext()/COI_16/LinkedList.java=
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+false
+=LinkedList.java=COI_15=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/boolean_hasNext()/COI_15/LinkedList.java=
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+false
+=LinkedList.java=ROR_11=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/boolean_hasNext()/ROR_11/LinkedList.java=
+linkedListTest1(structureTests): null
+linkedListTest2(structureTests): null
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+false
+=LinkedList.java=COI_14=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/boolean_hasNext()/COI_14/LinkedList.java=
+linkedListTest1(structureTests): null
+linkedListTest2(structureTests): null
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+false
+=LinkedList.java=ROR_12=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/boolean_hasNext()/ROR_12/LinkedList.java=
+linkedListTest1(structureTests): null
+linkedListTest2(structureTests): null
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+false
+=LinkedList.java=ROR_10=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/boolean_hasNext()/ROR_10/LinkedList.java=
+linkedListTest1(structureTests): null
+linkedListTest2(structureTests): null
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+false
+=LinkedList.java=ROR_17=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_remove()/ROR_17/LinkedList.java=
+linkedListTest1(structureTests): null
+linkedListTest2(structureTests): null
+linkedListTest3(structureTests): null
+linkedListTest4(structureTests): null
+linkedListTest6(structureTests): null
+false
+=LinkedList.java=COI_25=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_remove()/COI_25/LinkedList.java=
+true
+=LinkedList.java=COI_24=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_remove()/COI_24/LinkedList.java=
+true
+=LinkedList.java=COI_26=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_remove()/COI_26/LinkedList.java=
+true
+=LinkedList.java=ROR_16=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_remove()/ROR_16/LinkedList.java=
+true
+=LinkedList.java=COI_4=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_addFirst(java.lang.Object)/COI_4/LinkedList.java=
+true
+=LinkedList.java=ROR_4=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_addFirst(java.lang.Object)/ROR_4/LinkedList.java=
+linkedListTest5(structureTests): null
+false
+=LinkedList.java=COI_20=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_add(java.lang.Object)/COI_20/LinkedList.java=
+linkedListTest5(structureTests): null
+false
+=LinkedList.java=ROR_15=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_add(java.lang.Object)/ROR_15/LinkedList.java=
+linkedListTest5(structureTests): null
+false
+=LinkedList.java=COI_21=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_add(java.lang.Object)/COI_21/LinkedList.java=
+true
+=LinkedList.java=ROR_14=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/void_add(java.lang.Object)/ROR_14/LinkedList.java=
+true
+=LinkedList.java=COI_7=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_removeLast()/COI_7/LinkedList.java=
+true
+=LinkedList.java=COI_6=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_removeLast()/COI_6/LinkedList.java=
+true
+=LinkedList.java=ROR_7=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_removeLast()/ROR_7/LinkedList.java=
+true
+=LinkedList.java=ROR_6=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_removeLast()/ROR_6/LinkedList.java=
+true
+=LinkedList.java=ROR_1=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_getFirst()/ROR_1/LinkedList.java=
+true
+=LinkedList.java=COI_1=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/java.lang.Object_getFirst()/COI_1/LinkedList.java=
+linkedListTest5(structureTests): null
+false
+=LinkedList.java=ROR_13=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/boolean_hasPrevious()/ROR_13/LinkedList.java=
+linkedListTest2(structureTests): null
+false
+=LinkedList.java=COI_19=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/boolean_hasPrevious()/COI_19/LinkedList.java=
+linkedListTest2(structureTests): null
+false
+=LinkedList.java=COI_30=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/linkedlist.LinkedList.Node_lastPosition()/COI_30/LinkedList.java=
+true
+=LinkedList.java=COI_31=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/linkedlist.LinkedList.Node_lastPosition()/COI_31/LinkedList.java=
+true
+=LinkedList.java=ROR_18=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/linkedlist.LinkedList.Node_lastPosition()/ROR_18/LinkedList.java=
+true
+=LinkedList.java=COI_29=/home/david/Desktop/StructuresExample/mutants/linkedlist/traditional_mutants/linkedlist.LinkedList.Node_lastPosition()/COI_29/LinkedList.java=
+linkedListTest2(structureTests): null
+false
+=LinkedList.java=PRV_13=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_13/LinkedList.java=
+linkedListTest2(structureTests): null
+false
+=LinkedList.java=PRV_8=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_8/LinkedList.java=
+true
+=LinkedList.java=PRV_9=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_9/LinkedList.java=
+true
+=LinkedList.java=PRV_16=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_16/LinkedList.java=
+true
+=LinkedList.java=PRV_14=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_14/LinkedList.java=
+true
+=LinkedList.java=PRV_7=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_7/LinkedList.java=
+true
+=LinkedList.java=PRV_11=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_11/LinkedList.java=
+linkedListTest3(structureTests): expected:<[C]> but was:<[B]>
+linkedListTest6(structureTests): expected:<false> but was:<true>
+false
+=LinkedList.java=PRV_15=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_15/LinkedList.java=
+linkedListTest3(structureTests): expected:<[C]> but was:<[B]>
+linkedListTest6(structureTests): expected:<false> but was:<true>
+false
+=LinkedList.java=PRV_2=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_2/LinkedList.java=
+linkedListTest3(structureTests): expected:<[C]> but was:<[B]>
+linkedListTest6(structureTests): expected:<false> but was:<true>
+false
+=LinkedList.java=JDC_1=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/JDC_1/LinkedList.java=
+true
+=LinkedList.java=PRV_17=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_17/LinkedList.java=
+true
+=LinkedList.java=JSI_1=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/JSI_1/LinkedList.java=
+true
+=LinkedList.java=PRV_12=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_12/LinkedList.java=
+true
+=LinkedList.java=PRV_4=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_4/LinkedList.java=
+true
+=LinkedList.java=PRV_5=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_5/LinkedList.java=
+true
+=LinkedList.java=PRV_1=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_1/LinkedList.java=
+true
+=LinkedList.java=PRV_10=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_10/LinkedList.java=
+linkedListTest3(structureTests): expected:<[C]> but was:<[B]>
+linkedListTest6(structureTests): expected:<false> but was:<true>
+false
+=LinkedList.java=JSI_2=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/JSI_2/LinkedList.java=
+linkedListTest3(structureTests): expected:<[C]> but was:<[B]>
+linkedListTest6(structureTests): expected:<false> but was:<true>
+false
+=LinkedList.java=PRV_6=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_6/LinkedList.java=
+linkedListTest3(structureTests): expected:<[C]> but was:<[B]>
+linkedListTest6(structureTests): expected:<false> but was:<true>
+false
+=LinkedList.java=PRV_3=/home/david/Desktop/StructuresExample/mutants/linkedlist/class_mutants/PRV_3/LinkedList.java=
+true
+=LinkedListStack.java=ROR_1=/home/david/Desktop/StructuresExample/mutants/linkedliststack/traditional_mutants/java.lang.Object_pop()/ROR_1/LinkedListStack.java=
+stackTest1(structureTests): null
+stackTest2(structureTests): null
+false
+=LinkedListStack.java=COI_1=/home/david/Desktop/StructuresExample/mutants/linkedliststack/traditional_mutants/java.lang.Object_pop()/COI_1/LinkedListStack.java=
+stackTest1(structureTests): null
+stackTest2(structureTests): null
+false
+=LinkedListStack.java=ROR_2=/home/david/Desktop/StructuresExample/mutants/linkedliststack/traditional_mutants/boolean_empty()/ROR_2/LinkedListStack.java=
+stackTest1(structureTests): null
+stackTest2(structureTests): null
+false
+=LinkedListStack.java=COI_2=/home/david/Desktop/StructuresExample/mutants/linkedliststack/traditional_mutants/boolean_empty()/COI_2/LinkedListStack.java=
+stackTest3(structureTests): expected:<true> but was:<false>
+stackTest4(structureTests): expected:<false> but was:<true>
+false
+=LinkedListStack.java=JDC_1=/home/david/Desktop/StructuresExample/mutants/linkedliststack/class_mutants/JDC_1/LinkedListStack.java=
+true
+=LinkedListStack.java=JSI_1=/home/david/Desktop/StructuresExample/mutants/linkedliststack/class_mutants/JSI_1/LinkedListStack.java=
+true

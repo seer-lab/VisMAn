@@ -1,0 +1,7 @@
+void_loadPlayers()
+void_playGame()
+void_addPlayers(int)
+int_getNumberOfPlayer()
+int_fetchScore(net.heinke.cbingutter.game.player.Player)
+java.util.List_findWinner(java.util.List)
+int_longestPlayerName()

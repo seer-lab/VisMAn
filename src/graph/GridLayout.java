@@ -18,9 +18,9 @@ public class GridLayout extends StaticLayout  {
 		
 		int currentNode = 0;
 		
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < Math.ceil(Math.sqrt(nodeArray.length)); i++)
 		{
-			for (int j = 0; j < 3; j++)
+			for (int j = 0; j < Math.ceil(Math.sqrt(nodeArray.length)); j++)
 			{
 				this.setLocation(nodeArray[currentNode], i*SPACER_DISTANCE+70, j*SPACER_DISTANCE+70);
 				currentNode++;

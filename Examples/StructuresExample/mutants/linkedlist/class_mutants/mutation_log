@@ -1,0 +1,26 @@
+PRV_1:37:first = first.next;  =>  first = last;
+PRV_2:50:newNode.next = first;  =>  newNode.next = last;
+PRV_3:53:last = newNode;  =>  last = first;
+PRV_4:55:first.previous = newNode;  =>  first.previous = last;
+PRV_5:55:first.previous = newNode;  =>  first.previous = first;
+PRV_6:57:first = newNode;  =>  first = last;
+PRV_7:74:last = last.previous;  =>  last = first;
+PRV_8:88:newNode.previous = last;  =>  newNode.previous = first;
+PRV_9:90:first = newNode;  =>  first = last;
+PRV_10:92:last.next = newNode;  =>  last.next = last;
+PRV_11:92:last.next = newNode;  =>  last.next = first;
+PRV_12:94:last = newNode;  =>  last = first;
+PRV_13:182:newNode.next = position.next;  =>  newNode.next = position;
+PRV_14:183:newNode.next.previous = newNode;  =>  newNode.next.previous = position;
+PRV_15:184:position.next = newNode;  =>  position.next = position;
+PRV_16:202:positionToRemove.previous.next = positionToRemove.next;  =>  positionToRemove.previous.next = position;
+PRV_17:203:positionToRemove.next.previous = positionToRemove.previous;  =>  positionToRemove.next.previous = position;
+JSI_1:13:static is inserted
+JSI_2:15:static is inserted
+JSI_3:105:static is inserted
+JSI_4:107:static is inserted
+JSI_5:109:static is inserted
+JSI_6:116:static is inserted
+JSI_7:118:static is inserted
+JSI_8:120:static is inserted
+JDC_1:17:public JDC_1() is deleted

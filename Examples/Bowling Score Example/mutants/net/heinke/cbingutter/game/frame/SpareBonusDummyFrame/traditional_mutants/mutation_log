@@ -1,0 +1,17 @@
+AOIU_1:15:SpareBonusDummyFrame():Constants.BONUS_SHOTS_FINAL_FRAME_SPARE => -Constants.BONUS_SHOTS_FINAL_FRAME_SPARE
+AOIS_1:15:SpareBonusDummyFrame():Constants.BONUS_SHOTS_FINAL_FRAME_SPARE => Constants.BONUS_SHOTS_FINAL_FRAME_SPARE++
+AOIS_2:15:SpareBonusDummyFrame():Constants.BONUS_SHOTS_FINAL_FRAME_SPARE => Constants.BONUS_SHOTS_FINAL_FRAME_SPARE--
+AOIS_3:20:boolean_isCompleted():Constants.BONUS_SHOTS_FINAL_FRAME_SPARE => ++Constants.BONUS_SHOTS_FINAL_FRAME_SPARE
+AOIS_4:20:boolean_isCompleted():Constants.BONUS_SHOTS_FINAL_FRAME_SPARE => --Constants.BONUS_SHOTS_FINAL_FRAME_SPARE
+AOIS_5:20:boolean_isCompleted():Constants.BONUS_SHOTS_FINAL_FRAME_SPARE => Constants.BONUS_SHOTS_FINAL_FRAME_SPARE++
+AOIS_6:20:boolean_isCompleted():Constants.BONUS_SHOTS_FINAL_FRAME_SPARE => Constants.BONUS_SHOTS_FINAL_FRAME_SPARE--
+ROR_1:20:boolean_isCompleted(): super.bowls.size() == Constants.BONUS_SHOTS_FINAL_FRAME_SPARE  =>   super.bowls.size() > Constants.BONUS_SHOTS_FINAL_FRAME_SPARE
+ROR_2:20:boolean_isCompleted(): super.bowls.size() == Constants.BONUS_SHOTS_FINAL_FRAME_SPARE  =>   super.bowls.size() >= Constants.BONUS_SHOTS_FINAL_FRAME_SPARE
+ROR_3:20:boolean_isCompleted(): super.bowls.size() == Constants.BONUS_SHOTS_FINAL_FRAME_SPARE  =>   super.bowls.size() < Constants.BONUS_SHOTS_FINAL_FRAME_SPARE
+ROR_4:20:boolean_isCompleted(): super.bowls.size() == Constants.BONUS_SHOTS_FINAL_FRAME_SPARE  =>   super.bowls.size() <= Constants.BONUS_SHOTS_FINAL_FRAME_SPARE
+ROR_5:20:boolean_isCompleted(): super.bowls.size() == Constants.BONUS_SHOTS_FINAL_FRAME_SPARE  =>   super.bowls.size() != Constants.BONUS_SHOTS_FINAL_FRAME_SPARE
+ROR_6:20:boolean_isCompleted(): super.bowls.size() == Constants.BONUS_SHOTS_FINAL_FRAME_SPARE  =>   true
+ROR_7:20:boolean_isCompleted(): super.bowls.size() == Constants.BONUS_SHOTS_FINAL_FRAME_SPARE  =>   false
+COI_1:20:boolean_isCompleted(): super.bowls.size() == Constants.BONUS_SHOTS_FINAL_FRAME_SPARE  =>  !(super.bowls.size() == Constants.BONUS_SHOTS_FINAL_FRAME_SPARE)
+LOI_1:15:SpareBonusDummyFrame():Constants.BONUS_SHOTS_FINAL_FRAME_SPARE => ~Constants.BONUS_SHOTS_FINAL_FRAME_SPARE
+LOI_2:20:boolean_isCompleted():Constants.BONUS_SHOTS_FINAL_FRAME_SPARE => ~Constants.BONUS_SHOTS_FINAL_FRAME_SPARE

@@ -1,0 +1,13 @@
+AOIS_1:18:boolean_isCompleted():Constants.SHOTS_PER_FRAME => ++Constants.SHOTS_PER_FRAME
+AOIS_2:18:boolean_isCompleted():Constants.SHOTS_PER_FRAME => --Constants.SHOTS_PER_FRAME
+AOIS_3:18:boolean_isCompleted():Constants.SHOTS_PER_FRAME => Constants.SHOTS_PER_FRAME++
+AOIS_4:18:boolean_isCompleted():Constants.SHOTS_PER_FRAME => Constants.SHOTS_PER_FRAME--
+ROR_1:18:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() > Constants.SHOTS_PER_FRAME
+ROR_2:18:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() >= Constants.SHOTS_PER_FRAME
+ROR_3:18:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() < Constants.SHOTS_PER_FRAME
+ROR_4:18:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() <= Constants.SHOTS_PER_FRAME
+ROR_5:18:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   bowls.size() != Constants.SHOTS_PER_FRAME
+ROR_6:18:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   true
+ROR_7:18:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>   false
+COI_1:18:boolean_isCompleted(): bowls.size() == Constants.SHOTS_PER_FRAME  =>  !(bowls.size() == Constants.SHOTS_PER_FRAME)
+LOI_1:18:boolean_isCompleted():Constants.SHOTS_PER_FRAME => ~Constants.SHOTS_PER_FRAME

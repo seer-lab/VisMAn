@@ -1,0 +1,8 @@
+AORB_1:36:java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int):Constants.FRAMES_PER_MATCH - 1 => Constants.FRAMES_PER_MATCH * 1
+AORB_2:36:java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int):Constants.FRAMES_PER_MATCH - 1 => Constants.FRAMES_PER_MATCH / 1
+AORB_3:36:java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int):Constants.FRAMES_PER_MATCH - 1 => Constants.FRAMES_PER_MATCH % 1
+AORB_4:36:java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int):Constants.FRAMES_PER_MATCH - 1 => Constants.FRAMES_PER_MATCH + 1
+AORB_5:41:java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int):Constants.FRAMES_PER_MATCH - 1 => Constants.FRAMES_PER_MATCH * 1
+AORB_6:41:java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int):Constants.FRAMES_PER_MATCH - 1 => Constants.FRAMES_PER_MATCH / 1
+AORB_7:41:java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int):Constants.FRAMES_PER_MATCH - 1 => Constants.FRAMES_PER_MATCH % 1
+AORB_8:41:java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int):Constants.FRAMES_PER_MATCH - 1 => Constants.FRAMES_PER_MATCH + 1

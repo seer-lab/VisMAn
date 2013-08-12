@@ -114,8 +114,10 @@ public class GuiDisplayFrame extends JFrame
 	private JScrollPane sourcePane;
 	private JScrollPane mutantPane;
 	private JScrollPane testPane;
+	private JScrollPane operatorsPane;
 	private JPanel graphPane;
 	private JPanel rightPane;
+	private JPanel checkboxPanel;
 	
 	private JPanel controlPane;
 	private JButton zoomIn;
@@ -140,6 +142,8 @@ public class GuiDisplayFrame extends JFrame
 	private JTabbedPane tabbedPane;
 	
 	private JTextArea testResultsArea;
+	
+	private ArrayList<String> operatorsList;
 	
 	
 	//Other entities.
@@ -294,6 +298,8 @@ public class GuiDisplayFrame extends JFrame
 		rightPane = new JPanel();
 		tabbedPane = new JTabbedPane();
 		testPane = new JScrollPane();
+		operatorsPane = new JScrollPane();
+		checkboxPanel = new JPanel();
 		
 		selectionOptions = new ButtonGroup();
 		pickButton = new JRadioButton("Pick");
@@ -348,6 +354,7 @@ public class GuiDisplayFrame extends JFrame
 						sourceHighlighter.setText(selectedNode.getSource());
 						sourceHighlighter.setCaretPosition(0);
 						tabbedPane.setTitleAt(0, "Source Code");
+						operatorsList = new ArrayList<String>();
 						drawClassGraph(selectedNode);
 					}
 					else if (pickedNodes.toArray()[0] instanceof PackageNode)
@@ -398,9 +405,14 @@ public class GuiDisplayFrame extends JFrame
 		testResultsArea.setEditable(false);
 		testPane.setViewportView(testResultsArea);
 		
+		checkboxPanel.setLayout(new BoxLayout(checkboxPanel,BoxLayout.Y_AXIS));
+		
+		operatorsPane.setViewportView(checkboxPanel);
+		
 		tabbedPane.addTab("Aggregate Data",sourcePane);
 		tabbedPane.addTab("Mutant Code", mutantPane);
 		tabbedPane.addTab("Test Results", testPane);
+		tabbedPane.addTab("Mutation Operators", operatorsPane);
 		
 		horizontalSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,verticalSplit,rightPane);
 		horizontalSplit.setDividerLocation(450);
@@ -426,11 +438,10 @@ public class GuiDisplayFrame extends JFrame
 				if(sourceTree.getLastSelectedPathComponent() instanceof ClassNode)
 				{
 					ClassNode selectedNode = (ClassNode) sourceTree.getLastSelectedPathComponent();
-					//sourceArea.setText(selectedNode.getSource());
 					tabbedPane.setTitleAt(0, "Source Code");
 					sourceHighlighter.setText(selectedNode.getSource());
 					sourceHighlighter.setCaretPosition(0);
-					//highlightSource(selectedNode);
+					operatorsList = new ArrayList<String>();
 					drawClassGraph(selectedNode);
 				}
 				else if (sourceTree.getLastSelectedPathComponent() instanceof PackageNode)
@@ -471,16 +482,55 @@ public class GuiDisplayFrame extends JFrame
 	 * This method will create the graph of a class level file from the package hierarchy.
 	 * @param node the class file to visualize
 	 */
-	private void drawClassGraph(ClassNode node)
-	{
+	private void drawClassGraph(final ClassNode node)
+	{	
 		//Create a new graph.
 		Graph<DefaultMutableTreeNode, String> classGraph = new SparseMultigraph<DefaultMutableTreeNode, String>();
 		//Create a new edge list.
 		edgeList = new ArrayList<GraphEdge>();
+		
+		//Check to see which mutation operators will be displayed.
+		if (operatorsList.size() == 0) //Generate the list of operators.
+		{
+			checkboxPanel.removeAll();
+			for (final DataMutant mutant:node.getMutantList())
+			{
+				if (!(operatorsList.contains(mutant.getType())))
+				{
+					operatorsList.add(mutant.getType());
+					JCheckBox checkBox = new JCheckBox(mutant.getType());
+					checkBox.setSelected(true);
+					checkBox.addItemListener(new ItemListener(){
+						@Override
+						public void itemStateChanged(ItemEvent e) 
+						{
+							JCheckBox changedBox = (JCheckBox) e.getItemSelectable();
+							if (operatorsList.contains(changedBox.getText()))
+							{
+								operatorsList.remove(changedBox.getText());
+							}
+							else
+							{
+								operatorsList.add(changedBox.getText());
+							}
+							drawClassGraph(node);
+						}
+					});
+					checkboxPanel.add(checkBox);
+				}
+			}
+			
+			
+			
+		}
+		
 		//Add all of the mutants of the class to the graph as vertices (nodes).
 		for (DataMutant mutant:node.getMutantList())
 		{
-			classGraph.addVertex(mutant);
+			if (operatorsList.contains(mutant.getType()) == true)
+			{
+				classGraph.addVertex(mutant);
+			}
 		}
 		
 		/* Add the edges to the graph.  This nested for loop structure works by choosing each mutant as 
@@ -575,7 +625,8 @@ public class GuiDisplayFrame extends JFrame
 			
 		};
 		
-		Layout<DefaultMutableTreeNode, String> layout = new CircleLayout<DefaultMutableTreeNode, String>(classGraph);
+		//Layout<DefaultMutableTreeNode, String> layout = new CircleLayout<DefaultMutableTreeNode, String>(classGraph);
+		Layout layout = new GridLayout(classGraph);
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.setBackground(Color.white);

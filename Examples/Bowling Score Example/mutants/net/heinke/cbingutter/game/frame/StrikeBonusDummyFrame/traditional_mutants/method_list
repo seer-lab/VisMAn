@@ -1,0 +1,4 @@
+boolean_isCompleted()
+int_setAbsoluteScore(int,int)
+int_setAbsoluteScore(int)
+int_setAbsoluteScoreNoBonus()

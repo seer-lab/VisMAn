@@ -1,0 +1,4 @@
+SpareBonusDummyFrame()
+boolean_isCompleted()
+int_setAbsoluteScore(int)
+int_setAbsoluteScoreNoBonus()

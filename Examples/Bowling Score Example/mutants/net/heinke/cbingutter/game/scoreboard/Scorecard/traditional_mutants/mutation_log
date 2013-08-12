@@ -1,0 +1,111 @@
+AORS_1:46:void_playGame():++counter => counter--
+AORS_2:54:void_addPlayers(int):++i => i--
+AODS_1:46:void_playGame():++counter => counter
+AOIU_1:28:void_loadPlayers():numPlayers => -numPlayers
+AOIU_2:29:void_loadPlayers():numPlayers => -numPlayers
+AOIU_3:41:void_playGame():score => -score
+AOIU_4:44:void_playGame():longestPlayerName => -longestPlayerName
+AOIU_5:108:int_fetchScore(net.heinke.cbingutter.game.player.Player):Constants.MAX_PINS_PER_FRAME => -Constants.MAX_PINS_PER_FRAME
+AOIU_6:144:int_longestPlayerName():longest => -longest
+AOIS_1:28:void_loadPlayers():numPlayers => ++numPlayers
+AOIS_2:28:void_loadPlayers():numPlayers => --numPlayers
+AOIS_3:28:void_loadPlayers():numPlayers => numPlayers++
+AOIS_4:28:void_loadPlayers():numPlayers => numPlayers--
+AOIS_5:29:void_loadPlayers():numPlayers => numPlayers++
+AOIS_6:29:void_loadPlayers():numPlayers => numPlayers--
+AOIS_7:37:void_playGame():counter => ++counter
+AOIS_8:37:void_playGame():counter => --counter
+AOIS_9:37:void_playGame():counter => counter++
+AOIS_10:37:void_playGame():counter => counter--
+AOIS_11:37:void_playGame():Constants.FRAMES_PER_MATCH => ++Constants.FRAMES_PER_MATCH
+AOIS_12:37:void_playGame():Constants.FRAMES_PER_MATCH => --Constants.FRAMES_PER_MATCH
+AOIS_13:37:void_playGame():Constants.FRAMES_PER_MATCH => Constants.FRAMES_PER_MATCH++
+AOIS_14:37:void_playGame():Constants.FRAMES_PER_MATCH => Constants.FRAMES_PER_MATCH--
+AOIS_15:41:void_playGame():score => score++
+AOIS_16:41:void_playGame():score => score--
+AOIS_17:44:void_playGame():longestPlayerName => longestPlayerName++
+AOIS_18:44:void_playGame():longestPlayerName => longestPlayerName--
+AOIS_19:54:void_addPlayers(int):i => ++i
+AOIS_20:54:void_addPlayers(int):i => --i
+AOIS_21:54:void_addPlayers(int):i => i++
+AOIS_22:54:void_addPlayers(int):i => i--
+AOIS_23:54:void_addPlayers(int):numPlayers => ++numPlayers
+AOIS_24:54:void_addPlayers(int):numPlayers => --numPlayers
+AOIS_25:54:void_addPlayers(int):numPlayers => numPlayers++
+AOIS_26:54:void_addPlayers(int):numPlayers => numPlayers--
+AOIS_27:56:void_addPlayers(int):i => ++i
+AOIS_28:56:void_addPlayers(int):i => --i
+AOIS_29:56:void_addPlayers(int):i => i++
+AOIS_30:56:void_addPlayers(int):i => i--
+AOIS_31:108:int_fetchScore(net.heinke.cbingutter.game.player.Player):Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME++
+AOIS_32:108:int_fetchScore(net.heinke.cbingutter.game.player.Player):Constants.MAX_PINS_PER_FRAME => Constants.MAX_PINS_PER_FRAME--
+AOIS_33:123:java.util.List_findWinner(java.util.List):currentHigh => ++currentHigh
+AOIS_34:123:java.util.List_findWinner(java.util.List):currentHigh => --currentHigh
+AOIS_35:123:java.util.List_findWinner(java.util.List):currentHigh => currentHigh++
+AOIS_36:123:java.util.List_findWinner(java.util.List):currentHigh => currentHigh--
+AOIS_37:126:java.util.List_findWinner(java.util.List):currentHigh => ++currentHigh
+AOIS_38:126:java.util.List_findWinner(java.util.List):currentHigh => --currentHigh
+AOIS_39:126:java.util.List_findWinner(java.util.List):currentHigh => currentHigh++
+AOIS_40:126:java.util.List_findWinner(java.util.List):currentHigh => currentHigh--
+AOIS_41:140:int_longestPlayerName():longest => ++longest
+AOIS_42:140:int_longestPlayerName():longest => --longest
+AOIS_43:140:int_longestPlayerName():longest => longest++
+AOIS_44:140:int_longestPlayerName():longest => longest--
+AOIS_45:144:int_longestPlayerName():longest => longest++
+AOIS_46:144:int_longestPlayerName():longest => longest--
+ROR_1:54:void_addPlayers(int): i <= numPlayers  =>   i > numPlayers
+ROR_2:54:void_addPlayers(int): i <= numPlayers  =>   i >= numPlayers
+ROR_3:54:void_addPlayers(int): i <= numPlayers  =>   i < numPlayers
+ROR_4:54:void_addPlayers(int): i <= numPlayers  =>   i == numPlayers
+ROR_5:54:void_addPlayers(int): i <= numPlayers  =>   i != numPlayers
+ROR_6:54:void_addPlayers(int): i <= numPlayers  =>   true
+ROR_7:54:void_addPlayers(int): i <= numPlayers  =>   false
+ROR_8:123:java.util.List_findWinner(java.util.List): p.getRunningTotal() == currentHigh  =>   p.getRunningTotal() > currentHigh
+ROR_9:123:java.util.List_findWinner(java.util.List): p.getRunningTotal() == currentHigh  =>   p.getRunningTotal() >= currentHigh
+ROR_10:123:java.util.List_findWinner(java.util.List): p.getRunningTotal() == currentHigh  =>   p.getRunningTotal() < currentHigh
+ROR_11:123:java.util.List_findWinner(java.util.List): p.getRunningTotal() == currentHigh  =>   p.getRunningTotal() <= currentHigh
+ROR_12:123:java.util.List_findWinner(java.util.List): p.getRunningTotal() == currentHigh  =>   p.getRunningTotal() != currentHigh
+ROR_13:123:java.util.List_findWinner(java.util.List): p.getRunningTotal() == currentHigh  =>   true
+ROR_14:123:java.util.List_findWinner(java.util.List): p.getRunningTotal() == currentHigh  =>   false
+ROR_15:126:java.util.List_findWinner(java.util.List): p.getRunningTotal() > currentHigh  =>   p.getRunningTotal() >= currentHigh
+ROR_16:126:java.util.List_findWinner(java.util.List): p.getRunningTotal() > currentHigh  =>   p.getRunningTotal() < currentHigh
+ROR_17:126:java.util.List_findWinner(java.util.List): p.getRunningTotal() > currentHigh  =>   p.getRunningTotal() <= currentHigh
+ROR_18:126:java.util.List_findWinner(java.util.List): p.getRunningTotal() > currentHigh  =>   p.getRunningTotal() == currentHigh
+ROR_19:126:java.util.List_findWinner(java.util.List): p.getRunningTotal() > currentHigh  =>   p.getRunningTotal() != currentHigh
+ROR_20:126:java.util.List_findWinner(java.util.List): p.getRunningTotal() > currentHigh  =>   true
+ROR_21:126:java.util.List_findWinner(java.util.List): p.getRunningTotal() > currentHigh  =>   false
+ROR_22:140:int_longestPlayerName(): p.getPlayerName().length() > longest  =>   p.getPlayerName().length() >= longest
+ROR_23:140:int_longestPlayerName(): p.getPlayerName().length() > longest  =>   p.getPlayerName().length() < longest
+ROR_24:140:int_longestPlayerName(): p.getPlayerName().length() > longest  =>   p.getPlayerName().length() <= longest
+ROR_25:140:int_longestPlayerName(): p.getPlayerName().length() > longest  =>   p.getPlayerName().length() == longest
+ROR_26:140:int_longestPlayerName(): p.getPlayerName().length() > longest  =>   p.getPlayerName().length() != longest
+ROR_27:140:int_longestPlayerName(): p.getPlayerName().length() > longest  =>   true
+ROR_28:140:int_longestPlayerName(): p.getPlayerName().length() > longest  =>   false
+COD_1:43:void_playGame():!p.hasConcludedTurn() => p.hasConcludedTurn()
+COD_2:57:void_addPlayers(int):!success => success
+COD_3:76:int_getNumberOfPlayer():!success => success
+COD_4:95:int_fetchScore(net.heinke.cbingutter.game.player.Player):!success => success
+COI_1:37:void_playGame(): counter < Constants.FRAMES_PER_MATCH  =>  !(counter < Constants.FRAMES_PER_MATCH)
+COI_2:54:void_addPlayers(int): i <= numPlayers  =>  !(i <= numPlayers)
+COI_3:62:void_addPlayers(int): success  =>  !success
+COI_4:82:int_getNumberOfPlayer(): success  =>  !success
+COI_5:101:int_fetchScore(net.heinke.cbingutter.game.player.Player): success  =>  !success
+COI_6:123:java.util.List_findWinner(java.util.List): p.getRunningTotal() == currentHigh  =>  !(p.getRunningTotal() == currentHigh)
+COI_7:126:java.util.List_findWinner(java.util.List): p.getRunningTotal() > currentHigh  =>  !(p.getRunningTotal() > currentHigh)
+COI_8:140:int_longestPlayerName(): p.getPlayerName().length() > longest  =>  !(p.getPlayerName().length() > longest)
+LOI_1:28:void_loadPlayers():numPlayers => ~numPlayers
+LOI_2:29:void_loadPlayers():numPlayers => ~numPlayers
+LOI_3:37:void_playGame():counter => ~counter
+LOI_4:37:void_playGame():Constants.FRAMES_PER_MATCH => ~Constants.FRAMES_PER_MATCH
+LOI_5:41:void_playGame():score => ~score
+LOI_6:44:void_playGame():longestPlayerName => ~longestPlayerName
+LOI_7:46:void_playGame():counter => ~counter
+LOI_8:54:void_addPlayers(int):i => ~i
+LOI_9:54:void_addPlayers(int):numPlayers => ~numPlayers
+LOI_10:54:void_addPlayers(int):i => ~i
+LOI_11:56:void_addPlayers(int):i => ~i
+LOI_12:108:int_fetchScore(net.heinke.cbingutter.game.player.Player):Constants.MAX_PINS_PER_FRAME => ~Constants.MAX_PINS_PER_FRAME
+LOI_13:123:java.util.List_findWinner(java.util.List):currentHigh => ~currentHigh
+LOI_14:126:java.util.List_findWinner(java.util.List):currentHigh => ~currentHigh
+LOI_15:140:int_longestPlayerName():longest => ~longest
+LOI_16:144:int_longestPlayerName():longest => ~longest

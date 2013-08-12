@@ -1,0 +1,4016 @@
+=Validator.java=AOIS_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_10/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_1/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COD_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COD_4/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_5/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_9/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_3/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_2/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_4/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_10/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_14/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_5/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_12/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=LOI_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/LOI_3/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_2/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_4/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COD_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COD_3/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_8/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_11/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_3/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_1/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_11/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_7/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_8/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_2/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_10/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_7/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_5/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_13/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_9/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_9/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_6/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_4/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_7/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_11/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COD_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COD_1/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COD_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COD_5/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COD_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COD_2/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_5/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_6/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_4/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_9/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_6/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=LOI_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/LOI_4/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=LOI_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/LOI_1/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_3/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_8/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_1/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=LOI_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/LOI_2/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_7/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_8/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_12/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_1/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COR_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COR_12/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_10/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_16=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_16/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=ROR_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/ROR_6/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_15/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=AOIS_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/AOIS_2/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COI_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateScore(java.lang.String,net.heinke.cbingutter.game.player.Player)/COI_3/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Validator.java=COD_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Validator/traditional_mutants/boolean_validateNumberOfPlayers(java.lang.String)/COD_6/Validator.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_22=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/ROR_22/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_44=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/AOIS_44/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_45=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/AOIS_45/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_16=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/LOI_16/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_42=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/AOIS_42/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/LOI_15/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_27=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/ROR_27/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIU_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/AOIU_6/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_41=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/AOIS_41/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_26=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/ROR_26/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_28=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/ROR_28/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_24=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/ROR_24/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_46=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/AOIS_46/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_43=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/AOIS_43/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COI_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/COI_8/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_25=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/ROR_25/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_23=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_longestPlayerName()/ROR_23/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COI_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_getNumberOfPlayer()/COI_4/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COD_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_getNumberOfPlayer()/COD_3/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_10/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_17=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_17/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_9/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_14/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_12/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/LOI_3/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_18=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_18/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_11/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/LOI_7/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/LOI_5/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COI_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/COI_1/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_7/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_13/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AORS_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AORS_1/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COD_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/COD_1/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/LOI_4/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AODS_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AODS_1/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIU_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIU_3/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/LOI_6/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIU_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIU_4/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_8/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_16=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_16/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_playGame()/AOIS_15/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/ROR_1/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/LOI_11/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_19=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_19/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/LOI_9/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_30=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_30/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/ROR_3/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_20=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_20/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_23=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_23/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/ROR_2/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/ROR_4/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_29=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_29/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_27=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_27/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COI_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/COI_2/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_25=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_25/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_21=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_21/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/ROR_5/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COD_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/COD_2/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/LOI_10/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/LOI_8/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_22=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_22/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_28=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_28/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AORS_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AORS_2/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/ROR_7/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_24=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_24/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_26=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/AOIS_26/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/ROR_6/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COI_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_addPlayers(int)/COI_3/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIU_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/AOIU_1/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/AOIS_5/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/AOIS_4/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIU_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/AOIU_2/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/AOIS_6/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/LOI_1/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/AOIS_3/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/LOI_2/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/AOIS_1/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/void_loadPlayers()/AOIS_2/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/LOI_13/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_36=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/AOIS_36/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/LOI_14/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_15/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_18=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_18/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_39=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/AOIS_39/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_20=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_20/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_8/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_21=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_21/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_11/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_40=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/AOIS_40/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_34=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/AOIS_34/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_17=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_17/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_19=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_19/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COI_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/COI_7/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COI_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/COI_6/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_35=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/AOIS_35/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_13/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_14/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_9/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_12/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_33=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/AOIS_33/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_37=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/AOIS_37/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_38=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/AOIS_38/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_10/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=ROR_16=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/java.util.List_findWinner(java.util.List)/ROR_16/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COD_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_fetchScore(net.heinke.cbingutter.game.player.Player)/COD_4/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=COI_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_fetchScore(net.heinke.cbingutter.game.player.Player)/COI_5/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_32=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_fetchScore(net.heinke.cbingutter.game.player.Player)/AOIS_32/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIS_31=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_fetchScore(net.heinke.cbingutter.game.player.Player)/AOIS_31/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=AOIU_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_fetchScore(net.heinke.cbingutter.game.player.Player)/AOIU_5/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Scorecard.java=LOI_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/Scorecard/traditional_mutants/int_fetchScore(net.heinke.cbingutter.game.player.Player)/LOI_12/Scorecard.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=ScoreboardPainter.java=AORB_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/ScoreboardPainter/traditional_mutants/java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int)/AORB_4/ScoreboardPainter.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=ScoreboardPainter.java=AORB_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/ScoreboardPainter/traditional_mutants/java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int)/AORB_8/ScoreboardPainter.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=ScoreboardPainter.java=AORB_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/ScoreboardPainter/traditional_mutants/java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int)/AORB_5/ScoreboardPainter.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=ScoreboardPainter.java=AORB_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/ScoreboardPainter/traditional_mutants/java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int)/AORB_2/ScoreboardPainter.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=ScoreboardPainter.java=AORB_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/ScoreboardPainter/traditional_mutants/java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int)/AORB_1/ScoreboardPainter.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=ScoreboardPainter.java=AORB_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/ScoreboardPainter/traditional_mutants/java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int)/AORB_7/ScoreboardPainter.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=ScoreboardPainter.java=AORB_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/ScoreboardPainter/traditional_mutants/java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int)/AORB_3/ScoreboardPainter.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=ScoreboardPainter.java=AORB_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/scoreboard/ScoreboardPainter/traditional_mutants/java.lang.String_printTopLine(net.heinke.cbingutter.game.player.Player,int)/AORB_6/ScoreboardPainter.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_4/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_8/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_9/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_12/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_5/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_2/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_1/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_7/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_3/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_6/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_11/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=Player.java=AORB_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/player/Player/traditional_mutants/net.heinke.cbingutter.game.frame.Frame_playShot(int)/AORB_10/Player.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=ROR_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_1/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=ROR_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_3/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=ROR_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_2/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=ROR_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_4/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=COI_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/COI_1/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=ROR_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_5/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=AOIS_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/AOIS_4/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=LOI_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/LOI_1/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=AOIS_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/AOIS_3/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=ROR_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_7/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=AOIS_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/AOIS_1/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=ROR_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_6/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=StrikeBonusDummyFrame.java=AOIS_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/StrikeBonusDummyFrame/traditional_mutants/boolean_isCompleted()/AOIS_2/StrikeBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=AOIU_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/SpareBonusDummyFrame()/AOIU_1/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=LOI_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/SpareBonusDummyFrame()/LOI_1/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=AOIS_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/SpareBonusDummyFrame()/AOIS_1/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=AOIS_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/SpareBonusDummyFrame()/AOIS_2/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=ROR_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_1/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=ROR_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_3/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=AOIS_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/AOIS_5/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=ROR_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_2/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=ROR_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_4/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=COI_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/COI_1/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=ROR_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_5/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=AOIS_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/AOIS_4/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=AOIS_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/AOIS_6/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=AOIS_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/AOIS_3/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=LOI_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/LOI_2/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=ROR_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_7/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=SpareBonusDummyFrame.java=ROR_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/SpareBonusDummyFrame/traditional_mutants/boolean_isCompleted()/ROR_6/SpareBonusDummyFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_95=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_95/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_99=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_99/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_53=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/ROR_53/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_98=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_98/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_28=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/LOI_28/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_97=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_97/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_50=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/ROR_50/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_100=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_100/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_94=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_94/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_56=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/ROR_56/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_51=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/ROR_51/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_93=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_93/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_96=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_96/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_27=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/LOI_27/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_52=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/ROR_52/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_91=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_91/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_29=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/LOI_29/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_92=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIS_92/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_16=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/AOIU_16/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/COI_12/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_55=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/ROR_55/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_54=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_printAbsoluteScore()/ROR_54/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_109=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_109/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_63=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ROR_63/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_112=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_112/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_111=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_111/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_31=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/LOI_31/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/COI_15/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_62=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ROR_62/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/COI_13/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_60=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ROR_60/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_16=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ASRS_16/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_59=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ROR_59/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_103=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_103/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_106=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_106/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_108=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_108/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_30=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/LOI_30/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_61=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ROR_61/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_105=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_105/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/COI_14/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ASRS_15/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_102=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_102/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_65=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ROR_65/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_57=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ROR_57/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_110=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_110/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ASRS_14/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_64=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ROR_64/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_58=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ROR_58/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/ASRS_13/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_104=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_104/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_107=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_107/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_32=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/LOI_32/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_101=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/java.lang.String_toString()/AOIS_101/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_1/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/LOI_11/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_36=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_36/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_19=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_19/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/LOI_9/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AORB_4/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_44=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_44/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_30=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_30/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_15/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_17=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_17/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/COI_5/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_32=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_32/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ASRS_2/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_42=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_42/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_18=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_18/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_39=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_39/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_3/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_20=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_20/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COR_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/COR_2/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/COI_4/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_14/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_23=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_23/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_12/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_20=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_20/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_2/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_18=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_18/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_4/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_8/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_21=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_21/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_11/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_40=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_40/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_11/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/LOI_7/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_34=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_34/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_31=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_31/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_17=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_17/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_29=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_29/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/LOI_5/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/COI_1/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_27=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_27/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/COI_2/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_41=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_41/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ASRS_1/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_19=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_19/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_25=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_25/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_21=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_21/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AORB_2/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_5/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_13/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ASRS_3/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AORB_1/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_35=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_35/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_13/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_14/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/LOI_10/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_43=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_43/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AORB_3/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_9/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/LOI_8/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIU_5/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_12/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_33=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_33/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/LOI_4/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_22=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_22/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_37=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_37/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_28=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_28/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ASRS_4/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COR_1=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/COR_1/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_38=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_38/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_7/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/LOI_12/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/LOI_6/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIU_4/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_24=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_24/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_26=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_26/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_10/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_16=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_16/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_6/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_16=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/ROR_16/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/AOIS_15/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/void_playShot(int)/COI_3/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_89=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_getAbsoluteScore()/AOIS_89/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_26=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_getAbsoluteScore()/LOI_26/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_getAbsoluteScore()/AOIU_15/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_90=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_getAbsoluteScore()/AOIS_90/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AORB_9/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_115=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AOIS_115/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_33=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/LOI_33/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_116=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AOIS_116/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_120=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AOIS_120/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AORB_12/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_119=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AOIS_119/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_118=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AOIS_118/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_17=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AOIU_17/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_113=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AOIS_113/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_117=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AOIS_117/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_114=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AOIS_114/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_34=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/LOI_34/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AORB_11/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_pinsRemaining()/AORB_10/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_85=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/AOIS_85/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_87=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/AOIS_87/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/AOIU_13/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_86=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/AOIS_86/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_88=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/AOIS_88/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_24=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/LOI_24/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_83=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/AOIS_83/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_84=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/AOIS_84/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_25=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/LOI_25/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScoreNoBonus()/AOIU_14/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_63=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_63/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AORB_8/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_65=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_65/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_59=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_59/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_64=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_64/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_66=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_66/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/ASRS_7/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_70=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_70/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIU_9/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIU_7/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_69=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_69/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_68=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_68/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AORB_5/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/ASRS_8/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_18=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/LOI_18/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_19=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/LOI_19/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_62=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_62/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIU_8/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/ASRS_5/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/ASRS_6/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_60=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_60/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AORB_7/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_17=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/LOI_17/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_71=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_71/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AORB_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AORB_6/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_61=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_61/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_72=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_72/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_20=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/LOI_20/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_67=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int,int)/AOIS_67/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_13=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_fetchScore(int)/LOI_13/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_45=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_fetchScore(int)/AOIS_45/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_fetchScore(int)/AOIU_6/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_46=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_fetchScore(int)/AOIS_46/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_56=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/AOIS_56/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_48=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/ROR_48/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_55=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/AOIS_55/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_16=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/LOI_16/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_58=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/AOIS_58/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_46=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/ROR_46/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_57=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/AOIS_57/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_45=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/ROR_45/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_47=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/ROR_47/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_44=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/ROR_44/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_43=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/ROR_43/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/COI_11/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_49=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isCompleted()/ROR_49/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_29=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/ROR_29/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_30=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/ROR_30/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_35=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/ROR_35/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_32=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/ROR_32/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/COI_9/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_31=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/ROR_31/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_34=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/ROR_34/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COR_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/COR_5/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COR_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/COR_6/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_33=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/ROR_33/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpare()/COI_8/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_5=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame(int)/AOIS_5/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame(int)/AOIS_4/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame(int)/AOIU_2/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame(int)/AOIS_6/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame(int)/AOIS_3/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_2=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame(int)/LOI_2/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_82=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_82/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_73=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_73/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/ASRS_10/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_75=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_75/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_21=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/LOI_21/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/ASRS_11/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_77=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_77/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_78=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_78/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIU_12/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/ASRS_9/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_76=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_76/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_80=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_80/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_79=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_79/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_22=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/LOI_22/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_11=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIU_11/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIU_10/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_74=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_74/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_81=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/AOIS_81/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_23=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/LOI_23/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ASRS_12=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/int_setAbsoluteScore(int)/ASRS_12/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame()/AOIS_10/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_9=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame()/AOIS_9/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame()/LOI_3/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame()/AOIS_7/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIU_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame()/AOIU_3/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_8=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/RegularFrame()/AOIS_8/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_50=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/AOIS_50/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_14=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/LOI_14/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_40=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/ROR_40/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_52=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/AOIS_52/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_36=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/ROR_36/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_53=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/AOIS_53/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=LOI_15=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/LOI_15/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_47=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/AOIS_47/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_10=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/COI_10/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_42=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/ROR_42/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_37=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/ROR_37/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_54=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/AOIS_54/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_49=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/AOIS_49/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_38=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/ROR_38/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_51=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/AOIS_51/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_39=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/ROR_39/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_41=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/ROR_41/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=AOIS_48=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isSpareOrStrike()/AOIS_48/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_22=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/ROR_22/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_27=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/ROR_27/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COR_3=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/COR_3/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_7=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/COI_7/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_26=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/ROR_26/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COI_6=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/COI_6/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_28=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/ROR_28/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_24=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/ROR_24/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=COR_4=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/COR_4/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_25=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/ROR_25/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false
+=RegularFrame.java=ROR_23=/home/david/Desktop/BowlingExample/mutants/net/heinke/cbingutter/game/frame/RegularFrame/traditional_mutants/boolean_isStrike()/ROR_23/RegularFrame.java=
+
+
+
+
+
+testNotEnoughRemainingPinsValidator(CombinedTests): null
+false

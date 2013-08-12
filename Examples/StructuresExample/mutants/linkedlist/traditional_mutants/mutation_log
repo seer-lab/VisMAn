@@ -1,0 +1,51 @@
+ROR_1:25:java.lang.Object_getFirst(): first == null  =>   first != null
+ROR_2:33:java.lang.Object_removeFirst(): first == null  =>   first != null
+ROR_3:38:java.lang.Object_removeFirst(): first == null  =>   first != null
+ROR_4:52:void_addFirst(java.lang.Object): first == null  =>   first != null
+ROR_5:62:java.lang.Object_getLast(): last == null  =>   last != null
+ROR_6:70:java.lang.Object_removeLast(): last == null  =>   last != null
+ROR_7:75:java.lang.Object_removeLast(): last == null  =>   last != null
+ROR_8:89:void_addLast(java.lang.Object): last == null  =>   last != null
+ROR_9:136:java.lang.Object_next(): position == null  =>   position != null
+ROR_10:146:boolean_hasNext(): position == null  =>   position != null
+ROR_11:147:boolean_hasNext(): first != null  =>   first == null
+ROR_12:149:boolean_hasNext(): position.next != null  =>   position.next == null
+ROR_13:167:boolean_hasPrevious(): position != null  =>   position == null
+ROR_14:172:void_add(java.lang.Object): position == null  =>   position != null
+ROR_15:176:void_add(java.lang.Object): position == last  =>   position != last
+ROR_16:196:void_remove(): positionToRemove == first  =>   positionToRemove != first
+ROR_17:199:void_remove(): positionToRemove == last  =>   positionToRemove != last
+ROR_18:225:linkedlist.LinkedList.Node_lastPosition(): position == null  =>   position != null
+COD_1:131:java.lang.Object_next():!hasNext() => hasNext()
+COD_2:155:java.lang.Object_previous():!hasPrevious() => hasPrevious()
+COI_1:25:java.lang.Object_getFirst(): first == null  =>  !(first == null)
+COI_2:33:java.lang.Object_removeFirst(): first == null  =>  !(first == null)
+COI_3:38:java.lang.Object_removeFirst(): first == null  =>  !(first == null)
+COI_4:52:void_addFirst(java.lang.Object): first == null  =>  !(first == null)
+COI_5:62:java.lang.Object_getLast(): last == null  =>  !(last == null)
+COI_6:70:java.lang.Object_removeLast(): last == null  =>  !(last == null)
+COI_7:75:java.lang.Object_removeLast(): last == null  =>  !(last == null)
+COI_8:89:void_addLast(java.lang.Object): last == null  =>  !(last == null)
+COI_9:125:LinkedListIterator(): isAfterNext  =>  !isAfterNext
+COI_10:126:LinkedListIterator(): isAfterPrevious  =>  !isAfterPrevious
+COI_11:134:java.lang.Object_next(): isAfterNext  =>  !isAfterNext
+COI_12:135:java.lang.Object_next(): isAfterPrevious  =>  !isAfterPrevious
+COI_13:136:java.lang.Object_next(): position == null  =>  !(position == null)
+COI_14:146:boolean_hasNext(): position == null  =>  !(position == null)
+COI_15:147:boolean_hasNext(): first != null  =>  !(first != null)
+COI_16:149:boolean_hasNext(): position.next != null  =>  !(position.next != null)
+COI_17:158:java.lang.Object_previous(): isAfterNext  =>  !isAfterNext
+COI_18:159:java.lang.Object_previous(): isAfterPrevious  =>  !isAfterPrevious
+COI_19:167:boolean_hasPrevious(): position != null  =>  !(position != null)
+COI_20:172:void_add(java.lang.Object): position == null  =>  !(position == null)
+COI_21:176:void_add(java.lang.Object): position == last  =>  !(position == last)
+COI_22:189:void_add(java.lang.Object): isAfterNext  =>  !isAfterNext
+COI_23:190:void_add(java.lang.Object): isAfterPrevious  =>  !isAfterPrevious
+COI_24:196:void_remove(): positionToRemove == first  =>  !(positionToRemove == first)
+COI_25:199:void_remove(): positionToRemove == last  =>  !(positionToRemove == last)
+COI_26:206:void_remove(): isAfterNext  =>  !isAfterNext
+COI_27:209:void_remove(): isAfterNext  =>  !isAfterNext
+COI_28:210:void_remove(): isAfterPrevious  =>  !isAfterPrevious
+COI_29:221:linkedlist.LinkedList.Node_lastPosition(): isAfterNext  =>  !isAfterNext
+COI_30:224:linkedlist.LinkedList.Node_lastPosition(): isAfterPrevious  =>  !isAfterPrevious
+COI_31:225:linkedlist.LinkedList.Node_lastPosition(): position == null  =>  !(position == null)
