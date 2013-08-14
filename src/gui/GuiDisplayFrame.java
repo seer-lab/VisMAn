@@ -482,7 +482,7 @@ public class GuiDisplayFrame extends JFrame
 	 * This method will create the graph of a class level file from the package hierarchy.
 	 * @param node the class file to visualize
 	 */
-	private void drawClassGraph(final ClassNode node)
+	private void drawClassGraph(ClassNode node)
 	{	
 		//Create a new graph.
 		Graph<DefaultMutableTreeNode, String> classGraph = new SparseMultigraph<DefaultMutableTreeNode, String>();
@@ -490,38 +490,9 @@ public class GuiDisplayFrame extends JFrame
 		edgeList = new ArrayList<GraphEdge>();
 		
 		//Check to see which mutation operators will be displayed.
-		if (operatorsList.size() == 0) //Generate the list of operators.
+		if (operatorsList.size() == 0)
 		{
-			checkboxPanel.removeAll();
-			for (final DataMutant mutant:node.getMutantList())
-			{
-				if (!(operatorsList.contains(mutant.getType())))
-				{
-					operatorsList.add(mutant.getType());
-					JCheckBox checkBox = new JCheckBox(mutant.getType());
-					checkBox.setSelected(true);
-					checkBox.addItemListener(new ItemListener(){
-						@Override
-						public void itemStateChanged(ItemEvent e) 
-						{
-							JCheckBox changedBox = (JCheckBox) e.getItemSelectable();
-							if (operatorsList.contains(changedBox.getText()))
-							{
-								operatorsList.remove(changedBox.getText());
-							}
-							else
-							{
-								operatorsList.add(changedBox.getText());
-							}
-							drawClassGraph(node);
-						}
-					});
-					checkboxPanel.add(checkBox);
-				}
-			}
-			
-			
-			
+			checkBoxControl(node);
 		}
 		
 		//Add all of the mutants of the class to the graph as vertices (nodes).
@@ -539,30 +510,43 @@ public class GuiDisplayFrame extends JFrame
 		 * single direction from the reference.  The inner-most for loop compares the results of each test
 		 * case to see if both mutants were kill by the same test cases.
 		 */
+		
+		
 		ArrayList<DataMutant> mutantList = node.getMutantList();
 		for (int i = 0; i < mutantList.size(); i++)
 		{
 			DataMutant referenceMutant = mutantList.get(i);
-			for (int j = i+1; j < mutantList.size();j++)
+			
+			if (operatorsList.contains(referenceMutant.getType()) == false)
 			{
-				int similarities = 0;
-				DataMutant checkMutant = mutantList.get(j);
-				ArrayList<DataTest> referenceTests = referenceMutant.getTestArray();
-				ArrayList<DataTest> checkTests = referenceMutant.getTestArray();
-				
-				for (int q = 0; q < referenceTests.size();q++)
+				//DO NOTHING
+			}
+			else
+			{
+				for (int j = i+1; j < mutantList.size();j++)
 				{
-					if (referenceTests.get(q).getResult().equals("yes") && checkTests.get(q).getResult().equals("yes"))
+					int similarities = 0;
+					DataMutant checkMutant = mutantList.get(j);
+					ArrayList<DataTest> referenceTests = referenceMutant.getTestArray();
+					ArrayList<DataTest> checkTests = referenceMutant.getTestArray();
+				
+					for (int q = 0; q < referenceTests.size();q++)
 					{
-						similarities++;
+						if (referenceTests.get(q).getResult().equals("yes") && checkTests.get(q).getResult().equals("yes"))
+						{
+							similarities++;
+						}
 					}
-				}
 				
-				if (similarities > 0)
-				{
-					GraphEdge edge = new GraphEdge(referenceMutant, checkMutant, similarities);
-					edgeList.add(edge);
-					classGraph.addEdge(referenceMutant.getName()+" to "+checkMutant.getName(),referenceMutant,checkMutant);
+					if (similarities > 0)
+					{
+						if (operatorsList.contains(checkMutant.getType()) == true)
+						{
+							GraphEdge edge = new GraphEdge(referenceMutant, checkMutant, similarities);
+							edgeList.add(edge);
+							classGraph.addEdge(referenceMutant.getName()+" to "+checkMutant.getName(),referenceMutant,checkMutant);
+						}
+					}
 				}
 			}
 		}
@@ -626,7 +610,7 @@ public class GuiDisplayFrame extends JFrame
 		};
 		
 		//Layout<DefaultMutableTreeNode, String> layout = new CircleLayout<DefaultMutableTreeNode, String>(classGraph);
-		Layout layout = new GridLayout(classGraph);
+		Layout layout = new CircleLayout(classGraph);
 		viewer = new VisualizationViewer<DefaultMutableTreeNode,String>(layout);
 		viewer.setPreferredSize(new Dimension(graphPane.getWidth(),graphPane.getHeight()));
 		viewer.setBackground(Color.white);
@@ -794,5 +778,39 @@ public class GuiDisplayFrame extends JFrame
 		testResultsArea.setText(results);
 		testResultsArea.setCaretPosition(0);
 		testResultsArea.repaint();
+	}
+	
+	public void checkBoxControl(final ClassNode node)
+	{
+		if (operatorsList.size() == 0) //Generate the list of operators.
+		{
+			checkboxPanel.removeAll();
+			for (final DataMutant mutant:node.getMutantList())
+			{
+				if (!(operatorsList.contains(mutant.getType())))
+				{
+					operatorsList.add(mutant.getType());
+					JCheckBox checkBox = new JCheckBox(mutant.getType());
+					checkBox.setSelected(true);
+					checkBox.addItemListener(new ItemListener(){
+						@Override
+						public void itemStateChanged(ItemEvent e) 
+						{
+							JCheckBox changedBox = (JCheckBox) e.getItemSelectable();
+							if (operatorsList.contains(changedBox.getText()))
+							{
+								operatorsList.remove(changedBox.getText());
+							}
+							else
+							{
+								operatorsList.add(changedBox.getText());
+							}
+							drawClassGraph(node);
+						}
+					});
+					checkboxPanel.add(checkBox);
+				}
+			}
+		}
 	}
 }
